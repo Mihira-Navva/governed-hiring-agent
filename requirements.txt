@@ -1,0 +1,4 @@
+# Web app dependencies (installed by Vercel). The project's own skills, demo and evals use only the standard library.
+fastapi>=0.110.0
+anthropic>=0.40.0
+python-dotenv>=1.0.0

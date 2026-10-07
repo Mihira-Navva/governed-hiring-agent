@@ -1,0 +1,1201 @@
+candidate_id,gender,age_band,home_region,disability,ai_shortlisted,expert_qualified
+C26-00001,Man,21-29,South,No,1,
+C26-00002,Man,30-39,North,No,0,
+C26-00003,Man,30-39,South,No,0,
+C26-00004,Woman,30-39,East & North-East,No,0,
+C26-00005,Man,21-29,East & North-East,No,0,0
+C26-00006,Man,30-39,South,No,0,
+C26-00007,Man,40+,West,No,0,0
+C26-00008,Man,21-29,North,No,0,1
+C26-00009,Man,21-29,East & North-East,No,0,
+C26-00010,Man,30-39,West,No,0,
+C26-00011,Man,21-29,West,No,0,0
+C26-00012,Woman,21-29,South,No,0,
+C26-00013,Woman,30-39,West,Yes,0,1
+C26-00014,Woman,40+,East & North-East,No,0,1
+C26-00015,Man,30-39,South,No,0,1
+C26-00016,Woman,21-29,North,No,0,
+C26-00017,Man,21-29,South,No,0,0
+C26-00018,Man,40+,East & North-East,No,0,
+C26-00019,Woman,40+,West,No,1,0
+C26-00020,Woman,21-29,West,No,1,
+C26-00021,Man,21-29,West,No,0,
+C26-00022,Man,21-29,South,No,1,1
+C26-00023,Woman,21-29,South,No,0,
+C26-00024,Man,21-29,North,No,0,
+C26-00025,Man,21-29,South,No,1,
+C26-00026,Man,21-29,West,No,0,
+C26-00027,Woman,30-39,West,Yes,0,
+C26-00028,Woman,40+,West,No,0,
+C26-00029,Man,30-39,South,No,1,1
+C26-00030,Man,40+,West,No,0,0
+C26-00031,Woman,21-29,West,No,1,1
+C26-00032,Woman,30-39,South,No,1,1
+C26-00033,Woman,30-39,East & North-East,No,0,
+C26-00034,Man,21-29,South,Prefer not to say,0,
+C26-00035,Woman,40+,West,Yes,1,
+C26-00036,Man,40+,North,No,0,
+C26-00037,Man,21-29,South,No,1,1
+C26-00038,Woman,30-39,West,No,0,1
+C26-00039,Man,21-29,West,No,0,0
+C26-00040,Man,21-29,West,No,1,
+C26-00041,Man,30-39,South,No,0,
+C26-00042,Man,30-39,West,Prefer not to say,0,
+C26-00043,Woman,40+,East & North-East,No,0,0
+C26-00044,Man,21-29,North,No,0,
+C26-00045,Man,30-39,West,No,0,
+C26-00046,Woman,21-29,West,No,0,
+C26-00047,Man,21-29,East & North-East,No,0,
+C26-00048,Woman,21-29,South,No,0,0
+C26-00049,Man,30-39,North,No,0,1
+C26-00050,Woman,21-29,South,No,0,
+C26-00051,Transgender / non-binary,40+,West,No,0,
+C26-00052,Woman,30-39,West,No,1,1
+C26-00053,Man,21-29,East & North-East,No,0,
+C26-00054,Man,40+,West,No,0,0
+C26-00055,Man,21-29,North,No,0,0
+C26-00056,Man,21-29,East & North-East,No,0,0
+C26-00057,Woman,21-29,North,No,0,0
+C26-00058,Woman,30-39,West,No,0,
+C26-00059,Man,21-29,North,No,0,0
+C26-00060,Man,21-29,North,No,0,
+C26-00061,Woman,30-39,East & North-East,No,0,
+C26-00062,Woman,21-29,South,No,0,1
+C26-00063,Woman,21-29,East & North-East,No,0,1
+C26-00064,Man,21-29,South,No,1,
+C26-00065,Man,21-29,West,No,1,1
+C26-00066,Man,30-39,North,No,1,1
+C26-00067,Man,30-39,East & North-East,Prefer not to say,0,
+C26-00068,Man,40+,East & North-East,No,0,
+C26-00069,Man,30-39,West,No,1,0
+C26-00070,Man,30-39,North,No,0,0
+C26-00071,Man,21-29,South,No,0,
+C26-00072,Man,21-29,East & North-East,No,0,0
+C26-00073,Man,21-29,South,No,0,0
+C26-00074,Woman,21-29,South,No,0,1
+C26-00075,Woman,21-29,West,No,0,
+C26-00076,Man,30-39,West,No,0,0
+C26-00077,Man,21-29,South,No,0,1
+C26-00078,Man,21-29,West,No,0,
+C26-00079,Man,21-29,North,No,1,
+C26-00080,Man,30-39,West,No,0,0
+C26-00081,Woman,21-29,West,Prefer not to say,1,1
+C26-00082,Woman,30-39,East & North-East,No,0,
+C26-00083,Man,40+,North,No,1,1
+C26-00084,Woman,21-29,East & North-East,Prefer not to say,0,
+C26-00085,Woman,30-39,West,No,0,1
+C26-00086,Man,30-39,South,Prefer not to say,0,
+C26-00087,Woman,30-39,West,No,0,
+C26-00088,Man,21-29,West,No,1,
+C26-00089,Man,21-29,North,No,0,0
+C26-00090,Man,21-29,South,No,0,0
+C26-00091,Man,21-29,East & North-East,No,0,
+C26-00092,Woman,21-29,South,No,1,
+C26-00093,Man,30-39,South,No,0,0
+C26-00094,Man,21-29,West,No,1,
+C26-00095,Man,30-39,South,Yes,1,1
+C26-00096,Man,21-29,West,Prefer not to say,1,1
+C26-00097,Man,30-39,South,No,1,
+C26-00098,Woman,30-39,East & North-East,No,0,
+C26-00099,Woman,30-39,South,Yes,0,
+C26-00100,Man,21-29,North,No,0,1
+C26-00101,Woman,21-29,North,No,0,0
+C26-00102,Man,21-29,South,No,1,1
+C26-00103,Woman,21-29,West,No,0,0
+C26-00104,Man,21-29,North,No,0,
+C26-00105,Woman,21-29,North,No,1,1
+C26-00106,Woman,21-29,South,No,0,
+C26-00107,Man,30-39,West,No,0,
+C26-00108,Man,21-29,East & North-East,No,0,
+C26-00109,Man,21-29,East & North-East,No,0,
+C26-00110,Man,21-29,West,No,1,
+C26-00111,Man,30-39,West,No,1,
+C26-00112,Woman,30-39,West,No,1,1
+C26-00113,Man,30-39,West,No,0,
+C26-00114,Woman,21-29,West,No,0,0
+C26-00115,Woman,21-29,South,Prefer not to say,0,
+C26-00116,Man,30-39,West,No,1,1
+C26-00117,Man,21-29,West,No,1,1
+C26-00118,Prefer not to say,30-39,South,No,0,
+C26-00119,Woman,21-29,East & North-East,No,0,
+C26-00120,Woman,30-39,East & North-East,No,0,
+C26-00121,Man,21-29,West,No,0,0
+C26-00122,Man,21-29,West,No,0,
+C26-00123,Woman,21-29,West,No,1,
+C26-00124,Man,21-29,East & North-East,No,0,
+C26-00125,Man,21-29,West,No,0,0
+C26-00126,Woman,21-29,North,No,0,0
+C26-00127,Man,30-39,East & North-East,No,1,1
+C26-00128,Man,21-29,East & North-East,No,0,
+C26-00129,Woman,30-39,West,No,0,1
+C26-00130,Woman,30-39,West,No,0,0
+C26-00131,Man,30-39,South,No,0,
+C26-00132,Man,21-29,South,Yes,0,1
+C26-00133,Woman,30-39,West,No,0,0
+C26-00134,Man,21-29,West,No,0,
+C26-00135,Man,30-39,West,No,1,1
+C26-00136,Man,30-39,East & North-East,No,0,0
+C26-00137,Man,21-29,West,No,1,0
+C26-00138,Woman,40+,East & North-East,No,0,
+C26-00139,Woman,21-29,West,No,0,1
+C26-00140,Man,30-39,West,No,0,0
+C26-00141,Woman,21-29,East & North-East,No,0,0
+C26-00142,Woman,40+,West,No,0,
+C26-00143,Woman,21-29,North,No,1,1
+C26-00144,Woman,21-29,West,No,0,0
+C26-00145,Man,21-29,West,No,1,1
+C26-00146,Man,21-29,West,No,1,
+C26-00147,Man,21-29,North,No,0,
+C26-00148,Man,21-29,North,Yes,0,
+C26-00149,Woman,21-29,East & North-East,No,0,0
+C26-00150,Woman,40+,West,No,0,
+C26-00151,Man,21-29,East & North-East,No,0,
+C26-00152,Woman,40+,West,No,0,
+C26-00153,Man,40+,West,No,0,
+C26-00154,Man,30-39,West,No,0,
+C26-00155,Woman,21-29,North,No,1,
+C26-00156,Man,30-39,North,No,0,
+C26-00157,Man,30-39,South,No,0,
+C26-00158,Man,21-29,West,No,0,
+C26-00159,Man,30-39,South,No,0,
+C26-00160,Man,21-29,South,No,0,1
+C26-00161,Man,21-29,West,No,0,0
+C26-00162,Woman,30-39,East & North-East,No,0,1
+C26-00163,Man,21-29,West,No,0,1
+C26-00164,Man,40+,East & North-East,No,1,
+C26-00165,Woman,21-29,East & North-East,No,0,0
+C26-00166,Woman,21-29,West,No,1,
+C26-00167,Man,21-29,South,No,0,0
+C26-00168,Man,21-29,North,No,0,
+C26-00169,Man,21-29,East & North-East,No,0,1
+C26-00170,Woman,40+,West,No,1,1
+C26-00171,Man,40+,South,No,0,0
+C26-00172,Man,21-29,West,Prefer not to say,0,
+C26-00173,Man,21-29,North,No,1,0
+C26-00174,Man,21-29,East & North-East,No,0,1
+C26-00175,Man,21-29,West,No,0,1
+C26-00176,Man,40+,West,Prefer not to say,1,
+C26-00177,Woman,30-39,East & North-East,No,0,
+C26-00178,Woman,21-29,East & North-East,No,0,0
+C26-00179,Woman,40+,North,No,0,
+C26-00180,Woman,30-39,East & North-East,Prefer not to say,0,0
+C26-00181,Man,21-29,East & North-East,No,1,1
+C26-00182,Woman,21-29,East & North-East,No,0,
+C26-00183,Man,21-29,South,Prefer not to say,0,
+C26-00184,Woman,21-29,East & North-East,No,1,
+C26-00185,Man,40+,West,No,0,0
+C26-00186,Woman,21-29,West,No,0,
+C26-00187,Woman,30-39,North,No,0,
+C26-00188,Man,21-29,West,No,1,0
+C26-00189,Man,30-39,West,No,0,
+C26-00190,Man,40+,East & North-East,Yes,1,
+C26-00191,Man,30-39,South,No,1,1
+C26-00192,Man,21-29,South,No,0,0
+C26-00193,Man,21-29,West,No,0,
+C26-00194,Man,30-39,East & North-East,No,0,1
+C26-00195,Man,30-39,East & North-East,No,0,0
+C26-00196,Woman,21-29,West,No,0,0
+C26-00197,Man,30-39,West,No,0,1
+C26-00198,Man,21-29,West,No,0,1
+C26-00199,Man,21-29,North,No,0,
+C26-00200,Man,21-29,South,No,1,
+C26-00201,Woman,40+,West,No,0,1
+C26-00202,Man,40+,North,No,0,1
+C26-00203,Man,21-29,East & North-East,No,0,1
+C26-00204,Woman,21-29,North,No,0,0
+C26-00205,Man,30-39,South,No,0,0
+C26-00206,Woman,30-39,West,No,0,1
+C26-00207,Man,21-29,West,No,0,1
+C26-00208,Man,21-29,West,No,0,0
+C26-00209,Man,30-39,East & North-East,No,0,
+C26-00210,Woman,30-39,West,No,1,
+C26-00211,Woman,21-29,South,No,0,
+C26-00212,Man,21-29,West,No,0,
+C26-00213,Man,40+,North,No,0,1
+C26-00214,Woman,21-29,North,No,1,1
+C26-00215,Woman,30-39,East & North-East,Yes,0,1
+C26-00216,Man,30-39,North,No,1,1
+C26-00217,Man,21-29,South,No,1,1
+C26-00218,Man,30-39,West,No,0,
+C26-00219,Woman,21-29,South,No,0,0
+C26-00220,Man,30-39,West,No,1,1
+C26-00221,Man,21-29,South,Prefer not to say,1,
+C26-00222,Man,30-39,North,No,1,
+C26-00223,Man,30-39,South,No,1,1
+C26-00224,Man,21-29,West,No,1,1
+C26-00225,Woman,30-39,East & North-East,No,0,
+C26-00226,Man,21-29,East & North-East,No,0,1
+C26-00227,Woman,40+,West,No,0,
+C26-00228,Man,30-39,West,No,1,
+C26-00229,Man,30-39,East & North-East,No,0,
+C26-00230,Man,40+,West,No,0,
+C26-00231,Woman,40+,East & North-East,No,0,
+C26-00232,Man,30-39,West,No,0,
+C26-00233,Woman,30-39,South,No,0,
+C26-00234,Woman,21-29,South,No,1,1
+C26-00235,Woman,21-29,West,No,0,1
+C26-00236,Woman,21-29,South,No,1,
+C26-00237,Prefer not to say,21-29,North,No,0,0
+C26-00238,Man,21-29,West,No,1,
+C26-00239,Woman,21-29,North,No,0,
+C26-00240,Man,30-39,North,No,1,1
+C26-00241,Man,30-39,East & North-East,Yes,0,1
+C26-00242,Woman,30-39,South,No,0,0
+C26-00243,Woman,30-39,West,No,0,1
+C26-00244,Woman,21-29,North,No,0,1
+C26-00245,Man,30-39,West,No,0,
+C26-00246,Man,21-29,West,No,0,0
+C26-00247,Man,21-29,West,Prefer not to say,0,0
+C26-00248,Prefer not to say,30-39,West,No,1,
+C26-00249,Woman,21-29,West,No,0,
+C26-00250,Woman,21-29,South,No,0,0
+C26-00251,Man,21-29,West,Prefer not to say,0,
+C26-00252,Woman,30-39,North,No,0,1
+C26-00253,Man,21-29,East & North-East,No,0,
+C26-00254,Woman,21-29,West,No,1,1
+C26-00255,Man,21-29,West,No,0,0
+C26-00256,Man,40+,West,No,0,0
+C26-00257,Woman,21-29,East & North-East,No,0,0
+C26-00258,Woman,30-39,West,No,0,0
+C26-00259,Man,21-29,West,No,0,
+C26-00260,Man,21-29,East & North-East,No,1,
+C26-00261,Man,40+,East & North-East,No,0,0
+C26-00262,Man,30-39,West,No,0,1
+C26-00263,Man,21-29,East & North-East,No,0,
+C26-00264,Woman,21-29,North,Yes,0,
+C26-00265,Man,21-29,East & North-East,No,1,1
+C26-00266,Woman,21-29,West,No,0,
+C26-00267,Woman,21-29,East & North-East,No,0,
+C26-00268,Woman,40+,South,No,0,0
+C26-00269,Man,21-29,East & North-East,No,0,0
+C26-00270,Man,21-29,East & North-East,No,0,
+C26-00271,Man,21-29,West,No,0,
+C26-00272,Man,21-29,West,Yes,1,1
+C26-00273,Man,21-29,South,No,0,1
+C26-00274,Woman,30-39,West,No,0,
+C26-00275,Man,21-29,West,No,1,1
+C26-00276,Man,40+,West,Yes,0,
+C26-00277,Woman,30-39,South,Yes,0,0
+C26-00278,Woman,30-39,South,No,1,
+C26-00279,Man,21-29,South,No,0,
+C26-00280,Man,30-39,North,No,1,
+C26-00281,Woman,30-39,North,No,0,0
+C26-00282,Man,21-29,West,No,1,0
+C26-00283,Man,21-29,West,No,1,0
+C26-00284,Woman,21-29,South,No,0,
+C26-00285,Man,21-29,East & North-East,No,0,
+C26-00286,Woman,40+,West,No,0,
+C26-00287,Woman,21-29,South,No,1,
+C26-00288,Man,30-39,West,No,1,
+C26-00289,Man,21-29,South,No,0,0
+C26-00290,Man,21-29,South,No,0,0
+C26-00291,Man,21-29,East & North-East,No,0,
+C26-00292,Man,21-29,South,Yes,0,1
+C26-00293,Man,21-29,South,No,0,0
+C26-00294,Woman,30-39,West,Prefer not to say,0,0
+C26-00295,Woman,21-29,South,No,1,1
+C26-00296,Woman,40+,West,No,1,
+C26-00297,Man,21-29,North,No,0,0
+C26-00298,Man,30-39,West,No,0,
+C26-00299,Man,30-39,North,No,1,1
+C26-00300,Man,40+,West,No,1,1
+C26-00301,Man,21-29,South,No,0,
+C26-00302,Woman,21-29,West,No,0,1
+C26-00303,Woman,30-39,South,No,0,0
+C26-00304,Man,40+,West,No,1,0
+C26-00305,Man,30-39,West,No,1,
+C26-00306,Man,40+,East & North-East,No,0,
+C26-00307,Woman,21-29,East & North-East,No,0,
+C26-00308,Man,21-29,West,No,1,
+C26-00309,Woman,40+,East & North-East,No,0,
+C26-00310,Woman,30-39,West,Yes,0,1
+C26-00311,Man,21-29,South,No,0,
+C26-00312,Man,30-39,South,No,0,0
+C26-00313,Man,21-29,East & North-East,No,1,
+C26-00314,Man,21-29,West,No,1,1
+C26-00315,Woman,21-29,South,No,0,
+C26-00316,Man,21-29,East & North-East,No,1,1
+C26-00317,Man,21-29,South,No,1,
+C26-00318,Transgender / non-binary,30-39,East & North-East,No,0,
+C26-00319,Man,21-29,South,No,0,0
+C26-00320,Man,21-29,East & North-East,No,0,0
+C26-00321,Woman,21-29,East & North-East,No,0,0
+C26-00322,Woman,21-29,East & North-East,No,0,1
+C26-00323,Woman,30-39,West,No,0,0
+C26-00324,Woman,30-39,West,No,1,1
+C26-00325,Man,30-39,North,No,1,
+C26-00326,Woman,21-29,South,No,0,1
+C26-00327,Woman,21-29,West,No,0,
+C26-00328,Woman,21-29,West,No,0,
+C26-00329,Man,30-39,South,No,0,
+C26-00330,Man,40+,West,No,0,0
+C26-00331,Prefer not to say,30-39,West,No,1,
+C26-00332,Man,30-39,East & North-East,No,0,
+C26-00333,Man,30-39,West,No,0,0
+C26-00334,Man,30-39,North,No,1,1
+C26-00335,Woman,21-29,West,No,0,1
+C26-00336,Woman,30-39,East & North-East,No,0,
+C26-00337,Man,21-29,North,No,1,
+C26-00338,Man,21-29,South,No,0,0
+C26-00339,Woman,30-39,East & North-East,No,0,
+C26-00340,Man,21-29,North,No,0,
+C26-00341,Woman,21-29,North,No,0,
+C26-00342,Man,21-29,South,No,1,
+C26-00343,Man,21-29,West,No,1,1
+C26-00344,Man,21-29,West,No,1,
+C26-00345,Woman,21-29,East & North-East,No,0,0
+C26-00346,Woman,21-29,East & North-East,No,0,
+C26-00347,Woman,21-29,South,No,0,
+C26-00348,Woman,21-29,East & North-East,No,0,1
+C26-00349,Man,21-29,West,Prefer not to say,1,1
+C26-00350,Woman,21-29,South,No,1,1
+C26-00351,Man,40+,West,No,0,
+C26-00352,Man,30-39,South,No,0,0
+C26-00353,Man,40+,West,No,0,
+C26-00354,Man,21-29,North,No,0,1
+C26-00355,Woman,21-29,West,No,1,1
+C26-00356,Man,40+,West,No,0,1
+C26-00357,Man,30-39,West,No,0,1
+C26-00358,Man,21-29,East & North-East,No,0,
+C26-00359,Woman,30-39,West,No,0,0
+C26-00360,Man,40+,West,Prefer not to say,0,0
+C26-00361,Man,21-29,East & North-East,No,1,1
+C26-00362,Man,21-29,South,No,0,
+C26-00363,Woman,21-29,South,No,0,
+C26-00364,Woman,21-29,West,No,0,0
+C26-00365,Woman,30-39,West,No,0,
+C26-00366,Woman,30-39,West,No,0,1
+C26-00367,Man,40+,East & North-East,No,0,0
+C26-00368,Man,30-39,North,No,1,
+C26-00369,Man,30-39,South,No,0,0
+C26-00370,Man,21-29,North,No,1,0
+C26-00371,Man,21-29,East & North-East,No,1,1
+C26-00372,Man,30-39,West,No,0,
+C26-00373,Man,30-39,North,No,1,
+C26-00374,Man,21-29,West,No,0,0
+C26-00375,Man,21-29,North,No,1,
+C26-00376,Woman,30-39,North,No,0,
+C26-00377,Man,21-29,East & North-East,No,1,
+C26-00378,Woman,21-29,West,No,1,
+C26-00379,Man,21-29,West,No,0,0
+C26-00380,Woman,30-39,West,No,0,0
+C26-00381,Woman,40+,West,No,0,
+C26-00382,Man,30-39,East & North-East,No,0,0
+C26-00383,Woman,21-29,East & North-East,Prefer not to say,0,1
+C26-00384,Man,30-39,South,No,0,0
+C26-00385,Woman,30-39,West,No,0,1
+C26-00386,Man,30-39,West,No,1,1
+C26-00387,Man,21-29,West,No,0,0
+C26-00388,Man,30-39,South,No,0,
+C26-00389,Woman,21-29,North,No,0,0
+C26-00390,Man,40+,North,No,0,0
+C26-00391,Woman,21-29,West,No,0,0
+C26-00392,Man,21-29,South,No,0,0
+C26-00393,Man,40+,North,No,1,1
+C26-00394,Man,21-29,South,No,0,0
+C26-00395,Man,30-39,West,No,0,0
+C26-00396,Woman,21-29,North,Prefer not to say,0,
+C26-00397,Man,40+,West,No,0,
+C26-00398,Man,21-29,South,No,1,
+C26-00399,Woman,21-29,West,No,0,1
+C26-00400,Prefer not to say,30-39,South,No,0,
+C26-00401,Man,21-29,North,No,0,0
+C26-00402,Man,40+,South,Prefer not to say,0,
+C26-00403,Man,30-39,West,No,1,
+C26-00404,Man,30-39,South,Yes,0,0
+C26-00405,Man,21-29,West,No,0,0
+C26-00406,Woman,30-39,West,No,1,1
+C26-00407,Woman,21-29,West,Yes,0,1
+C26-00408,Woman,30-39,South,No,0,
+C26-00409,Woman,30-39,West,No,0,1
+C26-00410,Man,21-29,West,No,1,1
+C26-00411,Woman,40+,West,Yes,0,1
+C26-00412,Woman,30-39,East & North-East,No,0,
+C26-00413,Man,40+,West,No,0,1
+C26-00414,Man,21-29,East & North-East,No,0,
+C26-00415,Man,30-39,West,No,0,
+C26-00416,Man,30-39,East & North-East,No,1,
+C26-00417,Woman,21-29,West,Prefer not to say,1,1
+C26-00418,Woman,21-29,South,No,1,
+C26-00419,Woman,21-29,West,No,0,
+C26-00420,Man,21-29,South,No,0,1
+C26-00421,Man,21-29,East & North-East,No,1,
+C26-00422,Woman,21-29,South,No,0,1
+C26-00423,Man,30-39,East & North-East,No,0,0
+C26-00424,Prefer not to say,21-29,East & North-East,No,1,
+C26-00425,Man,21-29,North,No,1,
+C26-00426,Man,30-39,South,No,0,0
+C26-00427,Woman,21-29,North,No,0,
+C26-00428,Man,21-29,West,No,0,0
+C26-00429,Man,30-39,West,No,1,1
+C26-00430,Woman,21-29,East & North-East,Prefer not to say,0,1
+C26-00431,Man,30-39,West,No,1,
+C26-00432,Woman,40+,West,No,0,
+C26-00433,Woman,30-39,South,No,0,0
+C26-00434,Man,40+,West,No,0,1
+C26-00435,Woman,30-39,South,No,0,1
+C26-00436,Man,30-39,North,No,0,
+C26-00437,Man,21-29,West,No,0,
+C26-00438,Woman,21-29,West,No,1,
+C26-00439,Man,21-29,West,No,0,
+C26-00440,Woman,21-29,East & North-East,No,0,0
+C26-00441,Woman,21-29,West,Prefer not to say,0,
+C26-00442,Woman,21-29,North,No,0,
+C26-00443,Man,21-29,West,No,0,
+C26-00444,Woman,21-29,West,No,0,
+C26-00445,Man,21-29,East & North-East,No,0,
+C26-00446,Woman,21-29,East & North-East,No,1,
+C26-00447,Woman,30-39,East & North-East,Prefer not to say,0,0
+C26-00448,Man,21-29,West,Yes,0,
+C26-00449,Woman,30-39,North,No,0,0
+C26-00450,Man,21-29,West,No,0,
+C26-00451,Woman,30-39,South,No,0,0
+C26-00452,Man,40+,North,No,0,1
+C26-00453,Woman,21-29,South,No,0,1
+C26-00454,Man,30-39,East & North-East,No,1,1
+C26-00455,Woman,21-29,North,Yes,0,0
+C26-00456,Man,40+,West,No,0,1
+C26-00457,Man,30-39,West,No,1,1
+C26-00458,Man,30-39,West,No,0,
+C26-00459,Woman,40+,North,No,0,
+C26-00460,Woman,30-39,West,No,0,0
+C26-00461,Woman,30-39,West,No,0,0
+C26-00462,Woman,21-29,South,No,0,0
+C26-00463,Woman,21-29,West,Yes,0,0
+C26-00464,Man,30-39,East & North-East,No,0,
+C26-00465,Woman,21-29,North,No,1,
+C26-00466,Man,30-39,West,No,0,
+C26-00467,Man,30-39,North,No,1,
+C26-00468,Man,30-39,East & North-East,No,0,0
+C26-00469,Man,30-39,East & North-East,No,0,0
+C26-00470,Man,21-29,East & North-East,No,1,
+C26-00471,Man,21-29,West,Yes,0,0
+C26-00472,Man,40+,West,No,0,1
+C26-00473,Man,21-29,South,No,1,
+C26-00474,Woman,21-29,North,No,0,
+C26-00475,Woman,30-39,East & North-East,No,0,
+C26-00476,Man,30-39,East & North-East,No,1,1
+C26-00477,Man,21-29,West,No,0,
+C26-00478,Man,21-29,North,No,0,1
+C26-00479,Man,21-29,South,No,0,
+C26-00480,Woman,21-29,East & North-East,No,0,
+C26-00481,Man,21-29,South,No,0,
+C26-00482,Woman,21-29,West,No,0,1
+C26-00483,Man,21-29,West,No,0,1
+C26-00484,Man,40+,West,No,0,
+C26-00485,Man,21-29,South,No,0,
+C26-00486,Man,40+,West,No,0,
+C26-00487,Man,30-39,East & North-East,No,0,1
+C26-00488,Woman,21-29,West,No,0,
+C26-00489,Man,30-39,West,Prefer not to say,0,0
+C26-00490,Woman,30-39,West,No,0,1
+C26-00491,Man,21-29,South,No,0,
+C26-00492,Woman,30-39,South,No,0,0
+C26-00493,Man,21-29,South,No,1,0
+C26-00494,Man,30-39,West,No,0,0
+C26-00495,Man,40+,North,No,0,0
+C26-00496,Man,30-39,West,No,0,1
+C26-00497,Man,40+,South,No,1,1
+C26-00498,Man,21-29,West,No,1,1
+C26-00499,Man,40+,South,No,0,0
+C26-00500,Man,30-39,West,No,1,1
+C26-00501,Man,30-39,East & North-East,No,0,1
+C26-00502,Man,40+,West,No,0,
+C26-00503,Man,21-29,East & North-East,No,0,1
+C26-00504,Man,30-39,North,No,1,0
+C26-00505,Man,21-29,North,Prefer not to say,0,1
+C26-00506,Man,30-39,South,No,0,0
+C26-00507,Man,21-29,West,No,1,
+C26-00508,Man,40+,West,No,0,1
+C26-00509,Man,21-29,East & North-East,No,0,0
+C26-00510,Man,30-39,East & North-East,No,1,
+C26-00511,Man,21-29,South,No,0,
+C26-00512,Man,21-29,North,No,1,
+C26-00513,Man,21-29,North,No,0,1
+C26-00514,Man,21-29,West,Yes,0,
+C26-00515,Man,21-29,East & North-East,No,0,0
+C26-00516,Man,21-29,West,No,1,1
+C26-00517,Woman,30-39,South,No,0,0
+C26-00518,Man,21-29,West,No,0,0
+C26-00519,Man,30-39,West,No,0,
+C26-00520,Transgender / non-binary,40+,East & North-East,No,1,
+C26-00521,Man,30-39,East & North-East,No,1,1
+C26-00522,Woman,21-29,North,No,1,1
+C26-00523,Woman,21-29,North,No,1,
+C26-00524,Woman,30-39,West,No,1,
+C26-00525,Woman,21-29,North,Prefer not to say,1,
+C26-00526,Man,21-29,West,No,0,0
+C26-00527,Woman,40+,North,No,0,
+C26-00528,Man,30-39,South,No,1,
+C26-00529,Man,21-29,South,No,1,
+C26-00530,Woman,21-29,South,No,1,
+C26-00531,Woman,21-29,East & North-East,No,0,
+C26-00532,Woman,21-29,East & North-East,Prefer not to say,0,1
+C26-00533,Man,21-29,East & North-East,Prefer not to say,1,1
+C26-00534,Woman,30-39,North,No,1,
+C26-00535,Man,30-39,East & North-East,No,0,
+C26-00536,Woman,21-29,North,No,0,
+C26-00537,Man,21-29,North,No,0,
+C26-00538,Man,30-39,West,No,0,
+C26-00539,Woman,30-39,North,No,0,
+C26-00540,Man,21-29,West,No,0,1
+C26-00541,Man,21-29,East & North-East,Prefer not to say,0,
+C26-00542,Man,40+,West,No,0,1
+C26-00543,Man,40+,East & North-East,No,0,
+C26-00544,Man,21-29,West,No,0,0
+C26-00545,Man,30-39,North,No,0,0
+C26-00546,Man,40+,East & North-East,No,0,
+C26-00547,Man,21-29,West,No,0,
+C26-00548,Man,21-29,South,No,0,
+C26-00549,Man,21-29,South,No,1,1
+C26-00550,Man,30-39,West,No,0,1
+C26-00551,Woman,40+,North,No,0,0
+C26-00552,Man,21-29,South,No,0,
+C26-00553,Woman,30-39,West,No,0,
+C26-00554,Man,30-39,South,No,0,1
+C26-00555,Man,21-29,North,No,0,
+C26-00556,Man,30-39,North,No,0,
+C26-00557,Woman,30-39,East & North-East,No,0,1
+C26-00558,Man,21-29,North,No,1,
+C26-00559,Man,21-29,East & North-East,Prefer not to say,0,
+C26-00560,Man,21-29,North,No,0,
+C26-00561,Woman,21-29,West,No,0,
+C26-00562,Man,21-29,East & North-East,No,1,1
+C26-00563,Man,21-29,West,No,1,
+C26-00564,Man,30-39,South,No,1,1
+C26-00565,Woman,40+,South,No,0,
+C26-00566,Woman,21-29,South,No,0,0
+C26-00567,Man,30-39,South,Prefer not to say,1,
+C26-00568,Man,21-29,West,No,0,0
+C26-00569,Man,21-29,West,No,0,0
+C26-00570,Woman,30-39,North,No,0,
+C26-00571,Woman,21-29,West,No,1,
+C26-00572,Woman,21-29,West,No,0,1
+C26-00573,Man,30-39,South,No,0,0
+C26-00574,Woman,21-29,South,Prefer not to say,1,0
+C26-00575,Woman,30-39,North,No,0,1
+C26-00576,Man,21-29,West,No,1,
+C26-00577,Man,21-29,North,No,0,
+C26-00578,Woman,21-29,North,Yes,0,
+C26-00579,Man,30-39,West,No,0,
+C26-00580,Man,30-39,North,Yes,0,0
+C26-00581,Man,40+,West,No,0,
+C26-00582,Man,30-39,South,No,0,
+C26-00583,Man,21-29,West,No,1,
+C26-00584,Man,40+,North,No,0,1
+C26-00585,Man,21-29,South,No,0,0
+C26-00586,Woman,30-39,West,No,0,0
+C26-00587,Man,21-29,South,No,1,1
+C26-00588,Man,30-39,North,No,0,
+C26-00589,Woman,21-29,South,No,0,0
+C26-00590,Man,21-29,West,No,0,1
+C26-00591,Man,21-29,North,No,0,1
+C26-00592,Prefer not to say,30-39,South,Yes,0,
+C26-00593,Woman,21-29,South,No,0,
+C26-00594,Man,21-29,West,No,0,
+C26-00595,Prefer not to say,30-39,West,No,0,0
+C26-00596,Woman,30-39,South,No,0,1
+C26-00597,Man,21-29,West,No,0,
+C26-00598,Man,40+,North,No,0,
+C26-00599,Man,21-29,North,No,1,0
+C26-00600,Man,21-29,North,No,0,0
+C26-00601,Man,21-29,North,No,1,1
+C26-00602,Man,21-29,North,No,1,1
+C26-00603,Woman,30-39,East & North-East,No,0,0
+C26-00604,Man,40+,West,No,0,
+C26-00605,Woman,30-39,West,No,0,1
+C26-00606,Man,30-39,West,No,0,
+C26-00607,Man,30-39,West,No,1,1
+C26-00608,Woman,21-29,North,No,0,
+C26-00609,Woman,30-39,North,No,0,0
+C26-00610,Woman,40+,East & North-East,No,0,
+C26-00611,Man,30-39,East & North-East,No,0,0
+C26-00612,Man,21-29,East & North-East,No,0,
+C26-00613,Man,21-29,East & North-East,No,0,0
+C26-00614,Man,40+,West,No,0,0
+C26-00615,Man,30-39,West,No,1,
+C26-00616,Woman,21-29,East & North-East,No,0,1
+C26-00617,Woman,40+,East & North-East,No,0,
+C26-00618,Woman,21-29,West,No,1,
+C26-00619,Man,21-29,North,No,0,0
+C26-00620,Woman,21-29,South,No,1,
+C26-00621,Woman,30-39,West,No,0,0
+C26-00622,Man,21-29,North,No,0,0
+C26-00623,Man,30-39,East & North-East,No,0,0
+C26-00624,Man,21-29,North,No,1,0
+C26-00625,Prefer not to say,40+,East & North-East,No,0,0
+C26-00626,Woman,21-29,East & North-East,No,0,0
+C26-00627,Woman,21-29,West,No,1,1
+C26-00628,Woman,21-29,South,No,1,1
+C26-00629,Man,30-39,West,No,1,1
+C26-00630,Man,30-39,South,No,1,
+C26-00631,Woman,21-29,East & North-East,No,0,
+C26-00632,Man,21-29,South,No,0,0
+C26-00633,Woman,21-29,South,No,0,1
+C26-00634,Man,21-29,West,No,1,1
+C26-00635,Man,21-29,South,No,1,
+C26-00636,Man,30-39,East & North-East,Prefer not to say,1,1
+C26-00637,Man,21-29,North,No,0,0
+C26-00638,Woman,21-29,East & North-East,No,0,
+C26-00639,Man,21-29,South,No,1,
+C26-00640,Woman,21-29,South,No,1,
+C26-00641,Woman,21-29,West,No,1,1
+C26-00642,Prefer not to say,21-29,South,No,0,
+C26-00643,Woman,21-29,South,No,0,1
+C26-00644,Man,21-29,West,No,0,0
+C26-00645,Transgender / non-binary,40+,North,No,1,
+C26-00646,Man,21-29,West,No,0,
+C26-00647,Woman,30-39,East & North-East,No,0,
+C26-00648,Woman,30-39,East & North-East,No,0,
+C26-00649,Woman,21-29,East & North-East,No,0,0
+C26-00650,Woman,40+,West,No,0,1
+C26-00651,Man,21-29,West,No,0,0
+C26-00652,Man,21-29,West,No,0,0
+C26-00653,Man,30-39,West,Yes,1,1
+C26-00654,Man,21-29,East & North-East,No,0,
+C26-00655,Man,21-29,East & North-East,No,1,1
+C26-00656,Woman,40+,West,No,0,
+C26-00657,Woman,21-29,North,No,0,0
+C26-00658,Man,21-29,North,No,1,
+C26-00659,Prefer not to say,40+,West,Prefer not to say,0,1
+C26-00660,Woman,40+,North,No,0,
+C26-00661,Man,40+,East & North-East,Prefer not to say,0,
+C26-00662,Man,21-29,East & North-East,No,1,
+C26-00663,Woman,21-29,South,No,0,1
+C26-00664,Man,21-29,South,No,1,
+C26-00665,Man,30-39,North,No,0,
+C26-00666,Man,30-39,East & North-East,No,0,1
+C26-00667,Man,21-29,West,No,1,
+C26-00668,Woman,30-39,North,No,0,0
+C26-00669,Man,21-29,South,No,1,1
+C26-00670,Man,21-29,West,No,1,
+C26-00671,Prefer not to say,21-29,West,No,0,0
+C26-00672,Man,21-29,North,Yes,0,1
+C26-00673,Woman,21-29,North,No,0,
+C26-00674,Woman,21-29,North,No,1,1
+C26-00675,Woman,30-39,East & North-East,No,0,0
+C26-00676,Woman,40+,West,No,0,
+C26-00677,Man,21-29,South,No,0,0
+C26-00678,Woman,21-29,West,No,0,1
+C26-00679,Man,40+,West,No,0,
+C26-00680,Man,40+,West,No,0,0
+C26-00681,Man,21-29,West,No,0,
+C26-00682,Man,21-29,South,No,1,1
+C26-00683,Woman,40+,West,No,0,0
+C26-00684,Woman,40+,West,No,1,
+C26-00685,Man,30-39,South,No,0,0
+C26-00686,Man,40+,North,No,0,0
+C26-00687,Man,40+,North,No,0,
+C26-00688,Man,30-39,South,No,0,0
+C26-00689,Man,30-39,West,No,0,
+C26-00690,Man,40+,South,No,0,
+C26-00691,Woman,40+,North,No,0,
+C26-00692,Man,40+,West,No,0,
+C26-00693,Woman,30-39,North,Prefer not to say,0,0
+C26-00694,Man,21-29,North,No,0,
+C26-00695,Man,30-39,West,No,0,
+C26-00696,Woman,30-39,West,No,0,1
+C26-00697,Woman,21-29,North,No,0,
+C26-00698,Woman,30-39,North,No,0,0
+C26-00699,Man,21-29,West,No,1,
+C26-00700,Man,40+,West,No,0,0
+C26-00701,Man,21-29,West,No,0,1
+C26-00702,Woman,30-39,West,No,0,
+C26-00703,Man,30-39,South,No,0,
+C26-00704,Man,21-29,East & North-East,No,0,
+C26-00705,Woman,30-39,East & North-East,Yes,0,0
+C26-00706,Man,21-29,East & North-East,No,0,0
+C26-00707,Man,21-29,North,No,1,1
+C26-00708,Woman,30-39,West,No,1,
+C26-00709,Man,21-29,South,No,0,
+C26-00710,Woman,21-29,West,Prefer not to say,0,
+C26-00711,Man,30-39,East & North-East,No,0,0
+C26-00712,Man,30-39,South,No,0,
+C26-00713,Woman,21-29,North,No,1,
+C26-00714,Man,21-29,South,No,1,1
+C26-00715,Man,30-39,North,No,1,
+C26-00716,Man,40+,North,No,0,
+C26-00717,Man,21-29,East & North-East,Yes,0,0
+C26-00718,Man,21-29,East & North-East,No,0,0
+C26-00719,Man,21-29,East & North-East,No,0,0
+C26-00720,Woman,30-39,West,No,1,0
+C26-00721,Woman,21-29,East & North-East,No,0,0
+C26-00722,Woman,21-29,West,No,0,0
+C26-00723,Woman,21-29,West,No,0,0
+C26-00724,Woman,21-29,West,No,0,
+C26-00725,Woman,30-39,East & North-East,No,0,1
+C26-00726,Man,21-29,West,No,1,
+C26-00727,Man,30-39,South,No,0,0
+C26-00728,Man,21-29,East & North-East,No,1,
+C26-00729,Man,21-29,West,No,0,
+C26-00730,Man,21-29,West,No,1,1
+C26-00731,Man,21-29,West,No,0,0
+C26-00732,Woman,21-29,North,Prefer not to say,0,
+C26-00733,Man,21-29,West,No,1,0
+C26-00734,Woman,40+,North,No,1,1
+C26-00735,Woman,30-39,North,No,1,
+C26-00736,Man,21-29,North,No,1,
+C26-00737,Woman,21-29,East & North-East,No,0,
+C26-00738,Woman,30-39,North,Yes,0,1
+C26-00739,Woman,40+,East & North-East,No,0,0
+C26-00740,Man,21-29,South,No,0,0
+C26-00741,Man,30-39,West,No,0,1
+C26-00742,Transgender / non-binary,21-29,South,No,0,
+C26-00743,Man,21-29,North,Yes,0,
+C26-00744,Woman,21-29,East & North-East,No,1,1
+C26-00745,Man,30-39,West,No,0,0
+C26-00746,Man,30-39,North,No,1,
+C26-00747,Man,40+,West,No,0,
+C26-00748,Woman,21-29,North,No,0,
+C26-00749,Woman,40+,South,No,0,
+C26-00750,Man,30-39,North,No,1,
+C26-00751,Man,40+,North,No,0,
+C26-00752,Woman,21-29,West,No,0,1
+C26-00753,Woman,30-39,North,No,0,0
+C26-00754,Man,21-29,West,No,1,
+C26-00755,Man,30-39,North,No,0,0
+C26-00756,Woman,21-29,North,No,0,0
+C26-00757,Transgender / non-binary,21-29,West,No,0,
+C26-00758,Man,30-39,East & North-East,Yes,0,
+C26-00759,Man,30-39,West,No,1,1
+C26-00760,Man,21-29,South,No,0,
+C26-00761,Man,21-29,West,No,1,
+C26-00762,Man,30-39,West,Prefer not to say,1,1
+C26-00763,Woman,21-29,West,No,0,0
+C26-00764,Man,21-29,North,No,0,0
+C26-00765,Man,30-39,West,No,1,1
+C26-00766,Woman,21-29,South,No,0,
+C26-00767,Woman,30-39,West,No,0,
+C26-00768,Man,21-29,East & North-East,No,0,1
+C26-00769,Woman,40+,West,No,0,0
+C26-00770,Man,21-29,West,No,0,0
+C26-00771,Woman,21-29,East & North-East,Yes,0,0
+C26-00772,Man,21-29,South,No,0,0
+C26-00773,Woman,21-29,West,Prefer not to say,1,
+C26-00774,Man,30-39,East & North-East,No,1,1
+C26-00775,Man,21-29,South,No,0,
+C26-00776,Man,40+,South,No,0,
+C26-00777,Woman,21-29,West,No,0,0
+C26-00778,Man,40+,West,No,0,
+C26-00779,Woman,21-29,West,No,1,1
+C26-00780,Man,30-39,South,Yes,0,
+C26-00781,Man,21-29,West,No,0,
+C26-00782,Man,21-29,East & North-East,No,1,1
+C26-00783,Man,21-29,South,No,0,
+C26-00784,Woman,21-29,North,No,0,
+C26-00785,Man,21-29,North,No,0,1
+C26-00786,Woman,30-39,West,No,0,
+C26-00787,Woman,21-29,West,No,0,1
+C26-00788,Man,30-39,West,No,1,1
+C26-00789,Man,21-29,West,No,1,
+C26-00790,Man,21-29,North,No,0,
+C26-00791,Woman,21-29,South,No,1,1
+C26-00792,Man,40+,South,No,0,0
+C26-00793,Man,30-39,West,No,0,
+C26-00794,Man,30-39,East & North-East,No,1,1
+C26-00795,Prefer not to say,21-29,North,No,1,0
+C26-00796,Man,21-29,West,No,0,0
+C26-00797,Man,40+,North,No,0,0
+C26-00798,Man,30-39,West,No,0,1
+C26-00799,Man,30-39,East & North-East,No,0,0
+C26-00800,Woman,30-39,West,No,0,0
+C26-00801,Woman,30-39,West,No,0,0
+C26-00802,Woman,30-39,West,No,0,0
+C26-00803,Man,30-39,West,No,0,0
+C26-00804,Man,30-39,South,No,1,
+C26-00805,Woman,21-29,South,No,0,
+C26-00806,Woman,21-29,South,No,1,
+C26-00807,Man,21-29,West,No,0,
+C26-00808,Man,40+,East & North-East,No,0,1
+C26-00809,Man,30-39,South,Yes,0,
+C26-00810,Man,21-29,East & North-East,No,1,0
+C26-00811,Woman,40+,South,No,0,0
+C26-00812,Man,30-39,North,No,1,0
+C26-00813,Man,21-29,West,No,0,0
+C26-00814,Man,40+,North,Yes,0,0
+C26-00815,Transgender / non-binary,21-29,South,No,0,0
+C26-00816,Woman,21-29,West,No,1,0
+C26-00817,Man,30-39,North,No,0,
+C26-00818,Man,30-39,North,No,0,
+C26-00819,Man,21-29,North,Prefer not to say,1,
+C26-00820,Man,30-39,West,No,0,0
+C26-00821,Woman,30-39,West,No,0,
+C26-00822,Man,30-39,East & North-East,No,0,
+C26-00823,Woman,21-29,East & North-East,No,0,
+C26-00824,Man,30-39,West,No,0,
+C26-00825,Man,30-39,West,No,0,
+C26-00826,Woman,21-29,South,No,0,0
+C26-00827,Man,30-39,East & North-East,No,0,
+C26-00828,Woman,30-39,South,No,0,0
+C26-00829,Man,30-39,South,Yes,0,
+C26-00830,Man,30-39,West,No,0,
+C26-00831,Man,21-29,West,No,1,1
+C26-00832,Man,21-29,North,No,0,
+C26-00833,Woman,21-29,East & North-East,No,0,
+C26-00834,Man,21-29,South,No,1,1
+C26-00835,Man,21-29,South,No,0,0
+C26-00836,Woman,40+,West,No,0,
+C26-00837,Man,30-39,South,No,0,0
+C26-00838,Man,21-29,East & North-East,No,0,
+C26-00839,Man,21-29,West,No,0,1
+C26-00840,Man,30-39,North,No,0,0
+C26-00841,Woman,21-29,West,No,0,
+C26-00842,Man,21-29,North,No,1,
+C26-00843,Woman,21-29,South,No,0,
+C26-00844,Woman,21-29,North,No,1,1
+C26-00845,Woman,21-29,East & North-East,No,1,
+C26-00846,Man,40+,West,No,0,
+C26-00847,Man,30-39,North,No,0,
+C26-00848,Man,21-29,East & North-East,No,0,
+C26-00849,Woman,21-29,West,No,0,
+C26-00850,Man,30-39,West,No,1,1
+C26-00851,Woman,21-29,West,No,0,
+C26-00852,Man,21-29,South,No,1,1
+C26-00853,Man,30-39,North,No,1,
+C26-00854,Woman,40+,South,No,0,1
+C26-00855,Woman,30-39,West,No,0,0
+C26-00856,Woman,30-39,West,No,0,1
+C26-00857,Man,21-29,West,Yes,0,1
+C26-00858,Man,40+,North,No,0,
+C26-00859,Woman,21-29,West,No,0,0
+C26-00860,Woman,21-29,West,No,0,0
+C26-00861,Man,30-39,East & North-East,No,0,0
+C26-00862,Woman,21-29,South,No,0,
+C26-00863,Man,21-29,North,No,0,0
+C26-00864,Man,30-39,South,No,0,1
+C26-00865,Woman,21-29,South,No,0,
+C26-00866,Man,21-29,South,No,1,0
+C26-00867,Man,30-39,South,No,0,0
+C26-00868,Man,40+,North,No,0,0
+C26-00869,Man,21-29,West,No,1,1
+C26-00870,Man,40+,West,No,0,1
+C26-00871,Woman,21-29,West,No,0,0
+C26-00872,Man,21-29,North,No,0,1
+C26-00873,Woman,30-39,South,No,0,
+C26-00874,Man,21-29,South,No,0,
+C26-00875,Woman,21-29,West,No,0,0
+C26-00876,Man,40+,East & North-East,No,0,
+C26-00877,Man,30-39,West,No,1,
+C26-00878,Woman,21-29,West,No,0,
+C26-00879,Man,21-29,North,No,0,
+C26-00880,Man,30-39,South,No,0,0
+C26-00881,Man,30-39,North,No,1,1
+C26-00882,Woman,21-29,East & North-East,Yes,0,1
+C26-00883,Woman,40+,North,No,1,
+C26-00884,Woman,21-29,South,No,1,
+C26-00885,Man,21-29,West,No,1,1
+C26-00886,Woman,21-29,South,No,0,0
+C26-00887,Man,21-29,East & North-East,No,0,0
+C26-00888,Man,21-29,West,No,0,
+C26-00889,Man,21-29,North,Prefer not to say,0,
+C26-00890,Man,30-39,North,Prefer not to say,0,
+C26-00891,Man,30-39,South,Prefer not to say,0,1
+C26-00892,Woman,30-39,South,No,1,1
+C26-00893,Man,30-39,North,No,0,0
+C26-00894,Woman,21-29,North,No,0,
+C26-00895,Woman,21-29,South,No,0,0
+C26-00896,Man,30-39,North,No,0,1
+C26-00897,Woman,40+,North,No,0,
+C26-00898,Man,21-29,North,No,0,0
+C26-00899,Woman,21-29,West,No,0,
+C26-00900,Man,21-29,South,No,1,1
+C26-00901,Woman,21-29,South,No,1,1
+C26-00902,Man,21-29,East & North-East,No,0,1
+C26-00903,Man,21-29,South,Prefer not to say,0,0
+C26-00904,Woman,21-29,North,No,0,0
+C26-00905,Woman,30-39,West,No,0,0
+C26-00906,Man,21-29,East & North-East,No,0,0
+C26-00907,Man,30-39,West,No,1,0
+C26-00908,Woman,21-29,South,No,0,1
+C26-00909,Man,30-39,East & North-East,Prefer not to say,0,1
+C26-00910,Woman,21-29,South,No,0,1
+C26-00911,Man,21-29,West,No,0,
+C26-00912,Man,21-29,South,No,0,0
+C26-00913,Woman,21-29,South,No,1,1
+C26-00914,Man,21-29,North,No,0,0
+C26-00915,Man,30-39,North,Prefer not to say,0,0
+C26-00916,Man,21-29,West,No,0,
+C26-00917,Woman,30-39,West,No,0,1
+C26-00918,Man,30-39,East & North-East,Prefer not to say,0,
+C26-00919,Man,40+,North,No,0,
+C26-00920,Man,21-29,East & North-East,No,0,1
+C26-00921,Man,30-39,East & North-East,No,1,
+C26-00922,Man,21-29,North,No,0,
+C26-00923,Woman,21-29,East & North-East,No,0,0
+C26-00924,Man,30-39,West,No,0,
+C26-00925,Woman,21-29,West,No,0,1
+C26-00926,Woman,40+,South,No,0,1
+C26-00927,Woman,30-39,East & North-East,No,0,0
+C26-00928,Man,21-29,East & North-East,No,0,0
+C26-00929,Man,40+,North,No,0,
+C26-00930,Man,21-29,South,No,1,1
+C26-00931,Man,30-39,South,No,0,0
+C26-00932,Woman,21-29,South,No,0,
+C26-00933,Woman,40+,North,No,0,1
+C26-00934,Woman,21-29,South,No,0,0
+C26-00935,Man,30-39,South,Prefer not to say,0,
+C26-00936,Man,40+,West,No,0,0
+C26-00937,Man,21-29,East & North-East,No,0,1
+C26-00938,Man,21-29,West,No,0,0
+C26-00939,Man,30-39,South,No,1,1
+C26-00940,Woman,40+,West,No,0,0
+C26-00941,Man,21-29,West,No,0,0
+C26-00942,Man,21-29,East & North-East,Yes,0,
+C26-00943,Woman,30-39,South,No,0,
+C26-00944,Man,30-39,West,No,0,0
+C26-00945,Man,40+,West,No,0,
+C26-00946,Woman,21-29,West,No,0,0
+C26-00947,Man,21-29,East & North-East,No,0,
+C26-00948,Woman,30-39,North,No,0,
+C26-00949,Man,21-29,West,No,0,
+C26-00950,Man,21-29,North,No,0,0
+C26-00951,Man,21-29,East & North-East,No,0,1
+C26-00952,Woman,30-39,West,No,0,
+C26-00953,Man,30-39,East & North-East,No,0,
+C26-00954,Man,21-29,North,No,0,
+C26-00955,Woman,30-39,West,Prefer not to say,0,
+C26-00956,Man,21-29,North,No,1,0
+C26-00957,Man,30-39,South,No,0,0
+C26-00958,Man,21-29,East & North-East,No,0,1
+C26-00959,Man,21-29,West,No,1,1
+C26-00960,Woman,21-29,South,No,1,1
+C26-00961,Man,21-29,West,Prefer not to say,0,0
+C26-00962,Man,21-29,West,No,1,1
+C26-00963,Woman,21-29,North,No,1,
+C26-00964,Man,21-29,West,No,1,1
+C26-00965,Woman,40+,East & North-East,No,0,
+C26-00966,Man,21-29,North,No,0,
+C26-00967,Man,40+,South,No,1,1
+C26-00968,Man,40+,South,No,0,0
+C26-00969,Man,40+,South,No,0,0
+C26-00970,Man,21-29,West,No,1,1
+C26-00971,Woman,30-39,East & North-East,No,0,0
+C26-00972,Woman,40+,North,No,0,1
+C26-00973,Man,30-39,North,No,0,
+C26-00974,Man,21-29,East & North-East,No,0,
+C26-00975,Man,30-39,West,No,1,1
+C26-00976,Man,21-29,West,No,1,0
+C26-00977,Woman,30-39,North,No,0,
+C26-00978,Woman,40+,South,No,0,
+C26-00979,Man,21-29,West,No,1,1
+C26-00980,Woman,21-29,North,No,0,
+C26-00981,Man,30-39,South,No,0,
+C26-00982,Man,21-29,East & North-East,No,0,0
+C26-00983,Man,30-39,West,No,1,1
+C26-00984,Man,40+,South,No,0,1
+C26-00985,Woman,21-29,South,No,0,0
+C26-00986,Woman,21-29,East & North-East,No,0,1
+C26-00987,Man,21-29,West,No,0,
+C26-00988,Man,21-29,North,No,1,
+C26-00989,Man,21-29,West,No,0,0
+C26-00990,Man,21-29,West,No,0,
+C26-00991,Man,21-29,West,No,1,
+C26-00992,Man,21-29,West,No,1,
+C26-00993,Man,21-29,West,No,0,
+C26-00994,Woman,30-39,South,No,0,
+C26-00995,Man,21-29,North,No,1,1
+C26-00996,Woman,21-29,West,No,1,1
+C26-00997,Woman,21-29,West,No,0,
+C26-00998,Man,30-39,West,Yes,0,
+C26-00999,Man,21-29,West,No,1,1
+C26-01000,Woman,30-39,West,No,1,1
+C26-01001,Man,21-29,North,No,0,
+C26-01002,Man,30-39,West,No,1,
+C26-01003,Man,40+,East & North-East,No,0,1
+C26-01004,Man,21-29,West,No,0,
+C26-01005,Woman,21-29,East & North-East,No,0,1
+C26-01006,Woman,21-29,West,No,0,0
+C26-01007,Woman,30-39,East & North-East,Yes,0,
+C26-01008,Man,30-39,East & North-East,No,0,
+C26-01009,Man,21-29,West,No,0,0
+C26-01010,Woman,21-29,West,Prefer not to say,0,1
+C26-01011,Woman,21-29,South,No,0,
+C26-01012,Man,30-39,West,No,0,
+C26-01013,Woman,21-29,West,No,1,
+C26-01014,Man,40+,South,No,0,1
+C26-01015,Man,30-39,East & North-East,No,0,0
+C26-01016,Woman,30-39,East & North-East,No,0,0
+C26-01017,Man,30-39,West,Yes,1,
+C26-01018,Man,21-29,East & North-East,No,0,
+C26-01019,Man,30-39,North,No,1,1
+C26-01020,Man,30-39,West,No,0,
+C26-01021,Man,30-39,East & North-East,No,0,0
+C26-01022,Man,21-29,West,No,0,0
+C26-01023,Man,30-39,South,No,0,0
+C26-01024,Man,21-29,West,No,1,
+C26-01025,Woman,30-39,East & North-East,No,0,
+C26-01026,Man,21-29,East & North-East,No,0,
+C26-01027,Man,30-39,North,No,0,0
+C26-01028,Woman,30-39,South,No,0,1
+C26-01029,Woman,21-29,West,No,0,
+C26-01030,Prefer not to say,21-29,South,No,1,
+C26-01031,Man,30-39,West,No,0,
+C26-01032,Man,21-29,East & North-East,No,0,0
+C26-01033,Man,21-29,North,No,1,
+C26-01034,Woman,30-39,West,No,0,1
+C26-01035,Man,40+,North,Prefer not to say,0,1
+C26-01036,Woman,30-39,North,No,0,0
+C26-01037,Man,21-29,West,No,0,0
+C26-01038,Man,21-29,East & North-East,No,0,0
+C26-01039,Woman,21-29,West,No,0,1
+C26-01040,Prefer not to say,30-39,West,No,0,0
+C26-01041,Man,30-39,West,Prefer not to say,0,
+C26-01042,Man,30-39,North,No,0,0
+C26-01043,Man,40+,South,No,0,1
+C26-01044,Man,21-29,East & North-East,No,0,
+C26-01045,Man,40+,East & North-East,No,0,
+C26-01046,Man,30-39,North,No,1,
+C26-01047,Man,21-29,South,No,0,
+C26-01048,Woman,21-29,West,No,0,1
+C26-01049,Man,30-39,East & North-East,No,0,0
+C26-01050,Man,21-29,West,No,0,
+C26-01051,Woman,21-29,North,No,1,
+C26-01052,Man,21-29,South,No,0,
+C26-01053,Woman,30-39,West,No,0,
+C26-01054,Man,21-29,West,Prefer not to say,0,0
+C26-01055,Woman,30-39,South,No,0,0
+C26-01056,Man,21-29,South,No,0,0
+C26-01057,Woman,21-29,North,No,0,0
+C26-01058,Man,30-39,East & North-East,Prefer not to say,0,
+C26-01059,Man,30-39,East & North-East,Yes,0,0
+C26-01060,Man,21-29,North,No,0,
+C26-01061,Man,21-29,South,No,0,
+C26-01062,Man,21-29,South,No,0,
+C26-01063,Woman,21-29,East & North-East,No,0,
+C26-01064,Man,40+,West,No,0,
+C26-01065,Woman,30-39,West,No,0,
+C26-01066,Woman,21-29,West,No,1,
+C26-01067,Man,40+,West,No,1,1
+C26-01068,Man,21-29,North,No,0,
+C26-01069,Woman,30-39,South,No,1,1
+C26-01070,Man,30-39,South,No,0,
+C26-01071,Man,30-39,North,No,1,
+C26-01072,Man,21-29,West,No,0,
+C26-01073,Man,21-29,South,No,1,0
+C26-01074,Man,21-29,East & North-East,No,1,
+C26-01075,Man,30-39,West,No,0,0
+C26-01076,Woman,21-29,North,No,0,
+C26-01077,Man,30-39,South,No,1,1
+C26-01078,Man,21-29,East & North-East,No,0,0
+C26-01079,Man,21-29,West,Prefer not to say,0,
+C26-01080,Man,21-29,West,No,0,1
+C26-01081,Man,40+,East & North-East,Yes,0,1
+C26-01082,Man,21-29,West,Yes,0,0
+C26-01083,Man,40+,West,No,0,1
+C26-01084,Man,21-29,West,No,1,
+C26-01085,Man,21-29,East & North-East,No,0,
+C26-01086,Man,21-29,West,No,1,
+C26-01087,Man,21-29,East & North-East,No,0,
+C26-01088,Woman,30-39,South,No,0,
+C26-01089,Man,30-39,West,No,0,0
+C26-01090,Woman,21-29,South,No,0,0
+C26-01091,Man,30-39,West,No,0,0
+C26-01092,Man,30-39,West,No,0,
+C26-01093,Man,21-29,West,No,1,
+C26-01094,Man,21-29,West,No,0,1
+C26-01095,Man,21-29,East & North-East,No,1,
+C26-01096,Man,30-39,West,No,0,0
+C26-01097,Man,40+,North,No,0,0
+C26-01098,Transgender / non-binary,21-29,East & North-East,No,0,
+C26-01099,Man,30-39,East & North-East,Yes,0,1
+C26-01100,Woman,21-29,East & North-East,No,0,0
+C26-01101,Woman,21-29,West,No,0,0
+C26-01102,Prefer not to say,30-39,North,No,1,
+C26-01103,Man,21-29,West,No,1,1
+C26-01104,Woman,30-39,North,No,0,
+C26-01105,Man,30-39,South,No,0,0
+C26-01106,Man,21-29,West,No,0,0
+C26-01107,Woman,30-39,East & North-East,No,1,
+C26-01108,Man,21-29,North,No,0,1
+C26-01109,Man,30-39,West,No,1,0
+C26-01110,Man,30-39,North,Prefer not to say,0,1
+C26-01111,Woman,21-29,South,No,1,0
+C26-01112,Man,21-29,North,No,1,
+C26-01113,Prefer not to say,21-29,North,No,0,0
+C26-01114,Prefer not to say,21-29,South,No,0,0
+C26-01115,Man,40+,South,No,0,1
+C26-01116,Man,30-39,East & North-East,No,0,
+C26-01117,Man,21-29,West,No,1,
+C26-01118,Man,40+,East & North-East,No,0,0
+C26-01119,Man,21-29,West,No,1,
+C26-01120,Woman,21-29,South,No,0,
+C26-01121,Woman,30-39,South,Yes,0,
+C26-01122,Woman,30-39,South,No,0,
+C26-01123,Man,21-29,South,No,0,
+C26-01124,Man,21-29,West,No,1,
+C26-01125,Man,30-39,South,No,1,
+C26-01126,Man,40+,West,No,0,0
+C26-01127,Woman,30-39,East & North-East,No,0,
+C26-01128,Man,30-39,West,No,1,
+C26-01129,Man,30-39,North,Prefer not to say,0,
+C26-01130,Transgender / non-binary,21-29,South,No,0,
+C26-01131,Man,21-29,South,No,0,
+C26-01132,Woman,40+,North,No,0,1
+C26-01133,Man,30-39,North,Prefer not to say,1,
+C26-01134,Woman,30-39,West,Prefer not to say,0,
+C26-01135,Woman,30-39,West,No,0,1
+C26-01136,Woman,30-39,East & North-East,No,0,
+C26-01137,Man,21-29,West,No,0,0
+C26-01138,Man,21-29,West,No,0,
+C26-01139,Man,21-29,North,Yes,0,
+C26-01140,Woman,21-29,West,No,1,1
+C26-01141,Woman,21-29,West,No,0,0
+C26-01142,Man,40+,North,No,0,
+C26-01143,Man,30-39,West,No,0,0
+C26-01144,Woman,30-39,East & North-East,No,0,0
+C26-01145,Man,30-39,West,No,0,
+C26-01146,Man,40+,West,No,0,0
+C26-01147,Woman,21-29,West,No,0,1
+C26-01148,Woman,21-29,East & North-East,No,0,0
+C26-01149,Man,21-29,West,No,0,0
+C26-01150,Man,40+,South,No,0,1
+C26-01151,Woman,21-29,North,No,0,0
+C26-01152,Man,30-39,East & North-East,No,0,
+C26-01153,Woman,40+,West,No,0,
+C26-01154,Woman,30-39,North,No,0,0
+C26-01155,Man,40+,West,No,0,
+C26-01156,Woman,21-29,East & North-East,No,0,0
+C26-01157,Woman,30-39,South,No,0,
+C26-01158,Man,30-39,South,No,1,0
+C26-01159,Woman,30-39,South,No,0,1
+C26-01160,Man,21-29,West,No,1,
+C26-01161,Man,21-29,West,No,0,0
+C26-01162,Man,40+,South,Prefer not to say,1,
+C26-01163,Man,21-29,South,No,0,0
+C26-01164,Man,21-29,South,No,1,
+C26-01165,Man,21-29,South,No,0,0
+C26-01166,Woman,21-29,West,No,0,1
+C26-01167,Woman,21-29,South,No,0,
+C26-01168,Woman,21-29,South,No,1,
+C26-01169,Woman,21-29,North,No,0,
+C26-01170,Man,21-29,West,No,1,0
+C26-01171,Woman,30-39,South,No,0,1
+C26-01172,Woman,21-29,East & North-East,No,0,0
+C26-01173,Man,21-29,West,No,0,
+C26-01174,Man,30-39,North,No,0,
+C26-01175,Man,30-39,North,No,0,
+C26-01176,Woman,30-39,South,No,0,0
+C26-01177,Prefer not to say,21-29,West,No,0,
+C26-01178,Woman,21-29,West,No,0,0
+C26-01179,Woman,40+,West,No,0,0
+C26-01180,Man,30-39,North,Prefer not to say,0,
+C26-01181,Prefer not to say,30-39,West,No,0,0
+C26-01182,Man,30-39,North,No,1,1
+C26-01183,Man,21-29,South,No,0,
+C26-01184,Woman,30-39,West,No,0,0
+C26-01185,Man,21-29,North,No,1,
+C26-01186,Man,30-39,West,No,0,0
+C26-01187,Man,21-29,East & North-East,No,0,0
+C26-01188,Man,21-29,East & North-East,No,0,1
+C26-01189,Man,21-29,West,No,0,
+C26-01190,Man,21-29,West,No,0,0
+C26-01191,Man,21-29,West,No,0,1
+C26-01192,Man,21-29,North,No,1,1
+C26-01193,Man,21-29,South,No,0,
+C26-01194,Man,40+,South,No,1,
+C26-01195,Woman,30-39,East & North-East,No,0,
+C26-01196,Man,30-39,South,No,1,1
+C26-01197,Man,21-29,West,No,0,0
+C26-01198,Woman,21-29,North,No,0,1
+C26-01199,Woman,21-29,North,No,0,0
+C26-01200,Woman,21-29,North,No,0,

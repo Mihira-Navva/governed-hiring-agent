@@ -1,0 +1,152 @@
+{
+  "_about": "Risk tiering rubric for AI in hiring. Scores seven dimensions 0-3, applies a floor for systems that evaluate candidates, and checks prohibitions and red lines. Version-controlled: change the rubric here, never in the script.",
+  "prohibited_primary_functions": {
+    "video_interview_affect_analysis": {
+      "id": "PR-01",
+      "title": "Emotion or affect recognition as the basis of candidate evaluation",
+      "basis": "EU AI Act Art. 5(1)(f) prohibits emotion recognition in the workplace (in force since 2 Feb 2025). Adopted organisation-wide as policy POL-AI-07 for all jurisdictions: the scientific basis for inferring emotion or personality from faces and voices is weak and the harm to candidates is serious."
+    }
+  },
+  "red_lines": {
+    "RL-01": {
+      "title": "Emotion, affect or personality inferred from face, voice or behaviour",
+      "trigger": "system.techniques.emotion_or_affect_inference == true",
+      "basis": "EU AI Act Art. 5(1)(f); policy POL-AI-07.",
+      "remediable": true,
+      "remedy": "Remove the module entirely (switching it off in configuration is not enough if scores are still computed or stored)."
+    },
+    "RL-02": {
+      "title": "Automated rejection in practice: rejections that rest on judgment are not reviewed by a person",
+      "trigger": "automation_level in [auto_archive, auto_reject, fully_automated]; OR auto_reject_hard_requirements without a person reviewing every judgment-based rejection; OR any other level where no person reviews every rejection",
+      "basis": "Policy POL-AI-03 (no consequential decision about a person without meaningful human review); India AI Governance Guidelines 'People First' sutra; GDPR Art. 22 and EU AI Act Art. 26(2) where EU candidates are in scope.",
+      "remediable": true,
+      "remedy": "A trained recruiter reviews every rejection that rests on a judgment of ability. Automated rejection is allowed only for documented, verifiable hard requirements, with notice, appeal and audit."
+    },
+    "RL-04": {
+      "title": "Vendor refuses independent audit access",
+      "trigger": "vendor_governance.allows_independent_audit == false",
+      "basis": "Policy POL-AI-05 (no high-risk system the organisation cannot verify).",
+      "remediable": true,
+      "remedy": "Contractual audit rights, or choose another vendor."
+    },
+    "RL-06": {
+      "title": "Biometric categorisation inferring protected characteristics",
+      "trigger": "system.techniques.biometric_categorisation == true",
+      "basis": "EU AI Act Art. 5(1)(g); policy POL-AI-07.",
+      "remediable": true,
+      "remedy": "Remove biometric categorisation."
+    }
+  },
+  "evaluative_functions": [
+    "cv_screening_ranking",
+    "assessment_scoring",
+    "video_interview_scoring",
+    "video_interview_affect_analysis",
+    "chatbot_prescreening"
+  ],
+  "evaluative_stages": [
+    "initial_screening",
+    "assessment",
+    "interview",
+    "final_selection"
+  ],
+  "automation_scores": {
+    "advisory_only": 0,
+    "assistive_ranking": 1,
+    "auto_shortlist": 2,
+    "auto_reject_hard_requirements": 2,
+    "auto_archive": 3,
+    "auto_reject": 3,
+    "fully_automated": 3
+  },
+  "scale_bands": [
+    [
+      1000,
+      0
+    ],
+    [
+      10000,
+      1
+    ],
+    [
+      50000,
+      2
+    ]
+  ],
+  "scale_top_score": 3,
+  "tiers": [
+    {
+      "tier": "T1",
+      "label": "Low",
+      "max_score": 5
+    },
+    {
+      "tier": "T2",
+      "label": "Moderate",
+      "max_score": 10
+    },
+    {
+      "tier": "T3",
+      "label": "High",
+      "max_score": 15
+    },
+    {
+      "tier": "T4",
+      "label": "Very high",
+      "max_score": 21
+    }
+  ],
+  "evaluative_floor": "T3",
+  "review_requirements": {
+    "T1": {
+      "approver": "Business line head",
+      "reviewers": [
+        "Data Protection Officer (notification only)"
+      ],
+      "re_review_months": 24,
+      "conditions_mandatory": false
+    },
+    "T2": {
+      "approver": "AI Approval Committee chair",
+      "reviewers": [
+        "Data Protection Officer",
+        "HR Policy"
+      ],
+      "re_review_months": 12,
+      "conditions_mandatory": false
+    },
+    "T3": {
+      "approver": "AI Approval Committee (quorum)",
+      "reviewers": [
+        "Legal Counsel",
+        "Data Protection Officer",
+        "Chief Human Resources Officer",
+        "Independent fairness reviewer"
+      ],
+      "re_review_months": 6,
+      "conditions_mandatory": true
+    },
+    "T4": {
+      "approver": "AI Approval Committee + Board Risk Committee",
+      "reviewers": [
+        "Legal Counsel",
+        "Data Protection Officer",
+        "Chief Human Resources Officer",
+        "External independent auditor",
+        "Ethics Board"
+      ],
+      "re_review_months": 3,
+      "conditions_mandatory": true,
+      "pilot_required": true
+    },
+    "PROHIBITED": {
+      "approver": "Not approvable",
+      "reviewers": [
+        "Legal Counsel",
+        "Ethics Board (for the record)"
+      ],
+      "re_review_months": null,
+      "conditions_mandatory": null
+    }
+  }
+}

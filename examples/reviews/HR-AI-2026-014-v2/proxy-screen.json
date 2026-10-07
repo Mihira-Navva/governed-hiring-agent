@@ -1,0 +1,71 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "verdict": "JUSTIFY",
+  "feature_count": 5,
+  "counts": {
+    "PROTECTED": 0,
+    "STRONG_PROXY": 0,
+    "MODERATE_PROXY": 1,
+    "JOB_RELATED": 4,
+    "UNCLASSIFIED": 0
+  },
+  "features": [
+    {
+      "feature": "Skills assessment score (work sample: mock customer call and loan-eligibility case exercise)",
+      "category": "JOB_RELATED",
+      "rule": "J-ASSESSMENT",
+      "linked_attributes": [],
+      "rationale": "Direct measures of job-relevant ability, given to every candidate the same way.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": [
+        "J-SKILLS"
+      ]
+    },
+    {
+      "feature": "Relevant certification (NISM / IRDAI where the role requires it)",
+      "category": "JOB_RELATED",
+      "rule": "J-CERT",
+      "linked_attributes": [],
+      "rationale": "Legally or technically required credentials for the role.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Relevant sales experience (minimum threshold only, not scored above it)",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "linked_attributes": [],
+      "rationale": "Job-relevant if defined from a job analysis and extracted accurately.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Structured screening questions (field-work availability; two-wheeler licence for collections)",
+      "category": "JOB_RELATED",
+      "rule": "J-CERT",
+      "linked_attributes": [],
+      "rationale": "Legally or technically required credentials for the role.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Language proficiency required for the branch, tested in the assessment",
+      "category": "MODERATE_PROXY",
+      "rule": "M-LANGUAGES",
+      "linked_attributes": [
+        "class",
+        "region",
+        "schooling medium"
+      ],
+      "rationale": "Legitimate only where the role needs the language; then test it directly rather than infer it.",
+      "action": "Keep only with a written job-relatedness justification and a bias test of this feature.",
+      "also_matched": []
+    }
+  ],
+  "features_to_remove": [],
+  "features_to_justify": [
+    "Language proficiency required for the branch, tested in the assessment"
+  ],
+  "red_lines": [],
+  "limits": "Keyword screening finds proxies that are named. It cannot find proxies hidden inside composite scores or learned from free text; only outcome testing by group (adverse_impact.py) can show those."
+}

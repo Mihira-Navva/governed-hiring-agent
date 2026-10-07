@@ -1,0 +1,16 @@
+{
+  "proposal_id": "HR-AI-2026-021",
+  "status": "COMPLETE",
+  "fields_provided": 63,
+  "fields_total": 63,
+  "completeness_pct": 100.0,
+  "blocking_missing": [],
+  "important_missing": [],
+  "invalid_values": [],
+  "consistency_warnings": [],
+  "claims_needing_evidence": [
+    "Enterprise terms prohibiting the model provider from training on candidate data: Legal to file the clause.",
+    "Parser accuracy on regional CV formats: report to be attached."
+  ],
+  "integrity_observations": []
+}

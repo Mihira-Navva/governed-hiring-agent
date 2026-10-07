@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-07",
+  "catalog_published_on": "2026-10-07",
+  "skills": [
+    {
+      "name": "approval-decision-memo",
+      "version": "1.1.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "fairness-bias-review",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "hiring-decisions",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "hiring-guardrails",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "job-requisition",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "legal-privacy-review",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "resume-screening",
+      "version": "1.0.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "risk-tiering",
+      "version": "1.1.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    },
+    {
+      "name": "use-case-intake",
+      "version": "1.1.0",
+      "result": "PASS",
+      "checks": {
+        "integrity": "PASS",
+        "status": "PASS",
+        "currency": "PASS",
+        "format": "PASS",
+        "permissions": "PASS"
+      }
+    }
+  ]
+}

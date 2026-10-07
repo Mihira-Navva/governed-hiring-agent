@@ -1,0 +1,74 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "tier": "T4",
+  "tier_label": "Very high",
+  "score": 21,
+  "max_score": 21,
+  "evaluative_floor_applied": false,
+  "dimensions": {
+    "consequence": {
+      "score": 3,
+      "reason": "Evaluates candidates (cv_screening_ranking at initial_screening stage): outcome affects access to employment"
+    },
+    "automation": {
+      "score": 3,
+      "reason": "Automation level 'auto_archive'"
+    },
+    "scale": {
+      "score": 3,
+      "reason": "60,000 applications a year"
+    },
+    "data_sensitivity": {
+      "score": 3,
+      "reason": "Biometric or affect inference"
+    },
+    "opacity": {
+      "score": 3,
+      "reason": "no individual explanations; no model documentation; third-party or unclear provenance"
+    },
+    "contestability_gap": {
+      "score": 3,
+      "reason": "no appeal channel; no human alternative on request; no named grievance officer"
+    },
+    "oversight_weakness": {
+      "score": 3,
+      "reason": "reviewers not trained; overrides not logged; AI score seen before reviewer forms own view (anchoring)"
+    }
+  },
+  "prohibited_purpose": [],
+  "red_lines": [
+    {
+      "id": "RL-01",
+      "title": "Emotion, affect or personality inferred from face, voice or behaviour",
+      "trigger": "system.techniques.emotion_or_affect_inference == true",
+      "basis": "EU AI Act Art. 5(1)(f); policy POL-AI-07.",
+      "remediable": true,
+      "remedy": "Remove the module entirely (switching it off in configuration is not enough if scores are still computed or stored)."
+    },
+    {
+      "id": "RL-02",
+      "title": "Automated rejection in practice: rejections that rest on judgment are not reviewed by a person",
+      "trigger": "automation_level in [auto_archive, auto_reject, fully_automated]; OR auto_reject_hard_requirements without a person reviewing every judgment-based rejection; OR any other level where no person reviews every rejection",
+      "basis": "Policy POL-AI-03 (no consequential decision about a person without meaningful human review); India AI Governance Guidelines 'People First' sutra; GDPR Art. 22 and EU AI Act Art. 26(2) where EU candidates are in scope.",
+      "remediable": true,
+      "remedy": "A trained recruiter reviews every rejection that rests on a judgment of ability. Automated rejection is allowed only for documented, verifiable hard requirements, with notice, appeal and audit."
+    }
+  ],
+  "review_requirements": {
+    "approver": "AI Approval Committee + Board Risk Committee",
+    "reviewers": [
+      "Legal Counsel",
+      "Data Protection Officer",
+      "Chief Human Resources Officer",
+      "External independent auditor",
+      "Ethics Board"
+    ],
+    "re_review_months": 3,
+    "conditions_mandatory": true,
+    "pilot_required": true
+  },
+  "regulatory_classification": {
+    "eu_ai_act": "High-risk (Annex III, point 4: employment, recruitment and selection)",
+    "eu_ai_act_note": "Annex III high-risk obligations apply from 2 Dec 2027 (Digital Omnibus on AI, in force 27 Jul 2026). Art. 5 prohibitions already apply. Relevant only where EU candidates are in scope; used here as a benchmark."
+  }
+}

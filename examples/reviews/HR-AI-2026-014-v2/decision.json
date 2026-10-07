@@ -1,0 +1,106 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "outcome": "APPROVE_WITH_CONDITIONS",
+  "outcome_label": "Approve with conditions",
+  "rule_fired": "D5",
+  "risk_tier": "T3",
+  "rationale": [
+    {
+      "finding": "Risk tier T3 (High); 1 mandatory obligations open; fairness CONCERN.",
+      "basis": "Decision rule D5",
+      "source": "risk.json, legal.json, fairness.json"
+    }
+  ],
+  "finding_codes": [
+    "FA-CONCERN",
+    "FA-PROXY-JUSTIFY",
+    "GAP-AC-ACCESS",
+    "HO-ANCHOR",
+    "TIER-HIGH"
+  ],
+  "conditions_precedent": [
+    {
+      "id": "C-FA-JUSTIFY",
+      "title": "Show every input is job-related",
+      "text": "Provide a job analysis for each role in scope and show how each remaining input relates to performance in that role.",
+      "type": "precedent",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Job analysis document; validation summary.",
+      "deadline": "Before go-live",
+      "principle": "Fairness",
+      "triggered_by": [
+        "FA-PROXY-JUSTIFY"
+      ]
+    },
+    {
+      "id": "C-AC-ACCESS",
+      "title": "Accessible journey and human alternative",
+      "text": "Test the candidate journey with assistive technologies; offer extra time and an AI-free assessment route on request, without penalty.",
+      "type": "precedent",
+      "owner": "Chief Human Resources Officer",
+      "evidence": "Accessibility test report; accommodation process.",
+      "deadline": "Before go-live",
+      "principle": "Inclusion",
+      "triggered_by": [
+        "GAP-AC-ACCESS"
+      ]
+    }
+  ],
+  "conditions_subsequent": [
+    {
+      "id": "C-HO-BLIND",
+      "title": "Blind-first review on a sample to measure anchoring",
+      "text": "For a random 10% of applications, the recruiter records a judgment before seeing the AI score. Agreement and disagreement rates are reported monthly; persistent near-100% agreement is treated as a sign of rubber-stamping.",
+      "type": "subsequent",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Monthly blind-review report.",
+      "deadline": "Monthly from go-live",
+      "principle": "Human oversight",
+      "triggered_by": [
+        "HO-ANCHOR"
+      ]
+    },
+    {
+      "id": "C-FA-AUDIT",
+      "title": "Independent bias audit, repeated",
+      "text": "An auditor independent of the vendor repeats the adverse-impact and equal-opportunity tests (including intersections) every six months and after any material model change. Results go to the committee.",
+      "type": "subsequent",
+      "owner": "AI Governance Office",
+      "evidence": "Audit reports.",
+      "deadline": "Every 6 months",
+      "principle": "Fairness",
+      "triggered_by": [
+        "FA-CONCERN",
+        "TIER-HIGH"
+      ]
+    },
+    {
+      "id": "C-MO-REREVIEW",
+      "title": "Time-limited approval and re-review",
+      "text": "Approval lapses at the re-review date set by the risk tier unless the committee renews it on the basis of monitoring and audit results. Any material change to roles, inputs, model or vendor requires fresh approval.",
+      "type": "subsequent",
+      "owner": "AI Approval Committee",
+      "evidence": "Re-review on the committee calendar.",
+      "deadline": "Per risk tier",
+      "principle": "Accountability",
+      "triggered_by": [
+        "TIER-HIGH"
+      ]
+    }
+  ],
+  "condition_framing": "Conditions of approval",
+  "escalations": [
+    "Chief Human Resources Officer",
+    "Data Protection Officer",
+    "Independent fairness reviewer",
+    "Legal Counsel"
+  ],
+  "open_questions": [
+    "Where some rejections are automated, will a person review every rejection that rests on a judgment of ability (as opposed to a documented, verifiable hard requirement)?",
+    "If data leaves India, to which countries?",
+    "Is there an independent runtime check that can block individual decisions and withdraw the system's autonomy automatically if outcomes become unfair?"
+  ],
+  "re_review_months": 6,
+  "approver": "AI Approval Committee (quorum)",
+  "decision_authority": "Recommendation only. The AI Approval Committee decides."
+}

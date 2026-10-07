@@ -1,0 +1,82 @@
+{
+  "name": "fairness-bias-review",
+  "version": "1.0.0",
+  "status": "approved",
+  "purpose": "Proxy screen of inputs; adverse impact and equal opportunity by group.",
+  "owner": "AI Governance Office",
+  "author": "AI Governance Office (project team)",
+  "reviews": [
+    {
+      "role": "Independent fairness reviewer",
+      "scope": "statistical method",
+      "date": "2026-10-05",
+      "result": "approved"
+    },
+    {
+      "role": "Chief Human Resources Officer",
+      "scope": "proxy dictionary (Indian context)",
+      "date": "2026-10-05",
+      "result": "approved"
+    },
+    {
+      "role": "Information Security",
+      "scope": "code review: scripts, imports, file access",
+      "date": "2026-10-05",
+      "result": "approved"
+    }
+  ],
+  "approved_on": "2026-10-06",
+  "approved_by": "AI Approval Committee",
+  "review_due": "2027-04-06",
+  "permissions": {
+    "tools": [
+      "Read",
+      "Bash: python3 scripts/*.py only"
+    ],
+    "network": false,
+    "writes": "reviews/<proposal_id>/ only",
+    "reads": "the submission, reviews/<proposal_id>/, this skill's folder",
+    "allowed_imports": [
+      "argparse",
+      "csv",
+      "datetime",
+      "hashlib",
+      "json",
+      "math",
+      "os",
+      "re",
+      "sys",
+      "skillkit"
+    ]
+  },
+  "inputs": [
+    "intake.json",
+    "shadow-mode CSV (optional)"
+  ],
+  "outputs": [
+    "proxy-screen.json",
+    "fairness.json",
+    "fairness-tables.md"
+  ],
+  "depends_on": [
+    "use-case-intake"
+  ],
+  "evals": {
+    "suite": "evals/run_evals.py",
+    "last_run": null,
+    "last_result": null
+  },
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-06",
+      "change": "First approved release."
+    }
+  ],
+  "retire_if": [
+    "eval pass rate below 100% on critical cases",
+    "review_due passed without re-review",
+    "a referenced law changes and the register is not updated within 30 days"
+  ],
+  "layer": "governance-approval"
+}

@@ -1,0 +1,22 @@
+{
+  "_note": "SIMULATED HUMAN RECORD for the teaching demo. In a real deployment this file is written and signed by the AI Approval Committee, never by an AI agent. All names are fictional.",
+  "proposal_id": "HR-AI-2026-021",
+  "system": "Deccan Ledger governed hiring agent (branch roles)",
+  "decision": "APPROVE_WITH_CONDITIONS",
+  "departure_from_recommendation": "None.",
+  "autonomy_level_requested": "L2",
+  "conditions_precedent_evidenced": ["C-HO-HARDREQ", "C-FA-JUSTIFY"],
+  "evidence_notes": {
+    "C-HO-HARDREQ": "Job-spec gate records, letter template and audit-sample procedure reviewed by Talent Acquisition and Legal.",
+    "C-FA-JUSTIFY": "Job analysis JA-RM-2026-03 filed for the role family."
+  },
+  "additional_requirements": [
+    "Independent fairness reviewer to repeat the shadow-pilot analysis (reviewer's conflict-of-interest point).",
+    "Internal Audit to review the guardian's first three monthly reports."
+  ],
+  "audit_sample_rate": 0.10,
+  "min_parse_confidence": 0.7,
+  "grievance_contact": "hiring.grievance@deccanledger.example",
+  "dissent": "Employee representative asked for the audit sample rate to be 20% for the first three months; recorded, not adopted.",
+  "signature": {"signed_by": "Ananya Rao (fictional)", "role": "Chief Risk Officer, Chair, AI Approval Committee", "date": "2026-10-06"}
+}

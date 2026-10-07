@@ -1,0 +1,7 @@
+{
+  "autonomy_level": "L1",
+  "set_by": "hiring-guardian",
+  "set_at": "2026-10-07T12:57:40+00:00",
+  "reason": "Circuit breaker: significant adverse impact in advancement by gender, age_band, home_region, disability",
+  "restore": "Only the AI Approval Committee can restore autonomy, by issuing a new signed runtime policy after review."
+}

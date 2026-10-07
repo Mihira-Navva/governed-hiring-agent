@@ -1,0 +1,461 @@
+{
+  "_about": "Pre-approved conditions the committee attaches to AI hiring approvals. Each is triggered by finding codes from the other skills. 'precedent' conditions must be met before go-live (or before resubmission); 'subsequent' conditions apply while the system runs. Wording is fixed so that conditions are consistent across proposals; the memo may add proposal-specific detail.",
+  "conditions": [
+    {
+      "id": "C-RL-AFFECT",
+      "principle": "Safety and dignity",
+      "type": "precedent",
+      "triggers": [
+        "RL-01",
+        "RL-06",
+        "GAP-RL-AFFECT"
+      ],
+      "title": "Remove affect and biometric inference",
+      "text": "Remove every component that infers emotion, confidence, personality or protected traits from face, voice or behaviour. Disabling it in configuration is not enough if the vendor still computes or stores the scores.",
+      "owner": "HR Technology Lead",
+      "evidence": "Vendor technical confirmation and a test showing no such fields in outputs or logs.",
+      "deadline": "Before resubmission"
+    },
+    {
+      "id": "C-HO-REVIEW",
+      "principle": "Human oversight",
+      "type": "precedent",
+      "triggers": [
+        "RL-02",
+        "GAP-HO-REVIEW",
+        "W-DEFACTO-AUTO",
+        "W-DEFACTO-AUTO-JUDGMENT"
+      ],
+      "title": "A human reviews every application before rejection",
+      "text": "No application is rejected, archived or deprioritised out of sight on the AI's output alone. A trained recruiter reviews every application before a rejection is issued; recruiter workload is sized so this review is real (target: no more than 150 applications per recruiter per day).",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Workflow configuration; workload model; sample audit of 100 rejections showing a human review record.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-HO-HARDREQ",
+      "principle": "Human oversight",
+      "type": "precedent",
+      "triggers": [
+        "HO-HARDREQ-AUTO"
+      ],
+      "title": "Automated rejection only for verifiable hard requirements",
+      "text": "The system may reject on its own only when a documented legal, operational or safety requirement is clearly not met. Ambiguous or in-progress evidence goes to a person. Every automated rejection letter names the requirement and the evidence checked and offers a 14-day human review. A random 10% are re-checked by a person, and rejection rates by group are reported monthly.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Job-spec gate records; letter template; monthly audit and fairness reports.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-HO-GUARDIAN",
+      "principle": "Safety",
+      "type": "subsequent",
+      "triggers": [
+        "HO-HARDREQ-AUTO"
+      ],
+      "title": "Runtime guardian with circuit breaker",
+      "text": "An independent runtime guardian checks every decision before it takes effect, monitors advancement by self-declared group, and withdraws autonomy automatically (to assist-only) on statistically significant adverse impact. Only the committee can restore autonomy.",
+      "owner": "AI Governance Office",
+      "evidence": "Guardian reports per batch; ledger verification; breaker test record.",
+      "deadline": "Every batch"
+    },
+    {
+      "id": "C-HO-TRAIN",
+      "principle": "Human oversight",
+      "type": "precedent",
+      "triggers": [
+        "HO-TRAIN",
+        "GAP-EU-DEPLOYER"
+      ],
+      "title": "Train reviewers on the system's limits and on automation bias",
+      "text": "Every recruiter using the system completes training on what the score does and does not measure, known failure modes, and how to override.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Training material and completion records.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-HO-BLIND",
+      "principle": "Human oversight",
+      "type": "subsequent",
+      "triggers": [
+        "HO-ANCHOR"
+      ],
+      "title": "Blind-first review on a sample to measure anchoring",
+      "text": "For a random 10% of applications, the recruiter records a judgment before seeing the AI score. Agreement and disagreement rates are reported monthly; persistent near-100% agreement is treated as a sign of rubber-stamping.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Monthly blind-review report.",
+      "deadline": "Monthly from go-live"
+    },
+    {
+      "id": "C-HO-LOG",
+      "principle": "Accountability",
+      "type": "precedent",
+      "triggers": [
+        "HO-LOG"
+      ],
+      "title": "Log overrides and reasons",
+      "text": "The tool records every recruiter override of the AI ranking with a short reason; logs are retained for at least 12 months for audit.",
+      "owner": "HR Technology Lead",
+      "evidence": "Override log sample.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-FA-PROTECTED",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "RL-03"
+      ],
+      "title": "Remove protected attributes from model inputs",
+      "text": "Remove every protected attribute identified by the proxy screen from the model's inputs and retrain. Protected data may be held only in a separate, voluntary audit dataset.",
+      "owner": "HR Technology Lead",
+      "evidence": "Updated feature list; retraining record; proxy screen re-run.",
+      "deadline": "Before resubmission"
+    },
+    {
+      "id": "C-FA-PROXIES",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "FA-PROXY-STRONG"
+      ],
+      "title": "Remove or justify strong proxy features",
+      "text": "Remove strong-proxy features (listed in the memo). Any that the business wishes to keep requires a written job analysis showing necessity for the role and a feature-level bias test.",
+      "owner": "HR Technology Lead",
+      "evidence": "Revised feature list with job analysis for any retained proxy.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-FA-JUSTIFY",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "FA-PROXY-JUSTIFY",
+        "FA-JOBREL"
+      ],
+      "title": "Show every input is job-related",
+      "text": "Provide a job analysis for each role in scope and show how each remaining input relates to performance in that role.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Job analysis document; validation summary.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-FA-LABELS",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "FA-LABELS"
+      ],
+      "title": "Stop learning from past hiring decisions",
+      "text": "Do not use past hiring decisions as training labels. Use job-relevant criteria from the job analysis (e.g. skills assessment results) or a vendor model that is validated without them.",
+      "owner": "HR Technology Lead",
+      "evidence": "Model documentation describing labels.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-FA-REMEDIATE",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "RL-05",
+        "GAP-FA-GENDER",
+        "GAP-FA-PUBLIC"
+      ],
+      "title": "Find and fix the cause of adverse impact, then re-test",
+      "text": "Identify the features, labels or thresholds driving the adverse impact or unequal opportunity found, remove the cause, and re-run the adverse-impact test on fresh shadow-mode data (at least 1,000 applicants).",
+      "owner": "HR Technology Lead",
+      "evidence": "Root-cause note; new fairness report in which no attribute fails.",
+      "deadline": "Before resubmission"
+    },
+    {
+      "id": "C-FA-SHADOW",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "FA-NO-DATA"
+      ],
+      "title": "Run a shadow-mode pilot before any live use",
+      "text": "Run the system in shadow mode for at least 8 weeks or 1,000 applicants: AI outputs are recorded but not shown to recruiters and not used. An independent panel rates a sample of candidates as qualified or not, without seeing AI scores. Results return to the committee.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Shadow dataset and adverse-impact report.",
+      "deadline": "Before go-live decision"
+    },
+    {
+      "id": "C-FA-AUDITDATA",
+      "principle": "Fairness",
+      "type": "precedent",
+      "triggers": [
+        "GAP-FA-AUDITDATA"
+      ],
+      "title": "Set up voluntary self-declaration for fairness auditing",
+      "text": "Invite candidates to self-declare gender (inclusive options), age band, disability and home region, voluntarily and with a separate consent, stored apart from the hiring system and never used by the model.",
+      "owner": "Data Protection Officer",
+      "evidence": "Form text, consent wording, storage design.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-FA-AUDIT",
+      "principle": "Fairness",
+      "type": "subsequent",
+      "triggers": [
+        "GAP-FA-AUDIT",
+        "GAP-US-LL144",
+        "FA-CONCERN",
+        "TIER-HIGH"
+      ],
+      "title": "Independent bias audit, repeated",
+      "text": "An auditor independent of the vendor repeats the adverse-impact and equal-opportunity tests (including intersections) every six months and after any material model change. Results go to the committee.",
+      "owner": "AI Governance Office",
+      "evidence": "Audit reports.",
+      "deadline": "Every 6 months"
+    },
+    {
+      "id": "C-TR-NOTICE",
+      "principle": "Transparency",
+      "type": "precedent",
+      "triggers": [
+        "TR-NOTICE",
+        "GAP-PR-NOTICE"
+      ],
+      "title": "Tell candidates AI is used, in plain language",
+      "text": "Job adverts and the application form state that AI helps screen applications, what it looks at, that a person reviews every application, and how to ask for a human-only assessment. Available in English and Hindi at minimum, plus the main regional language of each hiring location.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Notice text approved by Legal and DPO.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-TR-EXPLAIN",
+      "principle": "Transparency",
+      "type": "precedent",
+      "triggers": [
+        "GAP-TR-EXPLAIN"
+      ],
+      "title": "Individual explanations",
+      "text": "Recruiters see the main factors behind each score; a candidate who asks receives a plain-language explanation of the AI's role in the decision about them.",
+      "owner": "HR Technology Lead",
+      "evidence": "Sample explanations reviewed by HR and Legal.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-TR-DOCS",
+      "principle": "Transparency",
+      "type": "precedent",
+      "triggers": [
+        "TR-DOCS"
+      ],
+      "title": "Model documentation from the vendor",
+      "text": "Obtain the vendor's documentation of intended use, training data, labels, validation results and known limitations.",
+      "owner": "Procurement",
+      "evidence": "Documentation pack reviewed by AI Governance Office.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-CO-APPEAL",
+      "principle": "Contestability",
+      "type": "precedent",
+      "triggers": [
+        "CO-APPEAL"
+      ],
+      "title": "Re-review on request",
+      "text": "Any rejected candidate may request a re-review by a recruiter who has not seen the AI score; requests are answered within 15 working days.",
+      "owner": "Head of Talent Acquisition",
+      "evidence": "Process note and request log.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-CO-GRIEVANCE",
+      "principle": "Contestability",
+      "type": "precedent",
+      "triggers": [
+        "GAP-CO-GRIEVANCE"
+      ],
+      "title": "Named grievance officer",
+      "text": "Publish a named grievance officer for candidate data and decision complaints, with response times consistent with the DPDP Rules.",
+      "owner": "Data Protection Officer",
+      "evidence": "Published contact in the candidate notice.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-AC-ACCESS",
+      "principle": "Inclusion",
+      "type": "precedent",
+      "triggers": [
+        "GAP-AC-ACCESS"
+      ],
+      "title": "Accessible journey and human alternative",
+      "text": "Test the candidate journey with assistive technologies; offer extra time and an AI-free assessment route on request, without penalty.",
+      "owner": "Chief Human Resources Officer",
+      "evidence": "Accessibility test report; accommodation process.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-AC-OWNER",
+      "principle": "Accountability",
+      "type": "precedent",
+      "triggers": [
+        "GAP-AC-OWNER"
+      ],
+      "title": "Name an accountable executive",
+      "text": "A named executive is accountable for the system's outcomes, receives monitoring reports and can suspend the system.",
+      "owner": "AI Approval Committee",
+      "evidence": "Signed accountability statement.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-BASIS",
+      "principle": "Privacy",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-BASIS"
+      ],
+      "title": "Confirm lawful basis",
+      "text": "Legal confirms the lawful ground for processing candidate data under the DPDP Act; consent is the default for applicants.",
+      "owner": "Legal Counsel",
+      "evidence": "Lawful-basis memo.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-REUSE",
+      "principle": "Privacy",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-REUSE"
+      ],
+      "title": "No vendor reuse of candidate data",
+      "text": "The contract prohibits the vendor from using candidate data to train or improve its products or for any other client.",
+      "owner": "Procurement",
+      "evidence": "Contract clause.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-ACCURACY",
+      "principle": "Privacy",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-ACCURACY"
+      ],
+      "title": "Accurate parsing, correctable by the candidate",
+      "text": "Test CV parsing on real CVs including regional formats, non-English names and accessible document formats; candidates can see and correct the parsed profile before scoring.",
+      "owner": "HR Technology Lead",
+      "evidence": "Parsing accuracy report (target 98% field accuracy).",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-RETENTION",
+      "principle": "Privacy",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-RETENTION"
+      ],
+      "title": "Retention within 180 days",
+      "text": "Unsuccessful applicants' data, including AI scores, is erased within 180 days unless the candidate opts into a talent pool.",
+      "owner": "Data Protection Officer",
+      "evidence": "Retention configuration verified at vendor.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-SECURITY",
+      "principle": "Security",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-SECURITY"
+      ],
+      "title": "Vendor security assessment",
+      "text": "Information Security assesses the vendor and remediates high findings before go-live.",
+      "owner": "Chief Information Security Officer",
+      "evidence": "Assessment report and closure of high findings.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-PR-TRANSFER",
+      "principle": "Privacy",
+      "type": "precedent",
+      "triggers": [
+        "GAP-PR-TRANSFER"
+      ],
+      "title": "Map cross-border transfers",
+      "text": "Document every country where candidate data is stored or processed and confirm none is restricted under DPDP Act s. 16; prefer India-hosted processing.",
+      "owner": "Data Protection Officer",
+      "evidence": "Data flow map.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-VE-CONTRACT",
+      "principle": "Accountability",
+      "type": "precedent",
+      "triggers": [
+        "GAP-VE-CONTRACT",
+        "RL-04"
+      ],
+      "title": "Vendor contract: processor terms and audit rights",
+      "text": "The vendor contract includes DPDP processor terms, independent audit access, documentation duties, breach notification and indemnity for non-compliance.",
+      "owner": "Procurement",
+      "evidence": "Executed contract.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-VE-CHANGE",
+      "principle": "Accountability",
+      "type": "precedent",
+      "triggers": [
+        "GAP-VE-CHANGE"
+      ],
+      "title": "Model change control",
+      "text": "The vendor must give 30 days' notice of any material model change; the organisation re-runs the fairness tests before the change applies to live candidates.",
+      "owner": "Procurement",
+      "evidence": "Contract clause.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-MO-PLAN",
+      "principle": "Safety",
+      "type": "precedent",
+      "triggers": [
+        "GAP-MO-PLAN"
+      ],
+      "title": "Monitoring plan and incident process",
+      "text": "Monthly report to the accountable executive: selection rates and impact ratios by group, override rates, blind-review agreement, appeals and their outcomes, parsing errors. Thresholds trigger an incident review.",
+      "owner": "AI Governance Office",
+      "evidence": "Monitoring plan; first report template.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-MO-KILL",
+      "principle": "Safety",
+      "type": "precedent",
+      "triggers": [
+        "GAP-MO-KILL"
+      ],
+      "title": "Kill switch and manual fallback",
+      "text": "The AI can be switched off within one working day while hiring continues manually; the fallback is tested before go-live.",
+      "owner": "HR Operations",
+      "evidence": "Fallback test record.",
+      "deadline": "Before go-live"
+    },
+    {
+      "id": "C-MO-REREVIEW",
+      "principle": "Accountability",
+      "type": "subsequent",
+      "triggers": [
+        "TIER-HIGH"
+      ],
+      "title": "Time-limited approval and re-review",
+      "text": "Approval lapses at the re-review date set by the risk tier unless the committee renews it on the basis of monitoring and audit results. Any material change to roles, inputs, model or vendor requires fresh approval.",
+      "owner": "AI Approval Committee",
+      "evidence": "Re-review on the committee calendar.",
+      "deadline": "Per risk tier"
+    },
+    {
+      "id": "C-INT-VENDOR",
+      "principle": "Integrity",
+      "type": "precedent",
+      "triggers": [
+        "INT-INJECTION"
+      ],
+      "title": "Address integrity concern in the submission",
+      "text": "The submission contained text aimed at influencing an automated reviewer. The business owner must explain its origin; Procurement assesses whether it reflects the vendor's conduct.",
+      "owner": "Procurement",
+      "evidence": "Written explanation; vendor due-diligence note.",
+      "deadline": "Before resubmission"
+    }
+  ]
+}

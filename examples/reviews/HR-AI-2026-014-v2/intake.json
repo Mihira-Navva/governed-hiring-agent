@@ -1,0 +1,106 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "version": "2.0",
+  "title": "TalentSort v2: skills-first screening assistant for branch and field sales hiring",
+  "submission_date": "2026-10-02",
+  "submitted_by": {"name": "Rohan Kulkarni", "role": "Head of Talent Acquisition"},
+  "accountable_executive": "Meera Iyer, Chief Human Resources Officer",
+  "organisation": {"name": "Deccan Ledger Finance Ltd (fictional NBFC)", "sector": "private"},
+  "use_case": {
+    "purpose": "Order the screening queue and highlight matched job-related skills so that recruiters, who review every application, can work through high volumes faster and more consistently.",
+    "problem_statement": "About 60,000 applications a year; 14 recruiters spend an estimated 70% of their time on first-pass CV reading; time-to-hire averages 38 days.",
+    "expected_benefits": ["Faster first-pass review through queue ordering and skills highlighting", "Consistent, job-related criteria across branches", "Shorter time-to-hire in peak season"],
+    "alternatives_considered": "More recruiters only (about three times the licence cost and still slow at peak); structured screening questions alone (adopted as one of five inputs).",
+    "roles_in_scope": ["Branch sales", "Collections", "Relationship roles"],
+    "annual_applications": 60000,
+    "jurisdictions": ["IN"]
+  },
+  "system": {
+    "vendor_name": "HireSort AI Pvt Ltd (fictional)",
+    "build_type": "third_party",
+    "primary_function": "cv_screening_ranking",
+    "decision_stage": "initial_screening",
+    "automation_level": "assistive_ranking",
+    "ai_output": "Queue order and highlighted job-related skills for each application; no pass/fail flag",
+    "techniques": {
+      "video_or_facial_analysis": false,
+      "emotion_or_affect_inference": false,
+      "voice_analysis": false,
+      "biometric_categorisation": false,
+      "social_media_screening": false,
+      "generative_llm_scoring": false
+    }
+  },
+  "human_oversight": {
+    "human_reviews_every_rejection": true,
+    "reviewer_can_override": true,
+    "reviewers_trained": true,
+    "overrides_logged": true,
+    "ai_score_visible_before_independent_review": true
+  },
+  "data": {
+    "input_features": [
+      "Skills assessment score (work sample: mock customer call and loan-eligibility case exercise)",
+      "Relevant certification (NISM / IRDAI where the role requires it)",
+      "Relevant sales experience (minimum threshold only, not scored above it)",
+      "Structured screening questions (field-work availability; two-wheeler licence for collections)",
+      "Language proficiency required for the branch, tested in the assessment"
+    ],
+    "training_data": "Work-sample assessment results of 9,400 candidates assessed 2024-2026, scored by trained assessors against a published rubric. No past hiring decisions used.",
+    "trained_on_historical_hiring_outcomes": false,
+    "protected_attributes_collected_for_audit": true,
+    "lawful_basis": "consent",
+    "notice_to_candidates": true,
+    "accuracy_controls": "Candidates see and can correct the parsed profile before it is ranked; parser tested on 2,000 real CVs including regional-language formats (98.4% field accuracy).",
+    "retention_days": 180,
+    "vendor_reuses_data_for_training": false,
+    "cross_border_transfer": false,
+    "transfer_destinations": null
+  },
+  "transparency": {
+    "candidate_notified_of_ai_use": true,
+    "individual_explanations_available": true,
+    "model_documentation_available": true
+  },
+  "contestability": {
+    "appeal_channel": true,
+    "human_alternative_on_request": true,
+    "grievance_officer_named": true
+  },
+  "testing": {
+    "bias_audit_completed": true,
+    "bias_audit_independent": true,
+    "job_relatedness_validated": true,
+    "shadow_pilot_data_available": true,
+    "accessibility_tested": false
+  },
+  "monitoring": {
+    "monitoring_plan": true,
+    "review_frequency_days": 30,
+    "kill_switch": true,
+    "incident_process": true
+  },
+  "vendor_governance": {
+    "allows_independent_audit": true,
+    "model_change_notification": true,
+    "contract_has_dpdp_processor_terms": true,
+    "security_assessment_done": true
+  },
+  "intake_notes": {
+    "source_documents": [
+      "HR-AI-2026-014-v2-resubmission.md (sections 1-6)",
+      "deccan-v2-shadow-pilot.csv (1,500 shadow-mode records, 14 Aug - 25 Sep 2026)",
+      "Referenced but summarised only: Samata Audit LLP report, job analysis for six role families, vendor model documentation v2.1"
+    ],
+    "assumptions": [
+      "automation_level recorded as 'assistive_ranking': every application is reviewed by a recruiter and nothing is archived or rejected without a recruiter decision (s. 1). Workload of about 120 applications per recruiter per day is within the committee's 150 target.",
+      "transfer_destinations left empty because processing is India-hosted (s. 1)."
+    ],
+    "claims_needing_evidence": [
+      "Samata Audit LLP report is summarised, not attached. The committee should receive the full report, including method and intersections.",
+      "Deletion of the video module 'for our tenant' (s. 1) should be confirmed by a test of outputs and logs, not by vendor statement alone.",
+      "Job analysis and model documentation v2.1 are referenced but not attached."
+    ],
+    "integrity_observations": []
+  }
+}

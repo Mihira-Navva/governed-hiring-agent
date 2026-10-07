@@ -1,0 +1,83 @@
+{
+  "name": "resume-screening",
+  "version": "1.0.0",
+  "status": "approved",
+  "purpose": "Parse and blind resumes; detect manipulation; score with quoted evidence.",
+  "owner": "AI Governance Office",
+  "author": "AI Governance Office (project team)",
+  "reviews": [
+    {
+      "role": "Head of Talent Acquisition",
+      "scope": "scoring method",
+      "date": "2026-10-07",
+      "result": "approved"
+    },
+    {
+      "role": "Data Protection Officer",
+      "scope": "blinding rules",
+      "date": "2026-10-07",
+      "result": "approved"
+    },
+    {
+      "role": "Information Security",
+      "scope": "code review: scripts, imports, file access",
+      "date": "2026-10-07",
+      "result": "approved"
+    }
+  ],
+  "approved_on": "2026-10-07",
+  "approved_by": "AI Approval Committee",
+  "review_due": "2027-04-07",
+  "permissions": {
+    "tools": [
+      "Read",
+      "Bash: python3 scripts/*.py only"
+    ],
+    "network": false,
+    "writes": "run folder only",
+    "reads": "run folder, governance/runtime-policy.json and autonomy-state.json (read-only), this skill's folder; never governance/audit-data",
+    "allowed_imports": [
+      "argparse",
+      "csv",
+      "datetime",
+      "hashlib",
+      "json",
+      "math",
+      "os",
+      "re",
+      "sys",
+      "skillkit"
+    ]
+  },
+  "inputs": [
+    "resumes/*.txt",
+    "applications.csv",
+    "job-spec.json"
+  ],
+  "outputs": [
+    "profiles.json (restricted)",
+    "blind-profiles.json",
+    "screening.json"
+  ],
+  "depends_on": [
+    "job-requisition"
+  ],
+  "evals": {
+    "suite": "evals/run_evals.py",
+    "last_run": null,
+    "last_result": null
+  },
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-10-07",
+      "change": "First approved release."
+    }
+  ],
+  "retire_if": [
+    "eval pass rate below 100% on critical cases",
+    "review_due passed without re-review",
+    "a referenced law changes and the register is not updated within 30 days"
+  ],
+  "layer": "hiring"
+}

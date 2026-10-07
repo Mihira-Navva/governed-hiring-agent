@@ -1,0 +1,128 @@
+{
+  "proposal_id": "HR-AI-2026-021",
+  "version": "1.0",
+  "title": "Governed hiring agent for branch roles (in-house, skill-based)",
+  "submission_date": "2026-10-05",
+  "submitted_by": {
+    "name": "Rohan Kulkarni",
+    "role": "Head of Talent Acquisition"
+  },
+  "accountable_executive": "Meera Iyer, Chief Human Resources Officer",
+  "organisation": {
+    "name": "Deccan Ledger Finance Ltd (fictional NBFC)",
+    "sector": "private"
+  },
+  "use_case": {
+    "purpose": "An AI agent screens applications for branch roles against a cleared job specification, advances strong candidates, rejects only candidates who clearly fail a verifiable legal or operational requirement, and sends every judgment-based or unclear case to a recruiter, under a runtime guardian.",
+    "problem_statement": "About 60,000 applications a year; 14 recruiters spend an estimated 70% of their time on first-pass reading; time-to-hire 38 days.",
+    "expected_benefits": [
+      "Recruiters read only borderline, unclear and flagged applications plus audit samples",
+      "Same job-related criteria for every applicant",
+      "Every decision explained and appealable"
+    ],
+    "alternatives_considered": "TalentSort v2 (vendor tool, approved with conditions as assist-only ordering); more recruiters (about three times the cost).",
+    "roles_in_scope": [
+      "Relationship Manager (Investments & Insurance)",
+      "Branch sales",
+      "Collections"
+    ],
+    "annual_applications": 60000,
+    "jurisdictions": [
+      "IN"
+    ]
+  },
+  "system": {
+    "vendor_name": "In-house agent on a general-purpose model, with a governed skill library",
+    "build_type": "in_house",
+    "primary_function": "cv_screening_ranking",
+    "decision_stage": "initial_screening",
+    "automation_level": "auto_reject_hard_requirements",
+    "ai_output": "Proposed action per candidate with quoted evidence: advance, reject on failed hard requirement, hold for a person, human-only",
+    "techniques": {
+      "video_or_facial_analysis": false,
+      "emotion_or_affect_inference": false,
+      "voice_analysis": false,
+      "biometric_categorisation": false,
+      "social_media_screening": false,
+      "generative_llm_scoring": false
+    }
+  },
+  "human_oversight": {
+    "human_reviews_every_rejection": false,
+    "human_reviews_every_judgment_rejection": true,
+    "reviewer_can_override": true,
+    "reviewers_trained": true,
+    "overrides_logged": true,
+    "ai_score_visible_before_independent_review": true
+  },
+  "data": {
+    "input_features": [
+      "Work-sample assessment score",
+      "Relevant sales experience with customers (months, capped at 24)",
+      "Product and compliance skills listed",
+      "Branch language test result",
+      "NISM-Series-V-A certificate (hard requirement)",
+      "Able to work at branch (hard requirement)"
+    ],
+    "training_data": "No machine-learned scoring model. Scores come from published, deterministic rules derived from the job analysis; the language model reads resumes and writes notes but does not set scores.",
+    "trained_on_historical_hiring_outcomes": false,
+    "protected_attributes_collected_for_audit": true,
+    "lawful_basis": "consent",
+    "notice_to_candidates": true,
+    "accuracy_controls": "Candidates see and can correct the parsed profile; low parse confidence routes to a person; parser tested on real CV formats.",
+    "retention_days": 180,
+    "vendor_reuses_data_for_training": false,
+    "cross_border_transfer": true,
+    "transfer_destinations": [
+      "United States (model provider processing)"
+    ]
+  },
+  "transparency": {
+    "candidate_notified_of_ai_use": true,
+    "individual_explanations_available": true,
+    "model_documentation_available": true
+  },
+  "contestability": {
+    "appeal_channel": true,
+    "human_alternative_on_request": true,
+    "grievance_officer_named": true
+  },
+  "testing": {
+    "bias_audit_completed": true,
+    "bias_audit_independent": true,
+    "job_relatedness_validated": true,
+    "shadow_pilot_data_available": true,
+    "accessibility_tested": true
+  },
+  "monitoring": {
+    "monitoring_plan": true,
+    "review_frequency_days": 30,
+    "kill_switch": true,
+    "incident_process": true,
+    "runtime_guardian": true
+  },
+  "vendor_governance": {
+    "allows_independent_audit": true,
+    "model_change_notification": true,
+    "contract_has_dpdp_processor_terms": true,
+    "security_assessment_done": true
+  },
+  "intake_notes": {
+    "source_documents": [
+      "Proposal HR-AI-2026-021 (governed hiring agent)",
+      "Agent and skill definitions (.claude/agents, .claude/skills)",
+      "Shadow pilot: 1,500 applicants scored by the skills-first method (synthetic)"
+    ],
+    "assumptions": [
+      "automation_level 'auto_reject_hard_requirements': the agent may reject alone only on a cleanly failed, documented hard requirement; all judgment-based rejections are confirmed by a recruiter.",
+      "generative_llm_scoring recorded false: the language model does not set scores; scores come from deterministic scripts. The model's notes are labelled as judgment.",
+      "vendor_reuses_data_for_training recorded false on the basis of the enterprise terms with the model provider; Legal to confirm in writing.",
+      "Candidate data is processed by the model provider outside India; recorded as a cross-border transfer."
+    ],
+    "claims_needing_evidence": [
+      "Enterprise terms prohibiting the model provider from training on candidate data: Legal to file the clause.",
+      "Parser accuracy on regional CV formats: report to be attached."
+    ],
+    "integrity_observations": []
+  }
+}

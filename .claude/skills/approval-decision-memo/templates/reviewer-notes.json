@@ -1,0 +1,15 @@
+{
+  "_about": "The reviewer's judgment, written by the agent after reading all findings. Everything here is opinion grounded in evidence; every number in the memo comes from the structured files instead. Keep each item short and cite the file or ID it rests on.",
+  "summary": "One paragraph for the committee: the recommendation, the two or three reasons, and the path forward.",
+  "key_findings": [
+    "Finding, with evidence reference, e.g. 'Low-ranked applicants are auto-archived after 14 days without review (intake: system.automation_level; RL-02).'"
+  ],
+  "candidate_journey": "Two to four sentences tracing an ordinary applicant through the process as proposed.",
+  "fairness_interpretation": "What the fairness numbers most likely mean, the likely causes, and how far they can be trusted.",
+  "issues_for_counsel": ["Legal questions the register cannot settle."],
+  "benefits_and_tradeoffs": "The claimed benefits, how well they are evidenced, and how they weigh against the risks found.",
+  "reviewer_judgment": "Where the reviewer agrees or disagrees with the rule-based outcome, and why.",
+  "hidden_risks": ["Risks the scripts cannot detect, e.g. composite scores, LLM summaries, workload pressure on recruiters."],
+  "what_would_change": ["Specific evidence or design changes that would change the recommendation."],
+  "assumptions": ["Assumptions made by the reviewer beyond those recorded at intake."]
+}

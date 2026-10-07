@@ -1,0 +1,150 @@
+{
+  "_enums": {
+    "organisation.sector": [
+      "private",
+      "public_sector_undertaking",
+      "government"
+    ],
+    "use_case.jurisdictions": [
+      "IN",
+      "EU",
+      "US-NYC",
+      "US-OTHER",
+      "OTHER"
+    ],
+    "system.build_type": [
+      "third_party",
+      "in_house",
+      "hybrid"
+    ],
+    "system.primary_function": [
+      "cv_screening_ranking",
+      "assessment_scoring",
+      "video_interview_scoring",
+      "video_interview_affect_analysis",
+      "chatbot_prescreening",
+      "interview_scheduling",
+      "job_ad_writing",
+      "sourcing_outreach",
+      "other"
+    ],
+    "system.decision_stage": [
+      "sourcing",
+      "initial_screening",
+      "assessment",
+      "interview",
+      "final_selection",
+      "logistics"
+    ],
+    "system.automation_level": [
+      "advisory_only",
+      "assistive_ranking",
+      "auto_shortlist",
+      "auto_reject_hard_requirements",
+      "auto_archive",
+      "auto_reject",
+      "fully_automated"
+    ],
+    "data.lawful_basis": [
+      "consent",
+      "legitimate_use",
+      null
+    ]
+  },
+  "_rules": "Use null for anything the proposal does not state. Never fill a field from assumption; record assumptions in intake_notes.assumptions instead.",
+  "proposal_id": null,
+  "version": null,
+  "title": null,
+  "submission_date": null,
+  "submitted_by": {
+    "name": null,
+    "role": null
+  },
+  "accountable_executive": null,
+  "organisation": {
+    "name": null,
+    "sector": null
+  },
+  "use_case": {
+    "purpose": null,
+    "problem_statement": null,
+    "expected_benefits": null,
+    "alternatives_considered": null,
+    "roles_in_scope": null,
+    "annual_applications": null,
+    "jurisdictions": null
+  },
+  "system": {
+    "vendor_name": null,
+    "build_type": null,
+    "primary_function": null,
+    "decision_stage": null,
+    "automation_level": null,
+    "ai_output": null,
+    "techniques": {
+      "video_or_facial_analysis": null,
+      "emotion_or_affect_inference": null,
+      "voice_analysis": null,
+      "biometric_categorisation": null,
+      "social_media_screening": null,
+      "generative_llm_scoring": null
+    }
+  },
+  "human_oversight": {
+    "human_reviews_every_rejection": null,
+    "human_reviews_every_judgment_rejection": null,
+    "reviewer_can_override": null,
+    "reviewers_trained": null,
+    "overrides_logged": null,
+    "ai_score_visible_before_independent_review": null
+  },
+  "data": {
+    "input_features": null,
+    "training_data": null,
+    "trained_on_historical_hiring_outcomes": null,
+    "protected_attributes_collected_for_audit": null,
+    "lawful_basis": null,
+    "notice_to_candidates": null,
+    "accuracy_controls": null,
+    "retention_days": null,
+    "vendor_reuses_data_for_training": null,
+    "cross_border_transfer": null,
+    "transfer_destinations": null
+  },
+  "transparency": {
+    "candidate_notified_of_ai_use": null,
+    "individual_explanations_available": null,
+    "model_documentation_available": null
+  },
+  "contestability": {
+    "appeal_channel": null,
+    "human_alternative_on_request": null,
+    "grievance_officer_named": null
+  },
+  "testing": {
+    "bias_audit_completed": null,
+    "bias_audit_independent": null,
+    "job_relatedness_validated": null,
+    "shadow_pilot_data_available": null,
+    "accessibility_tested": null
+  },
+  "monitoring": {
+    "monitoring_plan": null,
+    "review_frequency_days": null,
+    "kill_switch": null,
+    "incident_process": null,
+    "runtime_guardian": null
+  },
+  "vendor_governance": {
+    "allows_independent_audit": null,
+    "model_change_notification": null,
+    "contract_has_dpdp_processor_terms": null,
+    "security_assessment_done": null
+  },
+  "intake_notes": {
+    "source_documents": [],
+    "assumptions": [],
+    "claims_needing_evidence": [],
+    "integrity_observations": []
+  }
+}

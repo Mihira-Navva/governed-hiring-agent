@@ -1,0 +1,31 @@
+{
+  "summary": "Approve the governed hiring agent with conditions, at autonomy level L2 at most, for six months. The design keeps the line the committee drew for TalentSort: no candidate is rejected on a judgment of ability without a recruiter confirming it. It allows automation only where a decision is a checkable fact (a regulatory certificate, a stated inability to work at the branch), with evidence quoted, an appeal route and a 10% blind re-check. Scores come from published rules, not a learned model, so the past-decision bias that sank TalentSort v1 has no route in. The independent runtime guardian, which can withdraw autonomy on its own, is the main reason to accept automated hard-requirement rejections at all. Two conditions must be evidenced before the agent may act alone: the job analysis behind each input, and the controls around hard-requirement rejection.",
+  "key_findings": [
+    "**No red lines; tier T3 (score 10/21, evaluative floor).** Automation is scored 2, not 3: rejection without a person is limited to verifiable hard requirements, and every judgment-based rejection is reviewed by a recruiter. Evidence: risk.json, intake human_oversight.",
+    "**No learned model, no historical labels.** Scoring is deterministic from the job analysis; the language model reads and writes notes but does not set scores. This removes the label-bias route and makes every score reproducible. Evidence: intake data.training_data.",
+    "**Shadow-pilot fairness: CONCERN, not FAIL.** No group shows significant adverse impact; two signals remain: a 10.8-point equal-opportunity gap for qualified 21–29 year-olds (p = 0.25), and groups too small to test. Evidence: fairness.json.",
+    "**All 16 applicable legal obligations met on the evidence given**, including a disclosed cross-border transfer to the model provider. Two claims still need documents on file. Evidence: legal.json; intake claims_needing_evidence.",
+    "**Runtime governance is designed in, not bolted on.** Criteria gate on every requisition, per-decision checks, group monitoring with an automatic circuit breaker, blind audit sampling and a hash-chained ledger. Evidence: hiring-guardrails skill; condition C-HO-GUARDIAN."
+  ],
+  "candidate_journey": "An applicant applies online, is told AI assists, and can choose a human-only route. Their resume is blinded and scored against four job-related criteria. If they lack the NISM-Series-V-A certificate the regulator requires, they receive a letter naming the requirement and the evidence checked, with a 14-day human review route. If they score well, they are invited to interview. If they are borderline, unclear, flagged or low-scoring, a recruiter decides. Before any of this takes effect, the guardian checks it.",
+  "fairness_interpretation": "The pilot used the same skills-first method as TalentSort v2, so the same signals carry over: no significant adverse impact, a non-significant age-related equal-opportunity gap, and small groups. Automated hard-requirement rejections add a new question the pilot cannot answer: whether the certification requirement itself falls unequally on groups. That is not a reason to drop a regulatory requirement, but the committee should see it, so the guardian reports hard-requirement rejection rates by group monthly.",
+  "issues_for_counsel": [
+    "Confirm in writing that the model provider's enterprise terms prohibit training on, or retaining, candidate data, and that the US processing is not to a country restricted under DPDP Act s. 16.",
+    "Confirm that an automated rejection for a missing statutory certificate, with a human review route on request, is acceptable under the company's equal opportunity policy and POL-AI-03 as amended by this approval."
+  ],
+  "benefits_and_tradeoffs": "Compared with TalentSort v2 (assist-only ordering), this design saves more recruiter time: recruiters no longer read applications that plainly cannot be hired because of a regulatory requirement, or that clearly qualify for interview. The cost is a small, bounded set of automated rejections. Because they are restricted to facts, explained, appealable and audited, the expected harm is low, and the circuit breaker limits how long an error could run. The design deliberately leaves the most consequential judgment, rejecting someone as not good enough, with people.",
+  "reviewer_judgment": "I agree with D5, Approve with conditions, and with capping autonomy at L2. I would not support L3 (automated low-score rejection) on this evidence, and the policy file records that L3 needs a Board exception. One point the rules do not capture: this proposal comes from the same organisation that built the governance library, and the same agent architecture reviewed it. That is a structural conflict of interest. The committee should ask the independent fairness reviewer to repeat the shadow-pilot analysis, and have Internal Audit check the guardian's first three monthly reports.",
+  "hidden_risks": [
+    "Language-model variability: the agent's notes could differ run to run. Scores do not, because they come from scripts, but recruiters may read the notes. Notes must stay labelled as non-binding.",
+    "Requirement creep: a manager could relabel a preference as an 'operational' hard requirement to automate rejections. The criteria gate checks basis and proxies, but a person should review every new hard requirement.",
+    "Parser limits: unusual CV formats lower parse confidence and add recruiter work rather than errors. That is the right failure mode, but it should be measured.",
+    "Automation complacency: as recruiters see fewer applications, borderline reviews may become cursory. The blind-first sample measures this."
+  ],
+  "what_would_change": [
+    "A RED fairness status in any monthly report (the breaker already drops autonomy to L1 automatically).",
+    "Blind-audit disagreement above 5% on automated decisions, or appeals upheld above 5%.",
+    "Any new hard requirement without a documented legal, operational or safety basis.",
+    "A change of model provider or model version without re-running the evaluation suite."
+  ],
+  "assumptions": ["The shadow pilot (synthetic, 1,500 applicants) is taken as representative of live applicants for the role family."]
+}

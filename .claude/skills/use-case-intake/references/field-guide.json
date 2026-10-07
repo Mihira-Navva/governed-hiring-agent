@@ -1,0 +1,320 @@
+{
+  "_about": "Every field of the intake record, whether a missing value blocks the review, the question to put to the proposer, and why the committee needs it. Read by scripts/check_completeness.py.",
+  "fields": {
+    "proposal_id": {
+      "tier": "blocking",
+      "question": "What is the proposal reference number?",
+      "why": "Every review artefact and audit-log entry is keyed to it."
+    },
+    "title": {
+      "tier": "important",
+      "question": "What is the short name of the proposal?",
+      "why": "Used in the decision memo."
+    },
+    "submitted_by.name": {
+      "tier": "important",
+      "question": "Who submitted the proposal?",
+      "why": "Point of contact for follow-up questions."
+    },
+    "submitted_by.role": {
+      "tier": "important",
+      "question": "What is the submitter's role?",
+      "why": "Shows whether the business owner or a vendor drafted it."
+    },
+    "accountable_executive": {
+      "tier": "important",
+      "question": "Which named executive will be accountable for this system's outcomes once live?",
+      "why": "Accountability cannot rest with a vendor or a committee; it needs a named owner."
+    },
+    "organisation.name": {
+      "tier": "important",
+      "question": "Which legal entity will deploy the system?",
+      "why": "Determines the data fiduciary under the DPDP Act."
+    },
+    "organisation.sector": {
+      "tier": "important",
+      "question": "Is the employer a private company, a public sector undertaking or a government body?",
+      "why": "Public employers carry constitutional equality duties (Articles 14 and 16)."
+    },
+    "use_case.purpose": {
+      "tier": "blocking",
+      "question": "In one or two sentences, what decision will the AI support and why?",
+      "why": "The committee approves a purpose, not a product."
+    },
+    "use_case.problem_statement": {
+      "tier": "important",
+      "question": "What problem does the current process have that AI should solve, with figures if available?",
+      "why": "Benefits must be weighed against risks; vague benefits weigh little."
+    },
+    "use_case.expected_benefits": {
+      "tier": "important",
+      "question": "What measurable benefits do you expect (time saved, quality of hire, candidate experience)?",
+      "why": "Proportionality: a high-risk system needs a real, measured benefit."
+    },
+    "use_case.alternatives_considered": {
+      "tier": "important",
+      "question": "What non-AI or lower-risk alternatives were considered, and why were they rejected?",
+      "why": "Necessity: the least intrusive effective option should be preferred."
+    },
+    "use_case.roles_in_scope": {
+      "tier": "blocking",
+      "question": "Which job roles and levels will the system screen?",
+      "why": "Job-relatedness of every input can only be judged against specific roles."
+    },
+    "use_case.annual_applications": {
+      "tier": "blocking",
+      "question": "Roughly how many applications per year will pass through the system?",
+      "why": "Scale multiplies the number of people affected by any error or bias."
+    },
+    "use_case.jurisdictions": {
+      "tier": "blocking",
+      "question": "In which countries or cities are the candidates located (e.g. IN, EU, US-NYC)?",
+      "why": "Decides which laws apply."
+    },
+    "system.vendor_name": {
+      "tier": "important",
+      "question": "Which vendor or internal team supplies the model?",
+      "why": "Needed for due diligence and contract review."
+    },
+    "system.build_type": {
+      "tier": "blocking",
+      "question": "Is the system bought from a third party, built in-house, or a hybrid?",
+      "why": "Changes who holds the evidence and which contract terms are needed."
+    },
+    "system.primary_function": {
+      "tier": "blocking",
+      "question": "What is the system's primary function (e.g. CV screening and ranking, assessment scoring, video interview analysis, interview scheduling)?",
+      "why": "Some functions are prohibited outright; others are high-risk."
+    },
+    "system.decision_stage": {
+      "tier": "blocking",
+      "question": "At which stage of hiring does the AI act (sourcing, initial screening, assessment, interview, final selection, logistics)?",
+      "why": "Earlier stages filter more people out before any human sees them."
+    },
+    "system.automation_level": {
+      "tier": "blocking",
+      "question": "What happens to a candidate the AI scores low: shown to a recruiter, de-prioritised, auto-archived, or auto-rejected?",
+      "why": "The single most important risk driver: whether a human really decides."
+    },
+    "system.ai_output": {
+      "tier": "important",
+      "question": "What exactly does the AI output: a score, a rank, a pass/fail flag, or a written summary?",
+      "why": "Determines what a reviewer sees and how much it anchors them."
+    },
+    "system.techniques.video_or_facial_analysis": {
+      "tier": "blocking",
+      "question": "Does any part of the system analyse video or faces?",
+      "why": "Linked to emotion recognition and biometric risks."
+    },
+    "system.techniques.emotion_or_affect_inference": {
+      "tier": "blocking",
+      "question": "Does any part of the system infer emotions, confidence, enthusiasm, honesty or personality from face, voice or behaviour?",
+      "why": "Emotion recognition in the workplace is prohibited under EU AI Act Art. 5(1)(f) and is a red line in this organisation's policy."
+    },
+    "system.techniques.voice_analysis": {
+      "tier": "blocking",
+      "question": "Does any part of the system analyse voice or accent?",
+      "why": "Accent is a strong proxy for region and mother tongue."
+    },
+    "system.techniques.biometric_categorisation": {
+      "tier": "blocking",
+      "question": "Does the system categorise people by biometric data (e.g. inferring gender, age or ethnicity from images)?",
+      "why": "Biometric categorisation by protected traits is prohibited under EU AI Act Art. 5(1)(g)."
+    },
+    "system.techniques.social_media_screening": {
+      "tier": "blocking",
+      "question": "Does the system look at candidates' social media or other public online data?",
+      "why": "Purpose limitation, consent and proxy risks."
+    },
+    "system.techniques.generative_llm_scoring": {
+      "tier": "blocking",
+      "question": "Does a large language model score, summarise or rank candidates?",
+      "why": "LLM scores can vary run to run and can carry bias from name, language and writing style."
+    },
+    "human_oversight.human_reviews_every_rejection": {
+      "tier": "blocking",
+      "question": "Will a trained person look at every application before it is rejected?",
+      "why": "Without this, rejections are automated in practice."
+    },
+    "human_oversight.human_reviews_every_judgment_rejection": {
+      "tier": "important",
+      "question": "Where some rejections are automated, will a person review every rejection that rests on a judgment of ability (as opposed to a documented, verifiable hard requirement)?",
+      "why": "Automated rejection is defensible only for checkable facts; judgments about people need a person (policy POL-AI-03)."
+    },
+    "human_oversight.reviewer_can_override": {
+      "tier": "important",
+      "question": "Can recruiters override the AI ranking, and is that easy to do in the tool?",
+      "why": "Oversight without power to override is not oversight."
+    },
+    "human_oversight.reviewers_trained": {
+      "tier": "important",
+      "question": "Will recruiters be trained on the system's limits and on automation bias?",
+      "why": "EU AI Act Art. 26(2) requires competent, trained overseers; good practice everywhere."
+    },
+    "human_oversight.overrides_logged": {
+      "tier": "important",
+      "question": "Will overrides and the reasons for them be logged?",
+      "why": "Override rates show whether humans are deciding or rubber-stamping."
+    },
+    "human_oversight.ai_score_visible_before_independent_review": {
+      "tier": "important",
+      "question": "Do recruiters see the AI score before forming their own view of the candidate?",
+      "why": "Seeing the score first anchors judgment (automation bias)."
+    },
+    "data.input_features": {
+      "tier": "blocking",
+      "question": "List every input the model uses to score a candidate.",
+      "why": "Each input is screened for protected attributes and proxies."
+    },
+    "data.training_data": {
+      "tier": "important",
+      "question": "What data was the model trained on (whose data, which years, what labels)?",
+      "why": "Training on past hiring decisions reproduces past bias."
+    },
+    "data.trained_on_historical_hiring_outcomes": {
+      "tier": "blocking",
+      "question": "Were the training labels the organisation's past hiring decisions?",
+      "why": "The classic route by which historical discrimination is automated."
+    },
+    "data.protected_attributes_collected_for_audit": {
+      "tier": "important",
+      "question": "Will candidates be invited to self-declare gender, age band, disability and region, voluntarily and separately from the model, for fairness auditing?",
+      "why": "Bias cannot be measured without group data; it must never feed the model."
+    },
+    "data.lawful_basis": {
+      "tier": "important",
+      "question": "On what legal ground will candidate data be processed (consent or a specified legitimate use)?",
+      "why": "DPDP Act ss. 4, 6 and 7."
+    },
+    "data.notice_to_candidates": {
+      "tier": "important",
+      "question": "Will candidates receive an itemised privacy notice before their data is processed?",
+      "why": "DPDP Act s. 5."
+    },
+    "data.accuracy_controls": {
+      "tier": "important",
+      "question": "How will you ensure CV parsing and candidate data are complete and accurate before they are scored?",
+      "why": "DPDP Act s. 8(3): data used for decisions about a person must be complete, accurate and consistent."
+    },
+    "data.retention_days": {
+      "tier": "important",
+      "question": "How long will unsuccessful applicants' data be kept?",
+      "why": "Storage limitation; internal policy caps it at 180 days without fresh consent."
+    },
+    "data.vendor_reuses_data_for_training": {
+      "tier": "important",
+      "question": "Will the vendor reuse candidate data to train or improve its own products?",
+      "why": "Purpose limitation and consent scope."
+    },
+    "data.cross_border_transfer": {
+      "tier": "important",
+      "question": "Will candidate data be stored or processed outside India?",
+      "why": "DPDP Act s. 16."
+    },
+    "data.transfer_destinations": {
+      "tier": "important",
+      "question": "If data leaves India, to which countries?",
+      "why": "Transfers to countries restricted by government notification are not allowed."
+    },
+    "transparency.candidate_notified_of_ai_use": {
+      "tier": "important",
+      "question": "Will candidates be told that AI is used in screening, and how?",
+      "why": "Transparency and trust; required by EU AI Act Art. 26(11) and NYC Local Law 144 where they apply."
+    },
+    "transparency.individual_explanations_available": {
+      "tier": "important",
+      "question": "Can the system explain, for one candidate, the main reasons for their score?",
+      "why": "Needed for contestability and for recruiters to exercise judgment."
+    },
+    "transparency.model_documentation_available": {
+      "tier": "important",
+      "question": "Has the vendor provided model documentation (intended use, limitations, validation results)?",
+      "why": "The committee cannot assess what it cannot see."
+    },
+    "contestability.appeal_channel": {
+      "tier": "important",
+      "question": "Can a rejected candidate ask for a human re-review?",
+      "why": "People affected by consequential decisions need a route to challenge them."
+    },
+    "contestability.human_alternative_on_request": {
+      "tier": "important",
+      "question": "Can a candidate ask to be assessed without the AI (e.g. for disability-related reasons)?",
+      "why": "Reasonable accommodation under the RPwD Act, 2016."
+    },
+    "contestability.grievance_officer_named": {
+      "tier": "important",
+      "question": "Is there a named grievance officer for candidate data and decision complaints?",
+      "why": "DPDP Act s. 8(10) requires an effective grievance mechanism."
+    },
+    "testing.bias_audit_completed": {
+      "tier": "important",
+      "question": "Has a bias audit been completed on this system, on data like yours?",
+      "why": "Evidence, not vendor assurance, is required."
+    },
+    "testing.bias_audit_independent": {
+      "tier": "important",
+      "question": "Was the bias audit done by a party independent of the vendor?",
+      "why": "Self-assessment by the seller is weak evidence."
+    },
+    "testing.job_relatedness_validated": {
+      "tier": "important",
+      "question": "Has anyone shown that the scored inputs predict job performance in these roles?",
+      "why": "Inputs that do not predict performance can only add noise and bias."
+    },
+    "testing.shadow_pilot_data_available": {
+      "tier": "important",
+      "question": "Do you have shadow-mode pilot data (AI outputs recorded but not used) with outcomes?",
+      "why": "Allows the committee to measure adverse impact before anyone is affected."
+    },
+    "testing.accessibility_tested": {
+      "tier": "important",
+      "question": "Has the candidate journey been tested for accessibility (screen readers, time limits, alternatives)?",
+      "why": "RPwD Act, 2016: equal opportunity and reasonable accommodation."
+    },
+    "monitoring.monitoring_plan": {
+      "tier": "important",
+      "question": "How will selection rates by group, override rates and errors be monitored after launch?",
+      "why": "Bias and drift appear after launch, not only before it."
+    },
+    "monitoring.review_frequency_days": {
+      "tier": "important",
+      "question": "How often will monitoring results be reviewed, and by whom?",
+      "why": "A plan without a cadence is not a plan."
+    },
+    "monitoring.kill_switch": {
+      "tier": "important",
+      "question": "Can the AI be switched off quickly with hiring continuing manually?",
+      "why": "Lets the organisation stop harm without stopping hiring."
+    },
+    "monitoring.incident_process": {
+      "tier": "important",
+      "question": "What happens if a fairness or accuracy problem is found after launch?",
+      "why": "Defines who acts, how fast, and who is told."
+    },
+    "monitoring.runtime_guardian": {
+      "tier": "important",
+      "question": "Is there an independent runtime check that can block individual decisions and withdraw the system's autonomy automatically if outcomes become unfair?",
+      "why": "Approval is a point-in-time judgment; runtime controls catch drift and misconfiguration."
+    },
+    "vendor_governance.allows_independent_audit": {
+      "tier": "important",
+      "question": "Will the vendor allow an independent auditor access to test the system?",
+      "why": "A refusal is a red line: the system cannot be verified."
+    },
+    "vendor_governance.model_change_notification": {
+      "tier": "important",
+      "question": "Must the vendor notify you before changing the model?",
+      "why": "An approved system that silently changes is no longer the approved system."
+    },
+    "vendor_governance.contract_has_dpdp_processor_terms": {
+      "tier": "important",
+      "question": "Does the contract bind the vendor as a data processor under DPDP Act terms?",
+      "why": "DPDP Act s. 8(2): processing only under a valid contract."
+    },
+    "vendor_governance.security_assessment_done": {
+      "tier": "important",
+      "question": "Has information security assessed the vendor?",
+      "why": "DPDP Act s. 8(5): reasonable security safeguards."
+    }
+  }
+}

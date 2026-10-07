@@ -1,0 +1,55 @@
+{
+  "proposal_id": "HR-AI-2026-021",
+  "tier": "T3",
+  "tier_label": "High",
+  "score": 10,
+  "max_score": 21,
+  "evaluative_floor_applied": true,
+  "dimensions": {
+    "consequence": {
+      "score": 3,
+      "reason": "Evaluates candidates (cv_screening_ranking at initial_screening stage): outcome affects access to employment"
+    },
+    "automation": {
+      "score": 2,
+      "reason": "Automation level 'auto_reject_hard_requirements' (verifiable requirements only; a person reviews every judgment-based rejection)"
+    },
+    "scale": {
+      "score": 3,
+      "reason": "60,000 applications a year"
+    },
+    "data_sensitivity": {
+      "score": 1,
+      "reason": "CV and contact data are personal data"
+    },
+    "opacity": {
+      "score": 0,
+      "reason": "explainable, documented, in-house"
+    },
+    "contestability_gap": {
+      "score": 0,
+      "reason": "appeal, alternative and grievance routes in place"
+    },
+    "oversight_weakness": {
+      "score": 1,
+      "reason": "AI score seen before reviewer forms own view (anchoring)"
+    }
+  },
+  "prohibited_purpose": [],
+  "red_lines": [],
+  "review_requirements": {
+    "approver": "AI Approval Committee (quorum)",
+    "reviewers": [
+      "Legal Counsel",
+      "Data Protection Officer",
+      "Chief Human Resources Officer",
+      "Independent fairness reviewer"
+    ],
+    "re_review_months": 6,
+    "conditions_mandatory": true
+  },
+  "regulatory_classification": {
+    "eu_ai_act": "High-risk (Annex III, point 4: employment, recruitment and selection)",
+    "eu_ai_act_note": "Annex III high-risk obligations apply from 2 Dec 2027 (Digital Omnibus on AI, in force 27 Jul 2026). Art. 5 prohibitions already apply. Relevant only where EU candidates are in scope; used here as a benchmark."
+  }
+}

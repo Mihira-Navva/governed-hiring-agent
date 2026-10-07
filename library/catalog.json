@@ -1,0 +1,169 @@
+{
+  "library": "AI Hiring Approval Skill Library",
+  "library_version": "1.0.0",
+  "owner": "AI Governance Office",
+  "published_on": "2026-10-07",
+  "eval_summary": {
+    "unit": "23/23",
+    "scenarios": "16/16",
+    "critical_scenarios": "13/13",
+    "integrity": "3/3",
+    "hiring_and_guardian": "21/21",
+    "release_gate": "PASS"
+  },
+  "skills": [
+    {
+      "name": "approval-decision-memo",
+      "version": "1.1.0",
+      "status": "approved",
+      "path": ".claude/skills/approval-decision-memo",
+      "sha256": "c9ca3ae0980378d5d20762b8d6b00e6652d5a0e2b2e266e2d8e41395729e19f1",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 0,
+        "unit_total": 0,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "fairness-bias-review",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/fairness-bias-review",
+      "sha256": "a37fea779599b18d8422e5da5ad2880d9f7475a4ef89f857caebf8328096f649",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-06",
+      "review_due": "2027-04-06",
+      "network": false,
+      "evals": {
+        "unit_passed": 17,
+        "unit_total": 17,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "hiring-decisions",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/hiring-decisions",
+      "sha256": "36289eebd6f8ccf8093d87aae401da8d7f41b615c57eb75f29305004e5d113ef",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 3,
+        "unit_total": 3,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "hiring-guardrails",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/hiring-guardrails",
+      "sha256": "e5579649505d1b3579c807ddce963df00b053609aa42f30803839dd68106d4b3",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 1,
+        "unit_total": 1,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "job-requisition",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/job-requisition",
+      "sha256": "bc734d291371b4a11596f6ff64d5658c1803953d4259e05868cb9efc5ad16c27",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 0,
+        "unit_total": 0,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "legal-privacy-review",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/legal-privacy-review",
+      "sha256": "c00eae186ae63ffc3482ccdd79d8fd734fc423317f34138893fe12aa7782018e",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-06",
+      "review_due": "2027-04-06",
+      "network": false,
+      "evals": {
+        "unit_passed": 6,
+        "unit_total": 6,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "resume-screening",
+      "version": "1.0.0",
+      "status": "approved",
+      "path": ".claude/skills/resume-screening",
+      "sha256": "53c2f905ad929866b7547c2dc34651880faa321a284468f477052e644e697345",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 4,
+        "unit_total": 4,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "risk-tiering",
+      "version": "1.1.0",
+      "status": "approved",
+      "path": ".claude/skills/risk-tiering",
+      "sha256": "d528ef93831d38a110f2d75dd866e0fff2081e49c7ed3b11fe33e99dc58859a9",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 0,
+        "unit_total": 0,
+        "scenario_pass_rate": "16/16"
+      }
+    },
+    {
+      "name": "use-case-intake",
+      "version": "1.1.0",
+      "status": "approved",
+      "path": ".claude/skills/use-case-intake",
+      "sha256": "dee3d148ef6e2e025befda97cd04babcf1a5c11c31ea5fb7168ee058579da1a3",
+      "owner": "AI Governance Office",
+      "approved_by": "AI Approval Committee",
+      "approved_on": "2026-10-07",
+      "review_due": "2027-04-07",
+      "network": false,
+      "evals": {
+        "unit_passed": 0,
+        "unit_total": 0,
+        "scenario_pass_rate": "16/16"
+      }
+    }
+  ]
+}

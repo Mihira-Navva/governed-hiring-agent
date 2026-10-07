@@ -1,0 +1,91 @@
+{
+  "requisition_id": "REQ-2026-0457",
+  "checked_at": "2026-10-07T12:57:40+00:00",
+  "spec_sha256": "8992d86a7f41d21668aade390e57c3b760b06b985bfdad43b455d1bb4dc20284",
+  "result": "BLOCK",
+  "findings": [
+    {
+      "item": "HR-1",
+      "type": "hard_requirement",
+      "text": "Valid NISM-Series-V-A (Mutual Fund Distributors) certificate",
+      "category": "JOB_RELATED",
+      "rule": "J-CERT",
+      "verdict": "PASS",
+      "reason": "Legally or technically required credentials for the role."
+    },
+    {
+      "item": "HR-2",
+      "type": "hard_requirement",
+      "text": "Able to work at the Guwahati or Shillong branch",
+      "category": "UNCLASSIFIED",
+      "rule": null,
+      "verdict": "PASS",
+      "reason": "No proxy rule matched; relevance rests on the job analysis."
+    },
+    {
+      "item": "HR-3",
+      "type": "hard_requirement",
+      "text": "No career gap longer than 6 months",
+      "category": "STRONG_PROXY",
+      "rule": "S-GAP",
+      "verdict": "BLOCK",
+      "reason": "Career gaps are common after marriage, maternity, caregiving and illness; penalising them penalises women and people with disabilities."
+    },
+    {
+      "item": "SC-1",
+      "type": "scored_criterion",
+      "text": "Work-sample assessment score (mock customer call and needs-analysis case)",
+      "category": "JOB_RELATED",
+      "rule": "J-ASSESSMENT",
+      "verdict": "PASS",
+      "reason": "Direct measures of job-relevant ability, given to every candidate the same way."
+    },
+    {
+      "item": "SC-2",
+      "type": "scored_criterion",
+      "text": "Relevant sales experience with customers (months, capped at 24)",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "verdict": "PASS",
+      "reason": "Job-relevant if defined from a job analysis and extracted accurately."
+    },
+    {
+      "item": "SC-3",
+      "type": "scored_criterion",
+      "text": "Product and compliance skills listed (MF, insurance, KYC/AML, SIP, planning)",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "verdict": "PASS",
+      "reason": "Job-relevant if defined from a job analysis and extracted accurately."
+    },
+    {
+      "item": "SC-4",
+      "type": "scored_criterion",
+      "text": "Branch language test (Assamese or Khasi, plus English or Hindi), tested in the assessment",
+      "category": "UNCLASSIFIED",
+      "rule": null,
+      "verdict": "PASS",
+      "reason": "No proxy rule matched; relevance rests on the job analysis."
+    },
+    {
+      "item": "SC-5",
+      "type": "scored_criterion",
+      "text": "College tier (top-tier institutions preferred)",
+      "category": "STRONG_PROXY",
+      "rule": "S-INSTITUTION",
+      "verdict": "BLOCK",
+      "reason": "Access to elite institutions is unequal by class, caste and region; 'tier' rankings carry that inequality into scores."
+    }
+  ],
+  "declined_by_hiring_agent": [
+    {
+      "request": "Ideally 22 to 30",
+      "reason": "Age is a protected characteristic (policy POL-AI-04); declined outright."
+    },
+    {
+      "request": "Top-tier colleges only; no gaps over 6 months",
+      "reason": "Hiring agent advised these are proxies (S-INSTITUTION, S-GAP). Manager asked to keep them; included as requested for the guardian's gate to decide."
+    }
+  ],
+  "next_step": "Remove or rewrite the blocked items and resubmit; escalate to the AI Approval Committee if the manager disputes."
+}

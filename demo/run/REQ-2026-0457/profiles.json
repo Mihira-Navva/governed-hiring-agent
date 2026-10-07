@@ -1,0 +1,1549 @@
+{
+  "_access": "RESTRICTED: contact use only; never read by scoring",
+  "profiles": [
+    {
+      "candidate_id": "C001",
+      "header": {
+        "name": "Rajesh Banerjee",
+        "email": "rajesh.banerjee@example.com",
+        "phone": "+91 9891346327",
+        "address": "84, Ganeshguri, 700019",
+        "date of birth": "24/04/1995",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Mutual Fund Advisor, Eastline Mutual Fund Distributors | Dec 2018 - Dec 2020",
+          "- Built SIP portfolios for 58 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Assam Gramin Finance | Jan 2021 - Oct 2023",
+          "- Managed a book of 91 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Nov 2023 - Present",
+          "- Handled 139 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "Customer service, Financial planning, KYC, Mutual funds"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "BBA, Gauhati University, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C002",
+      "header": {
+        "name": "Kavya Reddy",
+        "email": "kavya.reddy@example.com",
+        "phone": "+91 9469667235",
+        "address": "98, Ganeshguri, 682020",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from South seeking a relationship manager role."
+        ],
+        "experience": [
+          "Primary School Teacher, Northbridge Insurance Ltd | Mar 2018 - Jan 2021",
+          "- Taught mathematics to classes of 212 students",
+          "Data Entry Operator, Meghalaya Rural Bank (fictional) | Feb 2021 - Mar 2024",
+          "- Entered and checked 281 records a day",
+          "Data Entry Operator, Northbridge Insurance Ltd | Apr 2024 - Present",
+          "- Entered and checked 104 records a day"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)"
+        ],
+        "skills": [
+          "Communication, Tally, Customer service, MS Excel"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Com, St. Edmunds College, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C003",
+      "header": {
+        "name": "Deep Das",
+        "email": "deep.das@example.com",
+        "phone": "+91 9221375308",
+        "address": "54, Beltola, 793001",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Data Entry Operator, Northbridge Insurance Ltd | Dec 2024 - Present",
+          "- Entered and checked 192 records a day"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "Communication, Customer service, Tally, MS Excel"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Com, Delhi University, 2022"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C004",
+      "header": {
+        "name": "Priya Hussain",
+        "email": "priya.hussain@example.com",
+        "phone": "+91 9315425089",
+        "address": "61, Ganeshguri, 781028",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Assam Gramin Finance | Mar 2023 - Present",
+          "- Handled 43 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "AML, Tally, MS Excel, Mutual funds, Cross-selling, Communication"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.Sc., Cotton University, 2021"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C005",
+      "header": {
+        "name": "Bikash Patil",
+        "email": "bikash.patil@example.com",
+        "phone": "+91 9615328730",
+        "address": "11, Beltola, 411038",
+        "date of birth": "25/09/1988",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from West seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Kamrup Small Finance Bank | Oct 2011 - Jun 2013",
+          "- Advised 269 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Jul 2013 - Feb 2016",
+          "- Handled 191 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Relationship Officer, Purbanchal Securities | Mar 2016 - Feb 2020",
+          "- Managed a book of 94 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Relationship Officer, Lumshnong Microfin | Mar 2020 - Jun 2021",
+          "- Managed a book of 71 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Mutual Fund Advisor, Northbridge Insurance Ltd | Jul 2021 - Aug 2024",
+          "- Built SIP portfolios for 293 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Meghalaya Rural Bank (fictional) | Sep 2024 - Present",
+          "- Managed a book of 102 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "Appearing for NISM-Series-V-A (Mutual Fund Distributors) exam, November 2026",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "CRM, AML, MS Excel, Customer service, Communication, Insurance, Financial planning"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "B.A. Economics, NEHU, 2009"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C006",
+      "header": {
+        "name": "Moushumi Lyngdoh",
+        "email": "moushumi.lyngdoh@example.com",
+        "phone": "+91 9621885902",
+        "address": "91, Beltola, 793001",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Purbanchal Securities | Mar 2011 - Jul 2013",
+          "- Advised 177 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Kamrup Small Finance Bank | Aug 2013 - Nov 2016",
+          "- Built SIP portfolios for 286 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Northbridge Insurance Ltd | Dec 2016 - Feb 2018",
+          "- Built SIP portfolios for 135 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Purbanchal Securities | Mar 2018 - Dec 2020",
+          "- Managed a book of 130 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Mutual Fund Advisor, Assam Gramin Finance | Jan 2021 - Feb 2023",
+          "- Built SIP portfolios for 81 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Lumshnong Microfin | Mar 2023 - Jun 2024",
+          "- Managed a book of 249 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Sales Executive, Insurance, Lumshnong Microfin | Jul 2024 - Present",
+          "- Advised 226 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "CRM, Customer service, Mutual funds, MS Excel"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Sc., Delhi University, 2009"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C007",
+      "header": {
+        "name": "Kyrshan Das",
+        "email": "kyrshan.das@example.com",
+        "phone": "+91 9746946088",
+        "address": "25, Ganeshguri, 793003",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Store Supervisor, Retail, Assam Gramin Finance | May 2023 - Dec 2024",
+          "- Supervised a team of 259 staff and daily cash reconciliation",
+          "Data Entry Operator, Purbanchal Securities | Jan 2025 - Present",
+          "- Entered and checked 148 records a day"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "MS Excel, Tally, Customer service"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.A. Economics, Gauhati University, 2021"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C008",
+      "header": {
+        "name": "Rupjyoti Shah",
+        "email": "rupjyoti.shah@example.com",
+        "phone": "+91 9445814778",
+        "address": "94, Polo Bazar, 411038",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from West seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "MS Excel, Tally, Financial planning, CRM"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "B.Com, Cotton University, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C009",
+      "header": {
+        "name": "Suresh Das",
+        "email": "suresh.das@example.com",
+        "phone": "+91 9400345258",
+        "address": "49, Beltola, 781028",
+        "date of birth": "18/09/2000",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Northbridge Insurance Ltd | Sep 2023 - Present",
+          "- Advised 58 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM"
+        ],
+        "certifications": [],
+        "skills": [
+          "KYC, Communication, SIP, Cross-selling, Insurance"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "BBA, Cotton University, 2021"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C010",
+      "header": {
+        "name": "Dimple Lyngdoh",
+        "email": "dimple.lyngdoh@example.com",
+        "phone": "+91 9415363401",
+        "address": "97, Zoo Road, 781024"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "KYC, Cross-selling, Insurance, Customer service, AML, Mutual funds"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "B.A. Economics, NEHU, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C011",
+      "header": {
+        "name": "Pranjal Sangma",
+        "email": "pranjal.sangma@example.com",
+        "phone": "+91 9405624706",
+        "address": "27, Zoo Road, 793001",
+        "date of birth": "01/10/1997",
+        "gender": "Male",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Meghalaya Rural Bank (fictional) | Nov 2020 - Jan 2022",
+          "- Advised 117 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Brahmaputra Co-operative Bank | Feb 2022 - Nov 2025",
+          "- Built SIP portfolios for 184 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Customer Service Associate, Branch Banking, Assam Gramin Finance | Dec 2025 - Present",
+          "- Handled 219 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Mutual funds, Communication, Insurance, Tally"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "B.Sc., Cotton University, 2018"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C012",
+      "header": {
+        "name": "Tanushree Banerjee",
+        "email": "tanushree.banerjee@example.com",
+        "phone": "+91 9246811847",
+        "address": "85, Beltola, 700019",
+        "date of birth": "20/10/2003"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Mutual funds, Customer service, AML, Insurance, CRM"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "B.Sc., Cotton University, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C013",
+      "header": {
+        "name": "Imran Gogoi",
+        "email": "imran.gogoi@example.com",
+        "phone": "+91 9430159479",
+        "address": "52, Laitumkhrah, 781006",
+        "date of birth": "17/03/2003",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "Customer service, Tally, MS Excel"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "BBA, Gauhati University, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C014",
+      "header": {
+        "name": "Sneha Bora",
+        "email": "sneha.bora@example.com",
+        "phone": "+91 9883090168",
+        "address": "92, Zoo Road, 793003",
+        "date of birth": "23/08/1992"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Brahmaputra Co-operative Bank | Oct 2015 - Mar 2018",
+          "- Advised 65 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Career break | Apr 2018 - Mar 2020",
+          "- Maternity leave and caring for a young child",
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Apr 2020 - Jul 2021",
+          "- Handled 52 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Aug 2021 - May 2023",
+          "- Built SIP portfolios for 144 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Eastline Mutual Fund Distributors | Jun 2023 - Jan 2025",
+          "- Built SIP portfolios for 104 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Purbanchal Securities | Feb 2025 - Present",
+          "- Advised 170 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)"
+        ],
+        "skills": [
+          "Tally, Financial planning, Customer service, KYC, SIP"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "BBA, Gauhati University, 2013"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C015",
+      "header": {
+        "name": "Deep Syiem",
+        "email": "deep.syiem@example.com",
+        "phone": "+91 9955264698",
+        "address": "83, Ganeshguri, 781006",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Mutual Fund Advisor, Brahmaputra Co-operative Bank | Mar 2008 - May 2009",
+          "- Built SIP portfolios for 191 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Purbanchal Securities | Jun 2009 - Dec 2010",
+          "- Built SIP portfolios for 289 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Jan 2011 - Aug 2013",
+          "- Handled 90 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Sales Executive, Insurance, Purbanchal Securities | Sep 2013 - Jun 2016",
+          "- Advised 158 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Eastline Mutual Fund Distributors | Jul 2016 - Apr 2020",
+          "- Built SIP portfolios for 215 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Customer Service Associate, Branch Banking, Kamrup Small Finance Bank | May 2020 - Jan 2022",
+          "- Handled 182 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Feb 2022 - Jul 2025",
+          "- Built SIP portfolios for 118 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Northbridge Insurance Ltd | Aug 2025 - Present",
+          "- Advised 80 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "AML, Cross-selling, Mutual funds, CRM, MS Excel, Insurance"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.Sc., Delhi University, 2006"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C016",
+      "header": {
+        "name": "Priya Hussain",
+        "email": "priya.hussain@example.com",
+        "phone": "+91 9228131407",
+        "address": "56, Polo Bazar, 793001",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Purbanchal Securities | Jul 2023 - Dec 2024",
+          "- Handled 207 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Relationship Officer, Northbridge Insurance Ltd | Jan 2025 - Present",
+          "- Managed a book of 251 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Tally, Mutual funds, Financial planning, KYC"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "BBA, Delhi University, 2021"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C017",
+      "header": {
+        "name": "Amit Iyer",
+        "email": "amit.iyer@example.com",
+        "phone": "+91 9417175617",
+        "address": "89, Polo Bazar, 560037",
+        "date of birth": "23/05/1982",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from South seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Jan 2005 - Jun 2006",
+          "- Handled 156 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Sales Executive, Insurance, Kamrup Small Finance Bank | Jul 2006 - Nov 2007",
+          "- Advised 187 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Dec 2007 - Mar 2011",
+          "- Built SIP portfolios for 239 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Customer Service Associate, Branch Banking, Assam Gramin Finance | Apr 2011 - May 2014",
+          "- Handled 71 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Kamrup Small Finance Bank | Jun 2014 - Aug 2017",
+          "- Built SIP portfolios for 198 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Brahmaputra Co-operative Bank | Sep 2017 - Feb 2019",
+          "- Managed a book of 237 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Customer Service Associate, Branch Banking, Lumshnong Microfin | Mar 2019 - Jan 2023",
+          "- Handled 136 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Lumshnong Microfin | Feb 2023 - Present",
+          "- Built SIP portfolios for 203 clients",
+          "- Explained risk profiles and financial planning basics"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)"
+        ],
+        "skills": [
+          "KYC, SIP, Customer service, Financial planning, Communication"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.A. Economics, NEHU, 2003"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C018",
+      "header": {
+        "name": "Riya Das",
+        "email": "riya.das@example.com",
+        "phone": "+91 9785843950",
+        "address": "73, Beltola, 781024",
+        "date of birth": "17/11/1998",
+        "gender": "Female",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Jun 2021 - Jul 2024",
+          "- Built SIP portfolios for 124 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Purbanchal Securities | Aug 2024 - Present",
+          "- Managed a book of 55 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)"
+        ],
+        "skills": [
+          "MS Excel, CRM, SIP, Customer service, Tally"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "B.Sc., Gauhati University, 2019"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C019",
+      "header": {
+        "name": "Kyrshan Kalita",
+        "email": "kyrshan.kalita@example.com",
+        "phone": "+91 9710533625",
+        "address": "9, Laitumkhrah, 781028",
+        "date of birth": "28/01/2001"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Data Entry Operator, Purbanchal Securities | Aug 2024 - Present",
+          "- Entered and checked 196 records a day"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "MS Excel, Communication, Tally"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "BBA, Cotton University, 2022"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C020",
+      "header": {
+        "name": "Bikash Kharkongor",
+        "email": "bikash.kharkongor@example.com",
+        "phone": "+91 9699410589",
+        "address": "77, Polo Bazar, 793003",
+        "gender": "Male",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Meghalaya Rural Bank (fictional) | May 2002 - Dec 2003",
+          "- Advised 166 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Sales Executive, Insurance, Assam Gramin Finance | Jan 2004 - Nov 2007",
+          "- Advised 175 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Northbridge Insurance Ltd | Dec 2007 - Sep 2011",
+          "- Built SIP portfolios for 176 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Purbanchal Securities | Oct 2011 - Nov 2014",
+          "- Built SIP portfolios for 179 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Northbridge Insurance Ltd | Dec 2014 - Nov 2016",
+          "- Built SIP portfolios for 278 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Lumshnong Microfin | Dec 2016 - Sep 2020",
+          "- Built SIP portfolios for 292 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Meghalaya Rural Bank (fictional) | Oct 2020 - Feb 2022",
+          "- Advised 255 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Mar 2022 - Apr 2025",
+          "- Built SIP portfolios for 280 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Meghalaya Rural Bank (fictional) | May 2025 - Present",
+          "- Managed a book of 180 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Communication, KYC, Mutual funds, Customer service, AML, SIP"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "BBA, NEHU, 2000"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C021",
+      "header": {
+        "name": "Wanbok Reddy",
+        "email": "wanbok.reddy@example.com",
+        "phone": "+91 9146000436",
+        "address": "57, Polo Bazar, 682020",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from South seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Jan 2008 - Jul 2009",
+          "- Handled 177 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Brahmaputra Co-operative Bank | Aug 2009 - Sep 2011",
+          "- Built SIP portfolios for 92 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Assam Gramin Finance | Oct 2011 - Mar 2014",
+          "- Managed a book of 166 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Sales Executive, Insurance, Northbridge Insurance Ltd | Apr 2014 - Jun 2017",
+          "- Advised 179 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Assam Gramin Finance | Jul 2017 - Sep 2020",
+          "- Built SIP portfolios for 254 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Mutual Fund Advisor, Eastline Mutual Fund Distributors | Oct 2020 - Jan 2022",
+          "- Built SIP portfolios for 172 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Lumshnong Microfin | Feb 2022 - Jul 2023",
+          "- Advised 64 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Aug 2023 - Present",
+          "- Handled 227 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "CRM, Cross-selling, Financial planning, Communication"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "BBA, NEHU, 2006"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C022",
+      "header": {
+        "name": "Dimple Bora",
+        "email": "dimple.bora@example.com",
+        "phone": "+91 9142418308",
+        "address": "52, Ganeshguri, 781024",
+        "date of birth": "25/08/1997"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Feb 2020 - Jul 2021",
+          "- Built SIP portfolios for 222 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Relationship Officer, Meghalaya Rural Bank (fictional) | Aug 2021 - Jun 2025",
+          "- Managed a book of 231 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Jul 2025 - Present",
+          "- Handled 41 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Financial planning, Communication, AML, KYC, Cross-selling"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "BBA, NEHU, 2018"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C023",
+      "header": {
+        "name": "Suresh Gupta",
+        "email": "suresh.gupta@example.com",
+        "phone": "+91 9205122086",
+        "address": "68, Beltola, 110092"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from North seeking a relationship manager role."
+        ],
+        "experience": [
+          "Relationship Officer, Assam Gramin Finance | Jun 2023 - Present",
+          "- Managed a book of 244 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Customer service, CRM, Communication, MS Excel"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "BBA, Delhi University, 2021"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C024",
+      "header": {
+        "name": "Nasreen Lyngdoh",
+        "email": "nasreen.lyngdoh@example.com",
+        "phone": "+91 9830647285",
+        "address": "97, Laitumkhrah, 781024",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Mutual Fund Advisor, Northbridge Insurance Ltd | Jun 2018 - Aug 2021",
+          "- Built SIP portfolios for 169 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Brahmaputra Co-operative Bank | Sep 2021 - Dec 2022",
+          "- Advised 180 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Jan 2023 - Mar 2025",
+          "- Handled 288 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Customer Service Associate, Branch Banking, Lumshnong Microfin | Apr 2025 - Present",
+          "- Handled 68 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)"
+        ],
+        "skills": [
+          "KYC, Communication, AML, Customer service, Cross-selling, SIP"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.A. Economics, NEHU, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C025",
+      "header": {
+        "name": "Daniel Chatterjee",
+        "email": "daniel.chatterjee@example.com",
+        "phone": "+91 9494019414",
+        "address": "13, Ganeshguri, 700019",
+        "marital status": "Married"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Meghalaya Rural Bank (fictional) | Dec 2018 - Nov 2021",
+          "- Advised 127 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Dec 2021 - Dec 2023",
+          "- Handled 276 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Relationship Officer, Purbanchal Securities | Jan 2024 - Present",
+          "- Managed a book of 239 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "SIP, Cross-selling, MS Excel, KYC, Mutual funds, Customer service, AML"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "BBA, St. Edmunds College, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C026",
+      "header": {
+        "name": "Sneha Verma",
+        "email": "sneha.verma@example.com",
+        "phone": "+91 9914820400",
+        "address": "91, Polo Bazar, 226010",
+        "date of birth": "10/08/2003",
+        "gender": "Female",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from North seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "MS Excel, Customer service, Communication, Tally"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.A. Economics, St. Edmunds College, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C027",
+      "header": {
+        "name": "Amit Hussain",
+        "email": "amit.hussain@example.com",
+        "phone": "+91 9988942305",
+        "address": "29, Laitumkhrah, 793003"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Sales Executive, Insurance, Assam Gramin Finance | May 2021 - Sep 2023",
+          "- Advised 293 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Relationship Officer, Kamrup Small Finance Bank | Oct 2023 - Present",
+          "- Managed a book of 166 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "KYC, Tally, Financial planning, CRM, Customer service, SIP"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "BBA, Cotton University, 2019"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C028",
+      "header": {
+        "name": "Tanushree Patil",
+        "email": "tanushree.patil@example.com",
+        "phone": "+91 9341215852",
+        "address": "34, Laitumkhrah, 400601",
+        "date of birth": "05/10/2001",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from West seeking a relationship manager role."
+        ],
+        "experience": [
+          "Relationship Officer, Brahmaputra Co-operative Bank | Jan 2024 - Present",
+          "- Managed a book of 220 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Insurance, KYC, Mutual funds, Customer service, AML, CRM, MS Excel"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Com, Cotton University, 2022"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C029",
+      "header": {
+        "|@#u@ k": "arkon:;;",
+        "e#ail": "arjun.@ha@|~^gor@exam^:e.@@m",
+        "p~o": "|: +91 9315169282",
+        "#|d@e@s": "14, %ol@ Baz^r, 781024",
+        "ge|der": "M:le",
+        "ma^#t#^ ^|atus": "Si|g@e",
+        "name": "S;%MAR@",
+        "@o%iv": "t#d ^|^|%ss@on;: fr%@ Ea^t & Nort:-#a;^ s%ek^ng a ;elati;nsh^; man~g;r ;ole.",
+        "relations%ip of": "ice@, @:%%# Gra|in %%%#n#^ | %ep 2024 - Pr;sent",
+        "- man#~e^ a ^o^k %f 162 re@;|": "custo:%rs #cros| ^^|#~@;, #u##al %@nd~ @n# i|s#;#n|e",
+        "- co;~leted ~": "C #n# %M% @#e#:~ %o% %:w acco^n^s",
+        "ni": "M-Ser;%|-V-A: M@tu;l Fu:d %%st^|@%;or| #%|t^|i%|^i@# (v~li^ t|ll 2027)",
+        "sk%ll": "",
+        "^ro^s-#el~i~g, com%%@": "^at:~^, |inancia: @la@ni:g, CRM, Insu|:^^e, :;l:y, %:%",
+        "@;": "G;|GES",
+        "hind~, en|l#": ":",
+        "^~u": "^^I|N",
+        ";ba, c^@ton ^n": "ver#%t@, 2022"
+      },
+      "sections": {}
+    },
+    {
+      "candidate_id": "C030",
+      "header": {
+        "name": "Wanshai Saikia",
+        "email": "wanshai.saikia@example.com",
+        "phone": "+91 9565657780",
+        "address": "67, Polo Bazar, 793001"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "Communication, Tally, MS Excel, Customer service"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Sc., NEHU, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C031",
+      "header": {
+        "name": "Kyrshan Lyngdoh",
+        "email": "kyrshan.lyngdoh@example.com",
+        "phone": "+91 9633520775",
+        "address": "51, Ganeshguri, 781006",
+        "date of birth": "07/12/1998",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Purbanchal Securities | Dec 2021 - Nov 2025",
+          "- Handled 175 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Meghalaya Rural Bank (fictional) | Dec 2025 - Present",
+          "- Built SIP portfolios for 138 clients",
+          "- Explained risk profiles and financial planning basics"
+        ],
+        "certifications": [
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Customer service, Insurance, Communication, KYC, Financial planning"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.Com, Delhi University, 2019"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C032",
+      "header": {
+        "name": "Kavya Sangma",
+        "email": "kavya.sangma@example.com",
+        "phone": "+91 9681039760",
+        "address": "79, Beltola, 793003",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Relationship Officer, Eastline Mutual Fund Distributors | Nov 2011 - Jun 2015",
+          "- Managed a book of 210 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank | Jul 2015 - Dec 2016",
+          "- Handled 118 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Assam Gramin Finance | Jan 2017 - Sep 2020",
+          "- Built SIP portfolios for 219 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Oct 2020 - May 2024",
+          "- Handled 119 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Customer Service Associate, Branch Banking, Purbanchal Securities | Jun 2024 - Present",
+          "- Handled 193 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2029)"
+        ],
+        "skills": [
+          "Mutual funds, Customer service, SIP, MS Excel, Insurance, CRM"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.Com, Delhi University, 2009"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C033",
+      "header": {
+        "name": "Bikash Iyer",
+        "email": "bikash.iyer@example.com",
+        "phone": "+91 9224942754",
+        "address": "96, Beltola, 560037",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from South seeking a relationship manager role."
+        ],
+        "experience": [
+          "Store Supervisor, Retail, Meghalaya Rural Bank (fictional) | Dec 2018 - Jun 2020",
+          "- Supervised a team of 228 staff and daily cash reconciliation",
+          "Primary School Teacher, Meghalaya Rural Bank (fictional) | Jul 2020 - May 2024",
+          "- Taught mathematics to classes of 281 students",
+          "Primary School Teacher, Purbanchal Securities | Jun 2024 - Present",
+          "- Taught mathematics to classes of 202 students"
+        ],
+        "certifications": [
+          "Certificate in Computer Applications"
+        ],
+        "skills": [
+          "Customer service, Communication"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "B.Com, NEHU, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C034",
+      "header": {
+        "name": "Farida Hussain",
+        "email": "farida.hussain@example.com",
+        "phone": "+91 9180427027",
+        "address": "16, Polo Bazar, 793001",
+        "date of birth": "01/07/2001",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Primary School Teacher, Brahmaputra Co-operative Bank | Oct 2024 - Present",
+          "- Taught mathematics to classes of 154 students"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)"
+        ],
+        "skills": [
+          "Tally, MS Excel, Communication"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "B.A. Economics, Gauhati University, 2022"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C035",
+      "header": {
+        "name": "Pranjal Yadav",
+        "email": "pranjal.yadav@example.com",
+        "phone": "+91 9610225030",
+        "address": "4, Laitumkhrah, 226010",
+        "date of birth": "13/04/2003",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from North seeking a relationship manager role."
+        ],
+        "experience": [
+          "Fresher"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "MS Excel, Customer service"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "B.A. Economics, St. Edmunds College, 2024"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C036",
+      "header": {
+        "name": "Anjali Gupta",
+        "email": "anjali.gupta@example.com",
+        "phone": "+91 9788714875",
+        "address": "38, Zoo Road, 110092",
+        "date of birth": "12/08/2001",
+        "marital status": "Single"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from North seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Eastline Mutual Fund Distributors | Sep 2024 - Present",
+          "- Handled 203 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "Tally, Financial planning, Mutual funds, Insurance"
+        ],
+        "languages": [
+          "Bengali, Assamese, English"
+        ],
+        "education": [
+          "B.Sc., Cotton University, 2022"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C037",
+      "header": {
+        "name": "Pranjal Hussain",
+        "email": "pranjal.hussain@example.com",
+        "phone": "+91 9105789182",
+        "address": "11, Laitumkhrah, 793003",
+        "date of birth": "20/02/1999",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Motivated professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Relationship Officer, Eastline Mutual Fund Distributors | Jan 2022 - May 2023",
+          "- Managed a book of 251 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Relationship Officer, Meghalaya Rural Bank (fictional) | Jun 2023 - Present",
+          "- Managed a book of 196 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "Financial planning, SIP, Cross-selling, Communication, Customer service, AML"
+        ],
+        "languages": [
+          "Khasi, English, Hindi"
+        ],
+        "education": [
+          "B.Com, Gauhati University, 2020"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C038",
+      "header": {
+        "name": "Anjali Patil",
+        "email": "anjali.patil@example.com",
+        "phone": "+91 9538509796",
+        "address": "67, Beltola, 411038",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from West seeking a relationship manager role."
+        ],
+        "experience": [
+          "Customer Service Associate, Branch Banking, Meghalaya Rural Bank (fictional) | Dec 2016 - Dec 2019",
+          "- Handled 264 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Customer Service Associate, Branch Banking, Northbridge Insurance Ltd | Jan 2020 - Mar 2023",
+          "- Handled 290 walk-in customers a week",
+          "- Opened accounts and completed KYC documentation",
+          "Mutual Fund Advisor, Brahmaputra Co-operative Bank | Apr 2023 - Mar 2026",
+          "- Built SIP portfolios for 295 clients",
+          "- Explained risk profiles and financial planning basics",
+          "Sales Executive, Insurance, Lumshnong Microfin | Apr 2026 - Present",
+          "- Advised 65 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2027)",
+          "IRDAI licensed insurance agent"
+        ],
+        "skills": [
+          "KYC, AML, SIP, Financial planning, Insurance, Communication, Tally"
+        ],
+        "languages": [
+          "Assamese, Hindi, English"
+        ],
+        "education": [
+          "B.A. Economics, Delhi University, 2014"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C039",
+      "header": {
+        "name": "Pranjal Kalita",
+        "email": "pranjal.kalita@example.com",
+        "phone": "+91 9256464081",
+        "address": "76, Beltola, 781024",
+        "gender": "Male"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Relationship Officer, Meghalaya Rural Bank (fictional) | Jul 2018 - Jan 2021",
+          "- Managed a book of 57 retail customers across savings, mutual funds and insurance",
+          "- Completed KYC and AML checks for new accounts",
+          "- Cross-selling of SIP and term insurance products",
+          "Sales Executive, Insurance, Purbanchal Securities | Feb 2021 - Jan 2025",
+          "- Advised 297 families on term and health insurance cover",
+          "- Met monthly sales targets in 9 of 12 months",
+          "- Maintained client records in CRM",
+          "Mutual Fund Advisor, Lumshnong Microfin | Feb 2025 - Present",
+          "- Built SIP portfolios for 142 clients",
+          "- Explained risk profiles and financial planning basics"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "MS Excel, KYC, Cross-selling, Insurance, Communication"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "BBA, NEHU, 2016"
+        ]
+      }
+    },
+    {
+      "candidate_id": "C040",
+      "header": {
+        "name": "Anjali Sangma",
+        "email": "anjali.sangma@example.com",
+        "phone": "+91 9138933979",
+        "address": "97, Beltola, 781024",
+        "gender": "Female"
+      },
+      "sections": {
+        "summary": [
+          "Experienced professional from East & North-East seeking a relationship manager role."
+        ],
+        "experience": [
+          "Store Supervisor, Retail, Kamrup Small Finance Bank | Mar 2018 - Apr 2020",
+          "- Supervised a team of 146 staff and daily cash reconciliation",
+          "Data Entry Operator, Meghalaya Rural Bank (fictional) | May 2020 - Aug 2022",
+          "- Entered and checked 47 records a day",
+          "Data Entry Operator, Eastline Mutual Fund Distributors | Sep 2022 - Present",
+          "- Entered and checked 157 records a day"
+        ],
+        "certifications": [
+          "NISM-Series-V-A: Mutual Fund Distributors Certification (valid till 2028)"
+        ],
+        "skills": [
+          "MS Excel, Communication"
+        ],
+        "languages": [
+          "Hindi, English"
+        ],
+        "education": [
+          "BBA, Cotton University, 2016"
+        ]
+      }
+    }
+  ]
+}

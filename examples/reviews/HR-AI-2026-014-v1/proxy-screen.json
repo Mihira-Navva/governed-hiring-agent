@@ -1,0 +1,166 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "verdict": "CONCERN",
+  "feature_count": 11,
+  "counts": {
+    "PROTECTED": 0,
+    "STRONG_PROXY": 5,
+    "MODERATE_PROXY": 4,
+    "JOB_RELATED": 2,
+    "UNCLASSIFIED": 0
+  },
+  "features": [
+    {
+      "feature": "Skills extracted from CV",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "linked_attributes": [],
+      "rationale": "Job-relevant if defined from a job analysis and extracted accurately.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Years of experience",
+      "category": "MODERATE_PROXY",
+      "rule": "M-EXPERIENCE",
+      "linked_attributes": [
+        "age"
+      ],
+      "rationale": "Acceptable as a minimum; as an upper bound or a continuous score it becomes an age proxy.",
+      "action": "Keep only with a written job-relatedness justification and a bias test of this feature.",
+      "also_matched": []
+    },
+    {
+      "feature": "Graduation year",
+      "category": "STRONG_PROXY",
+      "rule": "S-GRADYEAR",
+      "linked_attributes": [
+        "age"
+      ],
+      "rationale": "Graduation year lets a model recover age almost exactly.",
+      "action": "Remove unless a documented job analysis shows it is necessary for the role and an audit shows no adverse impact; if kept, test it explicitly.",
+      "also_matched": []
+    },
+    {
+      "feature": "College name and college tier",
+      "category": "STRONG_PROXY",
+      "rule": "S-NAME",
+      "linked_attributes": [
+        "caste",
+        "class",
+        "gender",
+        "language",
+        "region",
+        "religion"
+      ],
+      "rationale": "In India a name often signals caste, religion, region and gender together. Audit studies have repeatedly found callback gaps by name.",
+      "action": "Remove unless a documented job analysis shows it is necessary for the role and an audit shows no adverse impact; if kept, test it explicitly.",
+      "also_matched": [
+        "S-INSTITUTION"
+      ]
+    },
+    {
+      "feature": "Current location PIN code",
+      "category": "STRONG_PROXY",
+      "rule": "S-LOCATION",
+      "linked_attributes": [
+        "caste",
+        "class",
+        "region",
+        "religion"
+      ],
+      "rationale": "Residential segregation makes locality a proxy for community and income.",
+      "action": "Remove unless a documented job analysis shows it is necessary for the role and an audit shows no adverse impact; if kept, test it explicitly.",
+      "also_matched": []
+    },
+    {
+      "feature": "Employment gaps (months)",
+      "category": "STRONG_PROXY",
+      "rule": "S-GAP",
+      "linked_attributes": [
+        "caregiving",
+        "disability",
+        "gender",
+        "health"
+      ],
+      "rationale": "Career gaps are common after marriage, maternity, caregiving and illness; penalising them penalises women and people with disabilities.",
+      "action": "Remove unless a documented job analysis shows it is necessary for the role and an audit shows no adverse impact; if kept, test it explicitly.",
+      "also_matched": []
+    },
+    {
+      "feature": "Languages known",
+      "category": "MODERATE_PROXY",
+      "rule": "M-LANGUAGES",
+      "linked_attributes": [
+        "class",
+        "region",
+        "schooling medium"
+      ],
+      "rationale": "Legitimate only where the role needs the language; then test it directly rather than infer it.",
+      "action": "Keep only with a written job-relatedness justification and a bias test of this feature.",
+      "also_matched": []
+    },
+    {
+      "feature": "Previous employer",
+      "category": "MODERATE_PROXY",
+      "rule": "M-EMPLOYER",
+      "linked_attributes": [
+        "class",
+        "gender",
+        "network"
+      ],
+      "rationale": "Prestige of past employers compounds earlier inequalities of access.",
+      "action": "Keep only with a written job-relatedness justification and a bias test of this feature.",
+      "also_matched": []
+    },
+    {
+      "feature": "Current CTC",
+      "category": "MODERATE_PROXY",
+      "rule": "M-SALARY",
+      "linked_attributes": [
+        "gender"
+      ],
+      "rationale": "Salary history imports the gender pay gap into new decisions.",
+      "action": "Keep only with a written job-relatedness justification and a bias test of this feature.",
+      "also_matched": []
+    },
+    {
+      "feature": "Aptitude test score (online, 25 minutes, timed)",
+      "category": "JOB_RELATED",
+      "rule": "J-ASSESSMENT",
+      "linked_attributes": [],
+      "rationale": "Direct measures of job-relevant ability, given to every candidate the same way.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Video communication confidence score",
+      "category": "STRONG_PROXY",
+      "rule": "S-AFFECT",
+      "linked_attributes": [
+        "culture",
+        "disability",
+        "gender",
+        "neurodivergence"
+      ],
+      "rationale": "Scores inferred from faces or behaviour are affect inference (red line RL-01) and penalise cultural, neurodivergent and disabled candidates.",
+      "action": "Remove unless a documented job analysis shows it is necessary for the role and an audit shows no adverse impact; if kept, test it explicitly.",
+      "also_matched": []
+    }
+  ],
+  "features_to_remove": [
+    "Graduation year",
+    "College name and college tier",
+    "Current location PIN code",
+    "Employment gaps (months)",
+    "Video communication confidence score"
+  ],
+  "features_to_justify": [
+    "Years of experience",
+    "Languages known",
+    "Previous employer",
+    "Current CTC"
+  ],
+  "red_lines": [],
+  "limits": "Keyword screening finds proxies that are named. It cannot find proxies hidden inside composite scores or learned from free text; only outcome testing by group (adverse_impact.py) can show those."
+}

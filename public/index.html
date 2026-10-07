@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Governed Hiring Agent</title>
+<meta name="description" content="A hiring agent that acts, with governance on top. Responsible AI and Governance, Case 02.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<style>
+:root {
+  --paper: #EEF2F1; --surface: #FBFCFC; --ink: #142629; --muted: #566A6E; --line: #C3CFCE;
+  --teal: #0D5864; --teal-soft: #D6E7E8; --seal: #9A5F0C; --seal-soft: #F3E4C8;
+  --risk: #93302A; --risk-soft: #F2DDD9; --ok: #2F6B3C; --ok-soft: #DCEBDD;
+  --hire: #3D4F8F; --hire-soft: #E0E5F3;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1A1C; --surface: #162427; --ink: #E3ECEB; --muted: #9DB1B3; --line: #2C3F42;
+    --teal: #6FB8C2; --teal-soft: #173A40; --seal: #E0A955; --seal-soft: #3A2C14;
+    --risk: #EE8D84; --risk-soft: #3E1F1C; --ok: #86C793; --ok-soft: #1C3522;
+    --hire: #A3B2EA; --hire-soft: #222C4D; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1A1C; --surface: #162427; --ink: #E3ECEB; --muted: #9DB1B3; --line: #2C3F42;
+  --teal: #6FB8C2; --teal-soft: #173A40; --seal: #E0A955; --seal-soft: #3A2C14;
+  --risk: #EE8D84; --risk-soft: #3E1F1C; --ok: #86C793; --ok-soft: #1C3522;
+  --hire: #A3B2EA; --hire-soft: #222C4D; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); }
+a { color: var(--teal); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+header.site { border-bottom: 1px solid var(--line); background: var(--surface); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 0; flex-wrap: wrap; }
+.eyebrow { font: 500 12px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.2; margin: 0; }
+h1 { font-size: clamp(26px, 4vw, 38px); }
+h1 em { color: var(--teal); }
+h2 { font-size: 24px; margin-bottom: 6px; }
+h3 { font-size: 18px; }
+nav.tabs { display: flex; gap: 2px; overflow-x: auto; width: 100%; margin-top: 12px; }
+nav.tabs button { font: 500 14px var(--body); background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 10px 14px; cursor: pointer; white-space: nowrap; }
+nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--teal); }
+main { padding: 28px 0 60px; }
+section[role="tabpanel"][hidden] { display: none; }
+.lede { color: var(--muted); max-width: 70ch; margin: 6px 0 22px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+.grid { display: grid; gap: 14px; }
+.g3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.g6 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.layer { border-left: 4px solid var(--line); }
+.layer.people { border-left-color: var(--seal); } .layer.gov { border-left-color: var(--teal); } .layer.hire { border-left-color: var(--hire); }
+.layer p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.tile .k { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.tile .v { font: 500 26px/1.2 var(--display); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.tile .s { font-size: 13px; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 500 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+td.num { font-variant-numeric: tabular-nums; }
+.tablewrap { overflow-x: auto; }
+.btn { font: 600 14px var(--body); background: var(--teal); color: var(--surface); border: 0; border-radius: 8px; padding: 10px 18px; cursor: pointer; }
+.btn:disabled { opacity: .55; cursor: progress; }
+.btn.ghost { background: none; color: var(--teal); border: 1px solid var(--teal); }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.pill { display: inline-block; font: 500 12px var(--mono); padding: 2px 8px; border-radius: 99px; background: var(--teal-soft); color: var(--teal); white-space: nowrap; }
+.pill.ok { background: var(--ok-soft); color: var(--ok); } .pill.warn { background: var(--seal-soft); color: var(--seal); } .pill.bad { background: var(--risk-soft); color: var(--risk); } .pill.hire { background: var(--hire-soft); color: var(--hire); }
+.acts { counter-reset: act; }
+.act { position: relative; padding-left: 52px; }
+.act::before { counter-increment: act; content: counter(act); position: absolute; left: 16px; top: 18px; width: 26px; height: 26px; border-radius: 50%; background: var(--teal-soft); color: var(--teal); font: 600 13px/26px var(--mono); text-align: center; }
+.act p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.act .result { margin-top: 8px; font-size: 14px; color: var(--ink); }
+details { margin-top: 12px; }
+summary { cursor: pointer; font-weight: 500; color: var(--teal); }
+.md { font-size: 14px; overflow-wrap: anywhere; }
+.md h1 { font-size: 24px; margin: 18px 0 8px; } .md h2 { font-size: 20px; margin: 18px 0 6px; } .md h3 { font-size: 16px; margin: 14px 0 6px; }
+.md table { display: block; overflow-x: auto; }
+.md code, pre { font-family: var(--mono); font-size: 13px; }
+pre { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto; white-space: pre-wrap; max-height: 420px; }
+label { font-weight: 500; font-size: 14px; display: block; margin-bottom: 4px; }
+input[type=text], input[type=password], select, textarea { width: 100%; font: 14px var(--body); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; }
+textarea { min-height: 220px; font-family: var(--mono); font-size: 13px; }
+.form { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.feed { list-style: none; margin: 0; padding: 0; font-size: 14px; max-height: 360px; overflow-y: auto; }
+.feed li { padding: 6px 0; border-bottom: 1px dashed var(--line); display: flex; gap: 10px; align-items: baseline; }
+.feed .t { font: 12px var(--mono); color: var(--muted); min-width: 44px; }
+.banner { border-radius: 10px; padding: 16px 18px; border: 1px solid var(--line); background: var(--teal-soft); }
+.banner.bad { background: var(--risk-soft); border-color: var(--risk); } .banner.warn { background: var(--seal-soft); border-color: var(--seal); } .banner.ok { background: var(--ok-soft); border-color: var(--ok); }
+.banner .big { font: 500 24px var(--display); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
+.chips button { font: 500 13px var(--body); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 99px; padding: 4px 12px; cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--teal); color: var(--surface); border-color: var(--teal); }
+tr.clickable { cursor: pointer; } tr.clickable:hover td { background: var(--teal-soft); }
+.muted { color: var(--muted); } .small { font-size: 13px; }
+.err { color: var(--risk); font-weight: 500; }
+.spacer { height: 18px; }
+footer { border-top: 1px solid var(--line); padding: 18px 0 30px; color: var(--muted); font-size: 13px; }
+.themebtn { font: 500 12px var(--mono); background: none; border: 1px solid var(--line); color: var(--muted); border-radius: 6px; padding: 4px 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Responsible AI &amp; Governance · Case 02 · AI-assisted hiring</div>
+      <h1>A hiring agent that acts, with <em>governance on top</em></h1>
+    </div>
+    <button class="themebtn" id="themeBtn" type="button" aria-label="Toggle colour theme">Theme</button>
+    <nav class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" aria-controls="tab-overview" id="b-overview">Overview</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-demo" id="b-demo">Governed demo</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-agent" id="b-agent">Approval agent (Claude)</button>
+      <button role="tab" aria-selected="false" aria-controls="tab-tests" id="b-tests">Tests</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<!-- OVERVIEW -->
+<section role="tabpanel" id="tab-overview">
+  <p class="lede">The hiring agent reads applications, screens them and acts. It invites strong candidates and rejects only those who clearly fail a legal or operational requirement. Governance sits above it: it approves the agent before it runs, sets how much it may do alone, checks every decision before it takes effect, and withdraws its autonomy automatically if outcomes turn unfair.</p>
+  <div class="grid g3">
+    <div class="card layer people"><div class="eyebrow">People</div><h3>Committee, recruiters, candidates</h3><p>The AI Approval Committee signs the runtime policy and is the only party that can raise autonomy. Recruiters make every judgment call. Candidates can appeal within 14 days or opt for a human-only process.</p></div>
+    <div class="card layer gov"><div class="eyebrow">Governance</div><h3>Approval agent · guardian · library</h3><p>The approval agent reviews the system before deployment. The hiring guardian checks every job spec and decision, runs the fairness monitor and trips the circuit breaker. Skills are hash-pinned and verified before every run.</p></div>
+    <div class="card layer hire"><div class="eyebrow">Hiring</div><h3>Hiring agent</h3><p>Requisition → parse &amp; blind → screen → decide. Name, address, PIN code, date of birth, gender, photo, college and graduation year are removed before scoring. Scores come from deterministic scripts, never from the language model.</p></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="card">
+    <h2>Autonomy is granted, earned and taken away</h2>
+    <p class="muted small">The effective level is always the lower of the committee's signed policy and the guardian's current state.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Level</th><th>The agent acts alone on</th><th>A person decides</th><th>How it is reached</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill bad">L0</span> Suspended</td><td>nothing</td><td>everything</td><td>No valid signed policy</td></tr>
+        <tr><td><span class="pill warn">L1</span> Assist</td><td>parsing, scoring, drafting</td><td>every decision</td><td>Default; automatic when the circuit breaker trips</td></tr>
+        <tr><td><span class="pill ok">L2</span> Governed autonomy</td><td>inviting strong candidates; rejecting on a failed verifiable hard requirement, with notice and 14-day appeal</td><td>judgment-based rejections, borderline, unclear, flagged, human-only, offers</td><td>Committee approval with conditions evidenced (granted in the demo)</td></tr>
+        <tr><td><span class="pill hire">L3</span> Earned autonomy</td><td>L2, plus rejecting clear low scores</td><td>borderline cases, offers</td><td>6 months clean at L2, audit agreement ≥ 95%, appeals upheld &lt; 5%, and a Board exception</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="spacer"></div>
+  <div class="grid g3">
+    <div class="card"><h3>Try the governed demo</h3><p class="muted small">Runs the whole cycle live on 40 synthetic applications: approval, criteria gate, screening, guardian checks and the fire drill. Deterministic, no API key needed.</p><button class="btn ghost" data-goto="demo">Open demo →</button></div>
+    <div class="card"><h3>Ask the approval agent</h3><p class="muted small">Claude reads a hiring-AI proposal, fills the intake, runs the governed skill scripts and writes reviewer judgment. The scripts decide the outcome.</p><button class="btn ghost" data-goto="agent">Open agent →</button></div>
+    <div class="card"><h3>See the architecture</h3><p class="muted small">Interactive diagram of the three layers, the earned-autonomy path and traceability.</p><a class="btn ghost" href="/architecture" style="display:inline-block;text-decoration:none">Open architecture →</a></div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section role="tabpanel" id="tab-demo" hidden>
+  <h2>One requisition, 40 applications</h2>
+  <p class="lede">REQ-2026-0457: four Relationship Managers (Investments &amp; Insurance) for the Guwahati and Shillong branches of Deccan Ledger Finance (fictional). This runs <code>demo/run_demo.py</code> on the server, exactly as in the repository. All data is synthetic and the committee signature is simulated.</p>
+  <div class="row"><button class="btn" id="runDemo">Run the governed demo</button><span class="muted small" id="demoStatus"></span></div>
+  <div id="demoOut" hidden>
+    <div class="spacer"></div>
+    <div class="grid g6" id="demoTiles"></div>
+    <div class="spacer"></div>
+    <div class="grid acts" id="demoActs"></div>
+    <div class="spacer"></div>
+    <div class="card">
+      <h2>Every candidate</h2>
+      <p class="muted small">Click a row to read the candidate's letter. Letters stay drafts until the guardian releases them or a recruiter confirms.</p>
+      <div class="chips" id="demoFilters"></div>
+      <div class="tablewrap"><table><thead><tr><th>Candidate</th><th>Proposed action</th><th>Guardian</th><th>Main reason</th></tr></thead><tbody id="demoRows"></tbody></table></div>
+      <div id="letterBox" hidden><div class="spacer"></div><div class="card"><div class="row" style="justify-content:space-between"><h3 id="letterTitle"></h3><button class="btn ghost" id="closeLetter">Close</button></div><div class="md" id="letterBody"></div></div></div>
+    </div>
+    <details><summary>Fairness monitor by group (this batch)</summary><div id="demoFairness"></div></details>
+    <details><summary>Hiring manager's original request</summary><div class="md" id="demoRequest"></div></details>
+    <details><summary>Recruiter queue (human-queue.md)</summary><div class="md" id="demoQueue"></div></details>
+    <details><summary>Approval memo for the hiring agent (HR-AI-2026-021)</summary><div class="md" id="demoMemo"></div></details>
+    <details><summary>Raw run log</summary><pre id="demoLog"></pre></details>
+  </div>
+</section>
+
+<!-- AGENT -->
+<section role="tabpanel" id="tab-agent" hidden>
+  <h2>AI Use Case Approval Agent</h2>
+  <p class="lede">Claude does what a reviewer reads and writes: it turns the proposal into an evidence-tagged intake and writes judgment in the reviewer notes. Everything else is decided by the governed skills' scripts: completeness, risk tier, red lines, proxies, adverse impact, legal obligations and the outcome rule. The agent recommends; the committee decides.</p>
+  <div class="card">
+    <div class="form">
+      <div><label for="proposalSel">Proposal</label><select id="proposalSel"></select></div>
+      <div><label for="reviewer">Committee reviewer (your name)</label><input type="text" id="reviewer" placeholder="e.g. A. Sharma" autocomplete="name"></div>
+      <div id="codeWrap"><label for="accessCode">Access code</label><input type="password" id="accessCode" placeholder="Set as APP_ACCESS_CODE in Vercel" autocomplete="off"></div>
+    </div>
+    <div class="spacer"></div>
+    <label class="small"><input type="checkbox" id="usePilot" checked> Attach the shadow-pilot outcome data (1,200 decisions) for the fairness review</label>
+    <details id="customWrap"><summary>…or paste your own proposal</summary><p class="muted small">Plain text or Markdown, up to 40,000 characters. No pilot data is attached to pasted proposals.</p><textarea id="customText" placeholder="Paste a proposal to use AI in hiring…"></textarea></details>
+    <details><summary>Read the selected proposal</summary><div class="md" id="proposalText"></div></details>
+    <div class="spacer"></div>
+    <div class="row"><button class="btn" id="runAgent">Run the approval review</button><span class="muted small" id="agentStatus"></span></div>
+    <p class="muted small" id="agentConfig"></p>
+  </div>
+  <div id="agentLive" hidden>
+    <div class="spacer"></div>
+    <div class="card"><h3>What the agent is doing</h3><ul class="feed" id="feed"></ul></div>
+  </div>
+  <div id="agentOut" hidden>
+    <div class="spacer"></div>
+    <div class="banner" id="agentBanner"></div>
+    <div class="spacer"></div>
+    <div class="grid g6" id="agentTiles"></div>
+    <div class="spacer"></div>
+    <div class="card" id="handoffCard" hidden><h3>Hand-off to the committee</h3><div class="md" id="handoff"></div></div>
+    <div class="spacer"></div>
+    <div class="card"><div class="row" style="justify-content:space-between"><h2>Decision memo</h2><div class="row" id="downloads"></div></div><div class="md" id="memo"></div></div>
+  </div>
+</section>
+
+<!-- TESTS -->
+<section role="tabpanel" id="tab-tests" hidden>
+  <h2>Testing and the release gate</h2>
+  <p class="lede">Runs <code>evals/run_evals.py</code> on the server: unit tests for the statistics, proxy screen and legal logic, 16 approval scenarios, hiring-agent and guardian tests including 9 attacks on governance, and library tamper detection. No skill can be published unless all of them pass.</p>
+  <div class="row"><button class="btn" id="runTests">Run all tests</button><span class="muted small" id="testStatus"></span></div>
+  <div id="testOut" hidden>
+    <div class="spacer"></div>
+    <div class="banner" id="testBanner"></div>
+    <div class="spacer"></div>
+    <div class="card"><div class="md" id="testResults"></div></div>
+    <details><summary>Agent behaviour evaluations (language-model tests with pass criteria)</summary><div class="md" id="behaviour"></div></details>
+    <details><summary>Raw output</summary><pre id="testLog"></pre></details>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Teaching case. Organisations, people and data are fictional and synthetic; the committee's signature in the demo is simulated. Legal content reflects October 2026 and identifies obligations; it is not legal advice.</div></footer>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const md = (s) => DOMPurify.sanitize(marked.parse(String(s || "")));
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+
+// Theme
+const savedTheme = store.get("theme"); if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+$("#themeBtn").onclick = () => {
+  const dark = document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const next = dark ? "light" : "dark"; document.documentElement.dataset.theme = next; store.set("theme", next);
+};
+
+// Tabs
+const tabs = ["overview", "demo", "agent", "tests"];
+function show(name) {
+  tabs.forEach(t => { $("#tab-" + t).hidden = t !== name; $("#b-" + t).setAttribute("aria-selected", t === name); });
+  store.set("tab", name); history.replaceState(null, "", "#" + name);
+}
+tabs.forEach(t => $("#b-" + t).onclick = () => show(t));
+document.querySelectorAll("[data-goto]").forEach(b => b.onclick = () => show(b.dataset.goto));
+show(tabs.includes(location.hash.slice(1)) ? location.hash.slice(1) : (store.get("tab") || "overview"));
+
+const actionPill = (a) => {
+  const cls = a.startsWith("AUTO_ADVANCE") || a === "PROPOSE_ADVANCE" ? "ok" : a.includes("REJECT") ? "bad" : a === "HUMAN_ONLY" ? "hire" : "warn";
+  return `<span class="pill ${cls}">${esc(a.replace(/_/g, " ").toLowerCase())}</span>`;
+};
+const statusPill = (s) => `<span class="pill ${s === "RELEASED" ? "ok" : "warn"}">${esc(s.replace(/_/g, " ").toLowerCase())}</span>`;
+const fairPill = (s) => `<span class="pill ${s === "GREEN" ? "ok" : s === "RED" ? "bad" : "warn"}">${esc(s)}</span>`;
+const tile = (k, v, s) => `<div class="card tile"><div class="k">${esc(k)}</div><div class="v">${v}</div>${s ? `<div class="s">${s}</div>` : ""}</div>`;
+
+// ---------------- Demo ----------------
+let demoData = null, demoFilter = "All";
+$("#runDemo").onclick = async () => {
+  const btn = $("#runDemo"); btn.disabled = true; $("#demoStatus").textContent = "Running all five acts on the server…";
+  try {
+    const r = await fetch("/api/demo", { method: "POST" });
+    if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || r.statusText);
+    demoData = await r.json();
+    if (!demoData.ok) throw new Error("The demo script failed:\n" + demoData.stderr);
+    renderDemo(demoData);
+    $("#demoStatus").textContent = "Done. Same result every run (fixed seeds and date).";
+  } catch (e) { $("#demoStatus").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  btn.disabled = false;
+};
+function renderDemo(d) {
+  const g = d.guardian_report, pol = d.runtime_policy, drill = d.drill_report;
+  const acts = {}; g.decisions.forEach(x => acts[x.action] = (acts[x.action] || 0) + 1);
+  const person = g.decisions.filter(x => x.guardian_status !== "RELEASED").length;
+  $("#demoTiles").innerHTML = [
+    tile("Autonomy", g.effective_level, `granted ${esc(pol.autonomy_level)} by signed policy`),
+    tile("Released", g.counts.RELEASED || 0, `${acts.AUTO_ADVANCE || 0} invited · ${acts.AUTO_REJECT_HARD_REQUIREMENT || 0} hard-req. rejections`),
+    tile("Need a person", person, "borderline, unclear, flagged, human-only"),
+    tile("Blind audit", g.blind_audit_sample.length, esc(g.blind_audit_sample.join(", "))),
+    tile("Fairness", fairPill(g.fairness_status), `${g.fairness_records} AI-handled decisions`),
+    tile("After breaker", d.after_breaker_autonomous, `autonomous actions at ${esc(d.after_breaker_level || "L1")} (was ${g.counts.RELEASED || 0})`),
+  ].join("");
+  const blocked = (d.spec_gate_v0.findings || []).filter(f => f.verdict === "BLOCK").map(f => `${esc(f.item)} ${esc(f.text)}`).join("; ");
+  const asObj = (x) => { if (typeof x !== "string") return x; try { return JSON.parse(x); } catch { return { text: x }; } };
+  const declined = (d.spec_gate_v0.declined_by_hiring_agent || []).map(asObj).map(x => esc(x.request ? `"${x.request}": ${x.reason || "declined"}` : (x.text || x.item || JSON.stringify(x)))).join("<br>");
+  const cb = drill.circuit_breaker || {};
+  $("#demoActs").innerHTML = [
+    ["Approval", "The approval agent reviews the hiring agent (HR-AI-2026-021); the committee signs (simulated) and a runtime policy is issued.", `Policy <b>${esc(pol.policy_id)}</b> at <b>${esc(pol.autonomy_level)}</b>, valid to ${esc(pol.valid_until)}. ${esc(pol.autonomy_cap_reason || "")}`],
+    ["Criteria gate", "The hiring manager asks for top-tier colleges, no career gaps over 6 months, and ages 22–30.", `v0 <span class="pill bad">${esc(d.spec_gate_v0.result)}</span> ${blocked ? "— blocked: " + blocked : ""}${declined ? `<br><span class="muted">Declined by the hiring agent itself: ${declined}</span>` : ""}<br>v1 <span class="pill ok">${esc(d.spec_gate_v1.result)}</span>, hash pinned <code>${esc((d.spec_gate_v1.spec_sha256 || "").slice(0, 12))}…</code>`],
+    ["Screening", "40 resumes parsed and blinded, then scored on four job-related criteria; hard requirements checked as PASS, FAIL or UNCLEAR.", Object.entries(acts).map(([k, v]) => `${actionPill(k)} ${v}`).join(" ")],
+    ["Guardian", "Every decision is checked (G1–G6) before it takes effect; fairness monitor, blind audit sample and hash-chained ledger.", `${g.counts.RELEASED || 0} released, ${g.counts.QUEUED_FOR_HUMAN || 0} queued for recruiters · ledger ${esc(g.ledger?.appended ?? "")} entries ${g.ledger?.verified === false ? "<b class='err'>BROKEN</b>" : "verified"} · fairness ${fairPill(g.fairness_status)}`],
+    ["Fire drill", "1,200 biased historical decisions from the vendor pilot are replayed through a copy of governance.", `Fairness ${fairPill(drill.fairness_status)} · circuit breaker → <b>${esc(cb.autonomy_level || "L1")}</b> · same batch re-decided: <b>${d.after_breaker_autonomous}</b> autonomous actions`],
+  ].map(([t, p, r]) => `<div class="card act"><h3>${t}</h3><p>${p}</p><div class="result">${r}</div></div>`).join("");
+  const filters = ["All", "Released", "Need a person", "Audit sample"];
+  $("#demoFilters").innerHTML = filters.map(f => `<button aria-pressed="${f === demoFilter}">${f}</button>`).join("");
+  $("#demoFilters").querySelectorAll("button").forEach(b => b.onclick = () => { demoFilter = b.textContent; renderDemo(demoData); });
+  const rows = g.decisions.filter(x => demoFilter === "All" || (demoFilter === "Released" ? x.guardian_status === "RELEASED" : demoFilter === "Need a person" ? x.guardian_status !== "RELEASED" : x.blind_audit_sample));
+  $("#demoRows").innerHTML = rows.map(x => `<tr class="clickable" data-id="${esc(x.candidate_id)}"><td><b>${esc(x.candidate_id)}</b>${x.blind_audit_sample ? ' <span class="pill hire">audit</span>' : ""}</td><td>${actionPill(x.action)}</td><td>${statusPill(x.guardian_status)}</td><td class="small">${esc((x.reasons[0] || "").slice(0, 220))}${(x.reasons[0] || "").length > 220 ? "…" : ""}</td></tr>`).join("");
+  $("#demoRows").querySelectorAll("tr").forEach(tr => tr.onclick = () => {
+    const id = tr.dataset.id; const text = d.letters[id];
+    $("#letterTitle").textContent = `Letter for ${id}`; $("#letterBody").innerHTML = text ? md(text) : "<p class='muted'>No letter for this candidate.</p>";
+    $("#letterBox").hidden = false; $("#letterBox").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+  $("#closeLetter").onclick = () => $("#letterBox").hidden = true;
+  $("#demoFairness").innerHTML = (g.fairness || []).map(f => `<div class="spacer"></div><h3>${esc(f.attribute)} ${fairPill(f.status)}</h3><p class="muted small">${esc(f.note || "")}</p><div class="tablewrap"><table><thead><tr><th>Group</th><th>n</th><th>Advanced</th><th>Rate</th></tr></thead><tbody>${Object.entries(f.groups || {}).map(([k, v]) => `<tr><td>${esc(k)}</td><td class="num">${v.n}</td><td class="num">${v.advanced}</td><td class="num">${v.n ? (100 * v.advanced / v.n).toFixed(0) + "%" : "—"}</td></tr>`).join("")}</tbody></table></div>`).join("");
+  $("#demoRequest").innerHTML = md(d.manager_request_md);
+  $("#demoQueue").innerHTML = md(d.human_queue_md || "_No queue file._");
+  $("#demoMemo").innerHTML = md(d.approval_memo_md);
+  $("#demoLog").textContent = d.stdout;
+  $("#demoOut").hidden = false;
+}
+
+// ---------------- Agent ----------------
+let proposals = [], health = null;
+(async () => {
+  try {
+    [health, proposals] = await Promise.all([fetch("/api/health").then(r => r.json()), fetch("/api/proposals").then(r => r.json())]);
+    $("#proposalSel").innerHTML = proposals.map(p => `<option value="${esc(p.id)}">${esc(p.id)} — ${esc(p.label)}</option>`).join("");
+    const showProposal = () => { const p = proposals.find(x => x.id === $("#proposalSel").value); $("#proposalText").innerHTML = md(p.text); };
+    $("#proposalSel").onchange = showProposal; showProposal();
+    $("#codeWrap").hidden = !health.access_code_required;
+    const bits = [`Model: ${health.model}`, `time budget ${health.time_budget_seconds}s`];
+    if (!health.agent_enabled) bits.push("<span class='err'>ANTHROPIC_API_KEY is not set on the server</span>");
+    if (health.access_code_required && !health.access_code_configured) bits.push("<span class='err'>APP_ACCESS_CODE is not set on the server</span>");
+    $("#agentConfig").innerHTML = bits.join(" · ");
+    $("#reviewer").value = store.get("reviewer") || "";
+  } catch (e) { $("#agentConfig").innerHTML = `<span class="err">Could not reach the server: ${esc(e.message)}</span>`; }
+})();
+
+const started = { t: 0 };
+function feed(html) {
+  const li = document.createElement("li");
+  li.innerHTML = `<span class="t">${Math.round((Date.now() - started.t) / 1000)}s</span><span>${html}</span>`;
+  $("#feed").appendChild(li); $("#feed").scrollTop = $("#feed").scrollHeight;
+}
+const TOOL_LABELS = {
+  verify_library: "Stage 0 · verifying the skill library", submit_intake: "Stage 1 · intake written, checking completeness",
+  run_risk_tiering: "Stage 2 · risk tiering", run_fairness_review: "Stage 3 · proxy screen and adverse impact",
+  run_legal_review: "Stage 4 · legal and privacy obligations", run_decision: "Stage 5 · decision rules",
+  submit_reviewer_notes: "Stage 5 · reviewer notes written, rendering memo",
+};
+function onEvent(ev) {
+  if (ev.type === "tool_call") feed(ev.name === "read_skill_file" ? `📖 reading <code>${esc(ev.input.skill)}/${esc(ev.input.path)}</code>` : `⚙️ ${esc(TOOL_LABELS[ev.name] || ev.name)}`);
+  else if (ev.type === "tool_result" && ev.name !== "read_skill_file") {
+    const s = ev.summary || {};
+    const txt = ev.is_error ? `<span class="err">${esc(s.error || "error")}</span>` : Object.entries(s).map(([k, v]) => `${esc(k)}: <b>${esc(Array.isArray(v) ? v.join(", ") || "none" : v)}</b>`).join(" · ");
+    feed(`↳ ${txt}`);
+  } else if (ev.type === "text") feed(`💬 <span class="muted">${esc(ev.text.slice(0, 300))}${ev.text.length > 300 ? "…" : ""}</span>`);
+  else if (ev.type === "notice") feed(`⚠️ ${esc(ev.text)}`);
+}
+$("#runAgent").onclick = async () => {
+  const reviewer = $("#reviewer").value.trim();
+  if (reviewer.length < 2) { $("#agentStatus").innerHTML = "<span class='err'>Enter your name: every review is attributed to a committee member.</span>"; return; }
+  store.set("reviewer", reviewer);
+  const custom = $("#customText").value.trim();
+  const body = { reviewer, proposal_id: $("#proposalSel").value, custom_text: custom || null, use_pilot: $("#usePilot").checked };
+  const btn = $("#runAgent"); btn.disabled = true; $("#agentOut").hidden = true; $("#feed").innerHTML = ""; $("#agentLive").hidden = false;
+  started.t = Date.now(); $("#agentStatus").textContent = "Reviewing… this usually takes one to four minutes.";
+  feed(custom ? "Pasted proposal submitted (no pilot data)." : `Proposal ${esc(body.proposal_id)} submitted${body.use_pilot ? " with pilot data" : ""}.`);
+  try {
+    const r = await fetch("/api/review", { method: "POST", headers: { "Content-Type": "application/json", "X-Access-Code": $("#accessCode").value }, body: JSON.stringify(body) });
+    if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail || r.statusText)); }
+    const reader = r.body.getReader(); const dec = new TextDecoder(); let buf = "", result = null;
+    for (;;) {
+      const { value, done } = await reader.read(); if (done) break;
+      buf += dec.decode(value, { stream: true });
+      let i; while ((i = buf.indexOf("\n")) >= 0) {
+        const line = buf.slice(0, i).trim(); buf = buf.slice(i + 1); if (!line) continue;
+        const ev = JSON.parse(line);
+        if (ev.type === "result") result = ev.result; else if (ev.type === "error") throw new Error(ev.message); else onEvent(ev);
+      }
+    }
+    if (!result) throw new Error("The connection closed before the review finished (the server may have hit its time limit).");
+    renderReview(result);
+    $("#agentStatus").textContent = `Finished in ${result.elapsed_seconds}s.`;
+  } catch (e) { $("#agentStatus").innerHTML = `<span class="err">${esc(e.message)}</span>`; feed(`<span class="err">${esc(e.message)}</span>`); }
+  btn.disabled = false;
+};
+function renderReview(res) {
+  const d = res.decision || {}, risk = res.risk || {}, c = res.completeness || {};
+  const o = d.outcome || "";
+  const cls = /REJECT|REDESIGN/.test(o) ? "bad" : /RETURN|PILOT/.test(o) ? "warn" : o ? "ok" : "";
+  $("#agentBanner").className = "banner " + cls;
+  $("#agentBanner").innerHTML = d.outcome_label
+    ? `<div class="eyebrow">Recommendation (rule ${esc(d.rule_fired)}) · ${esc(d.decision_authority || "The committee decides.")}</div><div class="big">${esc(d.outcome_label)}</div><div class="small">Approver: ${esc(d.approver || "AI Approval Committee")} · re-review in ${esc(d.re_review_months ?? "—")} months · status ${esc(res.status)}</div>`
+    : `<div class="big">No decision produced</div><div class="small">Status ${esc(res.status)}. The agent did not complete enough stages.</div>`;
+  const reds = (risk.red_lines || []).map(x => typeof x === "string" ? x : x.id).filter(Boolean);
+  $("#agentTiles").innerHTML = [
+    tile("Risk tier", esc(risk.tier || "—"), esc(risk.tier_label || "")),
+    tile("Score", risk.score != null ? `${risk.score}/${risk.max_score}` : "—", risk.evaluative_floor_applied ? "evaluative floor applied" : ""),
+    tile("Red lines", reds.length, esc(reds.join(", ") || "none")),
+    tile("Completeness", c.completeness_pct != null ? c.completeness_pct + "%" : "—", esc(c.status || "")),
+    tile("Conditions", (d.conditions_precedent || []).length + (d.conditions_subsequent || []).length, esc(d.condition_framing || "")),
+    tile("Escalations", (d.escalations || []).length, `${(d.open_questions || []).length} open questions`),
+  ].join("");
+  $("#handoffCard").hidden = !res.handoff; $("#handoff").innerHTML = md(res.handoff);
+  $("#memo").innerHTML = res.memo_md ? md(res.memo_md) : "<p class='muted'>No memo: the review stopped before the reviewer notes were written. The rule-based decision above still comes from the scripts.</p>";
+  $("#downloads").innerHTML = Object.keys(res.files || {}).map(n => `<button class="btn ghost small" data-f="${esc(n)}">${esc(n)}</button>`).join("");
+  $("#downloads").querySelectorAll("button").forEach(b => b.onclick = () => {
+    const blob = new Blob([res.files[b.dataset.f]], { type: "text/plain" }); const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = b.dataset.f; a.click(); URL.revokeObjectURL(a.href);
+  });
+  feed(`✅ ${esc(d.outcome_label || res.status)} · ${res.turns} turns · ${res.usage.output_tokens} output tokens · model ${esc(res.model)}`);
+  $("#agentOut").hidden = false;
+}
+
+// ---------------- Tests ----------------
+$("#runTests").onclick = async () => {
+  const btn = $("#runTests"); btn.disabled = true; $("#testStatus").textContent = "Running 63 tests…";
+  try {
+    const r = await fetch("/api/tests", { method: "POST" });
+    if (!r.ok) throw new Error(r.statusText);
+    const t = await r.json();
+    const last = (t.stdout.trim().split("\n").pop() || "");
+    $("#testBanner").className = "banner " + (t.ok ? "ok" : "bad");
+    $("#testBanner").innerHTML = `<div class="big">${t.ok ? "Release gate PASS" : "Release gate FAIL"}</div><div class="small">${esc(last)}</div>`;
+    $("#testResults").innerHTML = md(t.results_md || "_No results file._");
+    $("#behaviour").innerHTML = md(t.behaviour_evals_md || "");
+    $("#testLog").textContent = t.stdout + (t.stderr ? "\n" + t.stderr : "");
+    $("#testOut").hidden = false; $("#testStatus").textContent = "";
+  } catch (e) { $("#testStatus").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  btn.disabled = false;
+};
+</script>
+</body>
+</html>

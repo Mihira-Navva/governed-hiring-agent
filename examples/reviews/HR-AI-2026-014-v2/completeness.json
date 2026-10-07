@@ -1,0 +1,33 @@
+{
+  "proposal_id": "HR-AI-2026-014",
+  "status": "COMPLETE_WITH_GAPS",
+  "fields_provided": 60,
+  "fields_total": 63,
+  "completeness_pct": 95.2,
+  "blocking_missing": [],
+  "important_missing": [
+    {
+      "field": "human_oversight.human_reviews_every_judgment_rejection",
+      "question": "Where some rejections are automated, will a person review every rejection that rests on a judgment of ability (as opposed to a documented, verifiable hard requirement)?",
+      "why": "Automated rejection is defensible only for checkable facts; judgments about people need a person (policy POL-AI-03)."
+    },
+    {
+      "field": "data.transfer_destinations",
+      "question": "If data leaves India, to which countries?",
+      "why": "Transfers to countries restricted by government notification are not allowed."
+    },
+    {
+      "field": "monitoring.runtime_guardian",
+      "question": "Is there an independent runtime check that can block individual decisions and withdraw the system's autonomy automatically if outcomes become unfair?",
+      "why": "Approval is a point-in-time judgment; runtime controls catch drift and misconfiguration."
+    }
+  ],
+  "invalid_values": [],
+  "consistency_warnings": [],
+  "claims_needing_evidence": [
+    "Samata Audit LLP report is summarised, not attached. The committee should receive the full report, including method and intersections.",
+    "Deletion of the video module 'for our tenant' (s. 1) should be confirmed by a test of outputs and logs, not by vendor statement alone.",
+    "Job analysis and model documentation v2.1 are referenced but not attached."
+  ],
+  "integrity_observations": []
+}

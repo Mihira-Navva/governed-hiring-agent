@@ -1,0 +1,27 @@
+{
+  "_about": "Structure of a job specification. Every requirement and criterion must trace to the job analysis. Hard requirements are pass/fail facts that can be checked from the resume or the application; everything that needs judgment is a scored criterion.",
+  "_evidence_types": {
+    "resume_keywords": "Pass if any 'match_any' phrase appears in the resume. If an 'ambiguous_if_any' phrase appears near it, the result is UNCLEAR and a person decides.",
+    "application_answer": "Pass if the application field equals one of 'pass_values'.",
+    "application_field": "Numeric field from the application (e.g. an assessment score), mapped to 0-100.",
+    "resume_experience_months": "Months of experience in roles whose title or description contains any 'counts_if_any' word, capped at 'cap_months'.",
+    "resume_skills": "Count of distinct listed 'skills' found in the resume; 'full_marks_at' distinct skills = 100."
+  },
+  "requisition_id": "REQ-YYYY-NNNN",
+  "role": "",
+  "department": "",
+  "locations": [],
+  "openings": 0,
+  "hiring_manager": "",
+  "job_analysis": {"reference": "", "summary": ""},
+  "hard_requirements": [
+    {"id": "HR-1", "requirement": "", "basis": "regulatory | operational | safety", "why": "",
+     "evidence": "resume_keywords | application_answer", "match_any": [], "ambiguous_if_any": [], "field": "", "pass_values": []}
+  ],
+  "scored_criteria": [
+    {"id": "SC-1", "criterion": "", "weight": 0, "why": "", "evidence": "application_field | resume_experience_months | resume_skills",
+     "field": "", "map": {}, "counts_if_any": [], "cap_months": 0, "skills": [], "full_marks_at": 0}
+  ],
+  "thresholds": {"advance": 65, "human_review_floor": 45},
+  "requests_declined": [{"request": "", "reason": ""}]
+}

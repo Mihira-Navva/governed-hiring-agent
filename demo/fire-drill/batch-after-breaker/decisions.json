@@ -1,0 +1,488 @@
+{
+  "requisition_id": "REQ-2026-0457",
+  "effective_level": "L1",
+  "level_reason": "Guardian lowered autonomy to L1: Circuit breaker: significant adverse impact in advancement by gender, age_band, home_region, disability",
+  "decided_on": "2026-10-07",
+  "decisions": [
+    {
+      "candidate_id": "C001",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 70.0,
+      "reasons": [
+        "Score 70.0 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 75); Relevant sales experience with customers (months, capped at 24) (95 relevant months, capped at 24: Mutual Fund Advisor, Eastline Mutual Fund Distributors (25 months); Relationship Officer, Assam Gramin Finance (34 months); Customer Service Associate, Branch Banking, Northbridge Insurance Ltd (36 months))"
+      ],
+      "letter": "C001.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C002",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 74.8,
+      "reasons": [
+        "Score 74.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 62); Relevant sales experience with customers (months, capped at 24) (66 relevant months, capped at 24: Primary School Teacher, Northbridge Insurance Ltd (35 months); Data Entry Operator, Northbridge Insurance Ltd (31 months))"
+      ],
+      "letter": "C002.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C003",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 62.6,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C003.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C004",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 85.2,
+      "reasons": [
+        "Score 85.2 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 63); Relevant sales experience with customers (months, capped at 24) (44 relevant months, capped at 24: Customer Service Associate, Branch Banking, Assam Gramin Finance (44 months))"
+      ],
+      "letter": "C004.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C005",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 66.0,
+      "reasons": [
+        "HR-1 unclear: \"Appearing for NISM-Series-V-A (Mutual Fund Distributors) exam, November 2026\" (certifications)"
+      ],
+      "letter": "C005.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C006",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 96.8,
+      "reasons": [
+        "Score 96.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 92); Relevant sales experience with customers (months, capped at 24) (188 relevant months, capped at 24: Sales Executive, Insurance, Purbanchal Securities (29 months); Mutual Fund Advisor, Kamrup Small Finance Bank (40 months); Mutual Fund Advisor, Northbridge Insurance Ltd (15 months); Relationship Officer, Purbanchal Securities (34 months); Mutual Fund Advisor, Assam Gramin Finance (26 months); Relationship Officer, Lumshnong Microfin (16 months); Sales Executive, Insurance, Lumshnong Microfin (28 months))"
+      ],
+      "letter": "C006.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C007",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 45.2,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C007.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C008",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 62.0,
+      "reasons": [
+        "Borderline score 62.0 (between 45 and 65): a recruiter decides"
+      ],
+      "letter": "C008.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C009",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 64.4,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C009.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C010",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 66.4,
+      "reasons": [
+        "Score 66.4 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 66); Product and compliance skills listed (MF, insurance, KYC/AML, SIP, planning) (5 of 8 listed: mutual fund, insurance, kyc, aml, cross-selling)"
+      ],
+      "letter": "C010.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C011",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 82.4,
+      "reasons": [
+        "Resume contains text addressed to an AI screener (removed before scoring); a person should read the original"
+      ],
+      "letter": "C011.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C012",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 66.8,
+      "reasons": [
+        "Score 66.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 67); Product and compliance skills listed (MF, insurance, KYC/AML, SIP, planning) (4 of 8 listed: mutual fund, insurance, aml, crm)"
+      ],
+      "letter": "C012.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C013",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 38.8,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C013.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C014",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 94.8,
+      "reasons": [
+        "Score 94.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 87); Relevant sales experience with customers (months, capped at 24) (109 relevant months, capped at 24: Sales Executive, Insurance, Brahmaputra Co-operative Bank (30 months); Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank (16 months); Mutual Fund Advisor, Meghalaya Rural Bank (fictional) (22 months); Mutual Fund Advisor, Eastline Mutual Fund Distributors (20 months); Sales Executive, Insurance, Purbanchal Securities (21 months))"
+      ],
+      "letter": "C014.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C015",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 88.4,
+      "reasons": [
+        "Score 88.4 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 71); Relevant sales experience with customers (months, capped at 24) (224 relevant months, capped at 24: Mutual Fund Advisor, Brahmaputra Co-operative Bank (15 months); Mutual Fund Advisor, Purbanchal Securities (19 months); Customer Service Associate, Branch Banking, Northbridge Insurance Ltd (32 months); Sales Executive, Insurance, Purbanchal Securities (34 months); Mutual Fund Advisor, Eastline Mutual Fund Distributors (46 months); Customer Service Associate, Branch Banking, Kamrup Small Finance Bank (21 months); Mutual Fund Advisor, Meghalaya Rural Bank (fictional) (42 months); Sales Executive, Insurance, Northbridge Insurance Ltd (15 months))"
+      ],
+      "letter": "C015.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C016",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 82.8,
+      "reasons": [
+        "Score 82.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 57); Relevant sales experience with customers (months, capped at 24) (40 relevant months, capped at 24: Customer Service Associate, Branch Banking, Purbanchal Securities (18 months); Relationship Officer, Northbridge Insurance Ltd (22 months))"
+      ],
+      "letter": "C016.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C017",
+      "action": "HUMAN_ONLY",
+      "autonomous": false,
+      "needs_person": true,
+      "score": null,
+      "reasons": [
+        "Candidate asked for a human-only assessment"
+      ],
+      "letter": "C017.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C018",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 84.4,
+      "reasons": [
+        "Score 84.4 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 61); Relevant sales experience with customers (months, capped at 24) (65 relevant months, capped at 24: Mutual Fund Advisor, Meghalaya Rural Bank (fictional) (38 months); Relationship Officer, Purbanchal Securities (27 months))"
+      ],
+      "letter": "C018.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C019",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 51.8,
+      "reasons": [
+        "Borderline score 51.8 (between 45 and 65): a recruiter decides"
+      ],
+      "letter": "C019.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C020",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 91.6,
+      "reasons": [
+        "Score 91.6 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 79); Relevant sales experience with customers (months, capped at 24) (294 relevant months, capped at 24: Sales Executive, Insurance, Meghalaya Rural Bank (fictional) (20 months); Sales Executive, Insurance, Assam Gramin Finance (47 months); Mutual Fund Advisor, Northbridge Insurance Ltd (46 months); Mutual Fund Advisor, Purbanchal Securities (38 months); Mutual Fund Advisor, Northbridge Insurance Ltd (24 months); Mutual Fund Advisor, Lumshnong Microfin (46 months); Sales Executive, Insurance, Meghalaya Rural Bank (fictional) (17 months); Mutual Fund Advisor, Meghalaya Rural Bank (fictional) (38 months); Relationship Officer, Meghalaya Rural Bank (fictional) (18 months))"
+      ],
+      "letter": "C020.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C021",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 89.6,
+      "reasons": [
+        "Score 89.6 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 74); Relevant sales experience with customers (months, capped at 24) (226 relevant months, capped at 24: Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank (19 months); Mutual Fund Advisor, Brahmaputra Co-operative Bank (26 months); Relationship Officer, Assam Gramin Finance (30 months); Sales Executive, Insurance, Northbridge Insurance Ltd (39 months); Mutual Fund Advisor, Assam Gramin Finance (39 months); Mutual Fund Advisor, Eastline Mutual Fund Distributors (16 months); Sales Executive, Insurance, Lumshnong Microfin (18 months); Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank (39 months))"
+      ],
+      "letter": "C021.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C022",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 88.4,
+      "reasons": [
+        "Score 88.4 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 71); Relevant sales experience with customers (months, capped at 24) (81 relevant months, capped at 24: Mutual Fund Advisor, Meghalaya Rural Bank (fictional) (18 months); Relationship Officer, Meghalaya Rural Bank (fictional) (47 months); Customer Service Associate, Branch Banking, Northbridge Insurance Ltd (16 months))"
+      ],
+      "letter": "C022.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C023",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": null,
+      "reasons": [
+        "Accommodation requested and an assessment is outstanding: arrange an accessible assessment"
+      ],
+      "letter": "C023.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C024",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 89.2,
+      "reasons": [
+        "Score 89.2 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 73); Relevant sales experience with customers (months, capped at 24) (101 relevant months, capped at 24: Mutual Fund Advisor, Northbridge Insurance Ltd (39 months); Sales Executive, Insurance, Brahmaputra Co-operative Bank (16 months); Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank (27 months); Customer Service Associate, Branch Banking, Lumshnong Microfin (19 months))"
+      ],
+      "letter": "C024.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C025",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 91.6,
+      "reasons": [
+        "Score 91.6 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 79); Relevant sales experience with customers (months, capped at 24) (95 relevant months, capped at 24: Sales Executive, Insurance, Meghalaya Rural Bank (fictional) (36 months); Customer Service Associate, Branch Banking, Brahmaputra Co-operative Bank (25 months); Relationship Officer, Purbanchal Securities (34 months))"
+      ],
+      "letter": "C025.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C026",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 40.0,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C026.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C027",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 82.0,
+      "reasons": [
+        "Score 82.0 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 55); Relevant sales experience with customers (months, capped at 24) (66 relevant months, capped at 24: Sales Executive, Insurance, Assam Gramin Finance (29 months); Relationship Officer, Kamrup Small Finance Bank (37 months))"
+      ],
+      "letter": "C027.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C028",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 82.0,
+      "reasons": [
+        "Score 82.0 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 55); Relevant sales experience with customers (months, capped at 24) (34 relevant months, capped at 24: Relationship Officer, Brahmaputra Co-operative Bank (34 months))"
+      ],
+      "letter": "C028.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C029",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 32.8,
+      "reasons": [
+        "Resume could not be read reliably (parse confidence 0.0)"
+      ],
+      "letter": "C029.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C030",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 42.0,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C030.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C031",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 93.2,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C031.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C032",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 93.6,
+      "reasons": [
+        "HR-2 not met: Able to work at the Guwahati or Shillong branch. Evidence: Application answer can_work_at_branch = 'No'"
+      ],
+      "letter": "C032.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C033",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 40.8,
+      "reasons": [
+        "HR-1 not met: Valid NISM-Series-V-A (Mutual Fund Distributors) certificate. Evidence: Not found in certifications, skills or experience"
+      ],
+      "letter": "C033.md",
+      "letter_kind": "reject_hard_requirement"
+    },
+    {
+      "candidate_id": "C034",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 50.6,
+      "reasons": [
+        "Borderline score 50.6 (between 45 and 65): a recruiter decides"
+      ],
+      "letter": "C034.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C035",
+      "action": "HUMAN_ONLY",
+      "autonomous": false,
+      "needs_person": true,
+      "score": null,
+      "reasons": [
+        "No consent to AI screening"
+      ],
+      "letter": "C035.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C036",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 95.2,
+      "reasons": [
+        "Score 95.2 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 88); Relevant sales experience with customers (months, capped at 24) (26 relevant months, capped at 24: Customer Service Associate, Branch Banking, Eastline Mutual Fund Distributors (26 months))"
+      ],
+      "letter": "C036.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C037",
+      "action": "PROPOSE_ADVANCE",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 90.8,
+      "reasons": [
+        "Score 90.8 (advance at 65). Strongest: Work-sample assessment score (mock customer call and needs-analysis case) (assessment_score = 77); Relevant sales experience with customers (months, capped at 24) (58 relevant months, capped at 24: Relationship Officer, Eastline Mutual Fund Distributors (17 months); Relationship Officer, Meghalaya Rural Bank (fictional) (41 months))"
+      ],
+      "letter": "C037.md",
+      "letter_kind": "advance"
+    },
+    {
+      "candidate_id": "C038",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": null,
+      "reasons": [
+        "Cannot score: missing SC-4 (missing is not treated as zero)"
+      ],
+      "letter": "C038.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C039",
+      "action": "HOLD_FOR_HUMAN",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 64.8,
+      "reasons": [
+        "Borderline score 64.8 (between 45 and 65): a recruiter decides"
+      ],
+      "letter": "C039.md",
+      "letter_kind": "acknowledge"
+    },
+    {
+      "candidate_id": "C040",
+      "action": "PROPOSE_REJECT",
+      "autonomous": false,
+      "needs_person": true,
+      "score": 36.2,
+      "reasons": [
+        "Score 36.2 (below 45). Weakest: Branch language test (Assamese or Khasi, plus English or Hindi), tested in the assessment (language_test = 'fail'); Product and compliance skills listed (MF, insurance, KYC/AML, SIP, planning) (1 of 8 listed: mutual fund)"
+      ],
+      "letter": "C040.md",
+      "letter_kind": "reject_judgment"
+    }
+  ]
+}

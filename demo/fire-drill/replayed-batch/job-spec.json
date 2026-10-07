@@ -1,0 +1,120 @@
+{
+  "requisition_id": "REQ-2026-0457",
+  "role": "Relationship Manager (Investments & Insurance)",
+  "department": "Retail Branch Banking, North-East region",
+  "locations": [
+    "Guwahati",
+    "Shillong"
+  ],
+  "openings": 4,
+  "hiring_manager": "Bikram Hazarika, Regional Head (fictional)",
+  "job_analysis": {
+    "reference": "JA-RM-2026-03 (role family: branch relationship manager)",
+    "summary": "Advises customers on mutual funds and insurance, completes KYC, meets service and sales goals; must be legally able to distribute mutual funds; works in the branch language."
+  },
+  "hard_requirements": [
+    {
+      "id": "HR-1",
+      "requirement": "Valid NISM-Series-V-A (Mutual Fund Distributors) certificate",
+      "basis": "regulatory",
+      "why": "Distributing mutual funds requires this NISM certification under SEBI/AMFI rules; without it the person cannot do the core task.",
+      "evidence": "resume_keywords",
+      "match_any": [
+        "nism-series-v-a",
+        "nism series v-a",
+        "nism v-a",
+        "nism-v-a"
+      ],
+      "ambiguous_if_any": [
+        "appearing",
+        "pursuing",
+        "preparing",
+        "scheduled",
+        "expected",
+        "awaiting"
+      ]
+    },
+    {
+      "id": "HR-2",
+      "requirement": "Able to work at the Guwahati or Shillong branch",
+      "basis": "operational",
+      "why": "The role is branch-based; customers are served in person at these two branches.",
+      "evidence": "application_answer",
+      "field": "can_work_at_branch",
+      "pass_values": [
+        "Yes"
+      ]
+    }
+  ],
+  "scored_criteria": [
+    {
+      "id": "SC-1",
+      "criterion": "Work-sample assessment score (mock customer call and needs-analysis case)",
+      "weight": 40,
+      "why": "Direct, standardised measure of the core tasks; the strongest predictor in the job analysis.",
+      "evidence": "application_field",
+      "field": "assessment_score"
+    },
+    {
+      "id": "SC-2",
+      "criterion": "Relevant sales experience with customers (months, capped at 24)",
+      "weight": 20,
+      "why": "Customer-facing sales or banking experience shortens time to productivity; benefit levels off after about two years.",
+      "evidence": "resume_experience_months",
+      "counts_if_any": [
+        "sales",
+        "relationship",
+        "customer",
+        "client",
+        "advisor",
+        "branch",
+        "banking",
+        "insurance",
+        "mutual fund",
+        "wealth"
+      ],
+      "cap_months": 24
+    },
+    {
+      "id": "SC-3",
+      "criterion": "Product and compliance skills listed (MF, insurance, KYC/AML, SIP, planning)",
+      "weight": 20,
+      "why": "The role sells these products and must complete KYC/AML correctly.",
+      "evidence": "resume_skills",
+      "skills": [
+        "mutual fund",
+        "insurance",
+        "kyc",
+        "aml",
+        "sip",
+        "financial planning",
+        "cross-selling",
+        "crm"
+      ],
+      "full_marks_at": 4
+    },
+    {
+      "id": "SC-4",
+      "criterion": "Branch language test (Assamese or Khasi, plus English or Hindi), tested in the assessment",
+      "weight": 20,
+      "why": "Customers are served in the branch language; tested directly rather than inferred from mother tongue.",
+      "evidence": "application_field",
+      "field": "language_test",
+      "map": {
+        "pass": 100,
+        "fail": 0,
+        "not_taken": null
+      }
+    }
+  ],
+  "thresholds": {
+    "advance": 65,
+    "human_review_floor": 45
+  },
+  "requests_declined": [
+    {
+      "request": "Ideally 22 to 30",
+      "reason": "Age is a protected characteristic (policy POL-AI-04); declined outright."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "_about": "What the parser removes before anything is scored. The full profile (for contacting candidates) is restricted; the blind profile is the only thing the scoring script may read. Rules come from the proxy dictionary used by the governance layer, so the hiring layer and the guardian agree on what counts as protected or proxy information.",
+  "removed_header_fields": {
+    "name": "Name signals gender, caste, religion and region (proxy rule S-NAME)",
+    "email": "Contact only; often contains the name",
+    "phone": "Contact only",
+    "address": "Address and PIN code signal community, class and region (S-LOCATION)",
+    "date of birth": "Age is protected (P-AGE)",
+    "age": "Age is protected (P-AGE)",
+    "gender": "Protected (P-GENDER)",
+    "marital status": "Protected (P-MARITAL)",
+    "nationality": "Not job-related for this role; work authorisation is asked as a separate question",
+    "religion": "Protected (P-RELIGION)",
+    "father's name": "Signals caste and class (S-FAMILY)",
+    "photo": "Reveals several protected characteristics (P-PHOTO)"
+  },
+  "removed_sections": {
+    "education": "College name and graduation year are proxies for class, caste, region and age (S-INSTITUTION, S-GRADYEAR). Not a scored criterion for this role.",
+    "languages": "Languages known is a proxy for region; branch language is tested directly in the assessment (M-LANGUAGES).",
+    "personal details": "Contains protected characteristics.",
+    "hobbies": "Proxy for class and gender (M-HOBBIES).",
+    "summary": "Free text often reveals age, family status or gender ('mother of two', '15 years in the industry'); job evidence is taken from the experience section instead."
+  },
+  "redact_terms_in_kept_text": [
+    "maternity",
+    "paternity",
+    "pregnan",
+    "married",
+    "marriage",
+    "wife",
+    "husband",
+    "mother of",
+    "father of",
+    "my children",
+    "widow",
+    "divorce",
+    "caste",
+    "religion",
+    "hindu",
+    "muslim",
+    "christian",
+    "sikh",
+    "temple",
+    "church",
+    "mosque",
+    "years old",
+    "disability",
+    "disabled",
+    "wheelchair",
+    "illness"
+  ],
+  "dates": "Experience dates are converted to durations in months; start and end years are dropped, because the date of a first job reveals age.",
+  "injection_patterns": [
+    "ignore (all |any )?(previous|prior|above|earlier) (instructions|prompts)",
+    "disregard (the |all )?(previous|prior|above) ",
+    "you are (an? )?(ai|assistant|language model|screening)",
+    "(rank|score|rate|shortlist|select) (me|this (candidate|applicant|resume))",
+    "system prompt",
+    "(note|message) to (the )?(ai|automated|assistant|screening|recruiter bot)",
+    "highest (possible )?(score|rating|rank)",
+    "\\[hidden\\]|<!--|white text|font-size:\\s*0"
+  ]
+}

@@ -1,0 +1,332 @@
+<title>Governed Hiring Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a case-file sheet. Header, the layered diagram as the hero, then autonomy, the demo run and traceability. */
+:root {
+  --paper: #EEF2F1; --surface: #FBFCFC; --ink: #142629; --muted: #566A6E; --line: #C3CFCE;
+  --teal: #0D5864; --teal-soft: #D6E7E8; --seal: #9A5F0C; --seal-soft: #F3E4C8;
+  --risk: #93302A; --risk-soft: #F2DDD9; --ok: #2F6B3C; --ok-soft: #DCEBDD;
+  --hire: #3D4F8F; --hire-soft: #E0E5F3;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #0E1618; --surface: #142124; --ink: #E2EBEA; --muted: #95A8AA; --line: #2C3D40;
+  --teal: #72BDC7; --teal-soft: #17363B; --seal: #E1AE55; --seal-soft: #3A2B13;
+  --risk: #E48C80; --risk-soft: #3C1F1C; --ok: #8FCB98; --ok-soft: #1C3321; --hire: #9DAEE8; --hire-soft: #1C2440; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --paper: #0E1618; --surface: #142124; --ink: #E2EBEA; --muted: #95A8AA; --line: #2C3D40;
+  --teal: #72BDC7; --teal-soft: #17363B; --seal: #E1AE55; --seal-soft: #3A2B13;
+  --risk: #E48C80; --risk-soft: #3C1F1C; --ok: #8FCB98; --ok-soft: #1C3321; --hire: #9DAEE8; --hire-soft: #1C2440; color-scheme: dark; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1340px; margin: 0 auto; padding-inline: clamp(16px, 3vw, 40px); padding-block: 36px 64px; display: grid; gap: 40px; }
+header { display: grid; gap: 10px; max-width: 80ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
+h1 { font-family: var(--display); font-weight: 500; font-size: clamp(32px, 4.4vw, 50px); line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 em { font-style: italic; color: var(--teal); }
+h2 { font-family: var(--display); font-weight: 500; font-size: 26px; margin: 0; text-wrap: balance; }
+.lede { color: var(--muted); margin: 0; font-size: 16px; }
+.figure { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 14px; }
+.figure-top { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+.views { display: flex; flex-wrap: wrap; gap: 8px; }
+.views button { font: 500 13px var(--body); color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.views button:hover { border-color: var(--teal); }
+.views button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--surface); }
+.views button:focus-visible { outline: 2px solid var(--seal); outline-offset: 2px; }
+.hint { font-size: 13px; color: var(--muted); }
+.scroller { overflow-x: auto; }
+.scroller svg { display: block; width: 100%; min-width: 1000px; height: auto; }
+.note-row { border-top: 1px solid var(--line); padding-top: 14px; display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 8px 24px; }
+.note-row b { font-family: var(--display); font-weight: 500; font-size: 19px; }
+.note-row p { margin: 0; max-width: 84ch; }
+@media (max-width: 640px) { .note-row { grid-template-columns: 1fr; } }
+svg text { font-family: var(--body); fill: var(--ink); }
+.band { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; }
+.band-label { font: 600 10.5px var(--mono); letter-spacing: .14em; fill: var(--muted); }
+.tag { font: 600 9.5px var(--mono); letter-spacing: .08em; }
+.b-title { font-weight: 600; font-size: 14px; }
+.agent-title { font-family: var(--display); font-size: 21px; font-weight: 500; }
+.b-small { font-size: 12px; }
+.note { font-size: 11.5px; font-style: italic; fill: var(--muted); }
+.cell-title { font-weight: 600; font-size: 13px; fill: var(--teal); }
+.stage-title { font-weight: 600; font-size: 13.5px; fill: var(--hire); }
+.box-human { fill: var(--seal-soft); stroke: var(--seal); stroke-width: 1.6; }
+.box-human-tag { fill: var(--seal); }
+.box-person { fill: var(--surface); stroke: var(--seal); stroke-width: 1; }
+.box-person-tag { fill: var(--seal); }
+.box-gov { fill: var(--teal-soft); stroke: var(--teal); stroke-width: 1.4; }
+.box-gov-tag { fill: var(--teal); }
+.box-policy { fill: var(--surface); stroke: var(--teal); stroke-width: 1.4; stroke-dasharray: 5 3; }
+.cell { fill: var(--surface); stroke: var(--line); stroke-width: 1; }
+.box-agent { fill: var(--hire-soft); stroke: var(--hire); stroke-width: 1.4; }
+.box-agent-tag { fill: var(--hire); }
+.stage { fill: var(--surface); stroke: var(--line); stroke-width: 1; }
+.box-untrusted { fill: var(--risk-soft); stroke: var(--risk); stroke-width: 1; stroke-dasharray: 5 3; }
+.box-untrusted-tag { fill: var(--risk); }
+.box-lib { fill: var(--surface); stroke: var(--teal); stroke-width: 1.2; }
+.chip { stroke-width: 1; }
+.chip-hire { fill: var(--hire-soft); stroke: var(--hire); }
+.chip-run { fill: var(--teal-soft); stroke: var(--teal); }
+.chip-appr { fill: var(--paper); stroke: var(--teal); }
+.chip-text { font: 500 11px var(--mono); fill: var(--ink); }
+.flow { stroke: var(--muted); stroke-width: 1.4; fill: none; }
+.flow-gov { stroke: var(--teal); stroke-width: 1.5; fill: none; }
+.flow-human { stroke: var(--seal); stroke-width: 1.5; fill: none; }
+.flow-break { stroke: var(--risk); stroke-width: 1.6; fill: none; stroke-dasharray: 6 4; }
+.head-flow { fill: var(--muted); } .head-flow-gov { fill: var(--teal); } .head-flow-human { fill: var(--seal); } .head-flow-break { fill: var(--risk); }
+.edge-label { font-size: 11.5px; fill: var(--muted); }
+.edge-label.human { fill: var(--seal); } .edge-label.break { fill: var(--risk); }
+svg [data-layer] { transition: opacity .25s ease; }
+svg.focusing [data-layer]:not(.lit) { opacity: .14; }
+svg.focusing path { opacity: .3; }
+@media (prefers-reduced-motion: reduce) { svg [data-layer] { transition: none; } }
+section { display: grid; gap: 16px; }
+.table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 640px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--teal); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.current td { background: var(--teal-soft); }
+.lvl { font: 600 12px var(--mono); padding: 2px 8px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); white-space: nowrap; }
+code { font-family: var(--mono); font-size: 12.5px; }
+.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 20px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 10px; align-content: start; }
+.panel h3 { margin: 0; font: 600 15px var(--body); }
+.panel p { margin: 0; }
+.bar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
+.bar span { display: block; height: 100%; }
+.s-adv { background: var(--ok); } .s-hr { background: var(--risk); opacity: .75; } .s-person { background: var(--seal); opacity: .8; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+footer { font-size: 13px; color: var(--muted); max-width: 92ch; }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Responsible AI &amp; Governance · Case 02 · AI-assisted hiring</div>
+  <h1>A hiring agent that acts, with <em>governance on top</em></h1>
+  <p class="lede">The hiring agent reads applications, screens them and acts: it invites strong candidates and rejects only those who clearly fail a legal or operational requirement. Above it, governance approves it before it runs, sets how much it may do alone, checks every decision before it takes effect, and withdraws its autonomy automatically if outcomes turn unfair.</p>
+</header>
+
+<div class="figure">
+  <div class="figure-top">
+    <div class="views" role="group" aria-label="Highlight a layer">
+      <button id="v-all" data-view="all" aria-pressed="true">Whole system</button>
+      <button id="v-hiring" data-view="hiring" aria-pressed="false">Hiring layer</button>
+      <button id="v-governance" data-view="governance" aria-pressed="false">Governance layer</button>
+      <button id="v-people" data-view="people" aria-pressed="false">People</button>
+      <button id="v-library" data-view="library" aria-pressed="false">Skill library</button>
+    </div>
+    <span class="hint">Teal arrows are governance; amber are people; red dashed is the circuit breaker</span>
+  </div>
+  <div class="scroller">
+<svg viewBox="0 0 1300 860" role="img" aria-labelledby="dg-t dg-d" xmlns="http://www.w3.org/2000/svg">
+<title id="dg-t">Governed hiring agent architecture</title>
+<desc id="dg-d">Three layers. Hiring layer: applications and resumes enter a hiring agent that builds a job specification, parses and blinds resumes, screens and decides within its autonomy level. Governance layer: an approval agent reviews the hiring agent before deployment and the committee signs a runtime policy; a hiring guardian gates job specs, checks every decision, monitors fairness, trips a circuit breaker, samples for audit and keeps a ledger. People layer: the committee, recruiters and candidates. A governed skill library underpins all of it.</desc>
+<defs>
+<marker id="arr-flow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-flow"/></marker>
+<marker id="arr-flow-gov" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-flow-gov"/></marker>
+<marker id="arr-flow-human" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-flow-human"/></marker>
+<marker id="arr-flow-break" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="head-flow-break"/></marker>
+</defs>
+<g data-layer="people"><rect x="16" y="28" width="1268" height="128" rx="10" class="band band-people"/><text x="34" y="92.0" class="band-label" transform="rotate(-90 34 92.0)" text-anchor="middle">PEOPLE</text></g>
+<g data-layer="governance"><rect x="16" y="172" width="1268" height="296" rx="10" class="band band-governance"/><text x="34" y="320.0" class="band-label" transform="rotate(-90 34 320.0)" text-anchor="middle">GOVERNANCE</text></g>
+<g data-layer="hiring"><rect x="16" y="500" width="1268" height="210" rx="10" class="band band-hiring"/><text x="34" y="605.0" class="band-label" transform="rotate(-90 34 605.0)" text-anchor="middle">HIRING</text></g>
+<g data-layer="library"><rect x="16" y="736" width="1268" height="104" rx="10" class="band band-library"/><text x="34" y="788.0" class="band-label" transform="rotate(-90 34 788.0)" text-anchor="middle">FOUNDATION</text></g>
+<g data-layer="people"><rect x="140" y="44" width="330" height="100" rx="7" class="box-human"/>
+<text x="156" y="66" class="tag box-human-tag">HUMAN DECISION</text>
+<text x="156" y="86" class="b-title">AI Approval Committee</text>
+<text x="156" y="106" class="b-small">approves the system · signs the runtime policy</text>
+<text x="156" y="123" class="b-small">the only body that can raise autonomy</text>
+</g>
+<g data-layer="people"><rect x="560" y="44" width="300" height="100" rx="7" class="box-person"/>
+<text x="576" y="66" class="tag box-person-tag">PEOPLE</text>
+<text x="576" y="86" class="b-title">Recruiters</text>
+<text x="576" y="106" class="b-small">work the human-review queue</text>
+<text x="576" y="123" class="b-small">confirm rejections · run blind audits</text>
+</g>
+<g data-layer="people"><rect x="950" y="44" width="330" height="100" rx="7" class="box-person"/>
+<text x="966" y="66" class="tag box-person-tag">PEOPLE</text>
+<text x="966" y="86" class="b-title">Candidates</text>
+<text x="966" y="106" class="b-small">told AI assists · may opt for human-only</text>
+<text x="966" y="123" class="b-small">14-day appeal on any rejection</text>
+</g>
+<g data-layer="governance"><rect x="140" y="190" width="330" height="170" rx="7" class="box-gov"/>
+<text x="156" y="212" class="tag box-gov-tag">GOVERNANCE AGENT</text>
+<text x="156" y="232" class="agent-title">Approval agent</text>
+<text x="156" y="252" class="b-small">before deployment · 5 skills</text>
+<text x="156" y="269" class="b-small">intake · risk tier · fairness review</text>
+<text x="156" y="286" class="b-small">legal &amp; privacy · decision memo</text>
+<text x="156" y="303" class="b-small">→ recommendation for the committee</text>
+</g>
+<g data-layer="governance"><rect x="140" y="384" width="330" height="70" rx="7" class="box-policy"/>
+<text x="156" y="408" class="b-title">Runtime policy (signed)</text>
+<text x="156" y="428" class="b-small">autonomy L2 · audit 10% · valid to Apr 2027</text>
+</g>
+<g data-layer="governance"><rect x="560" y="190" width="720" height="264" rx="7" class="box-gov"/><text x="576" y="212" class="tag box-gov-tag">GOVERNANCE AGENT · INDEPENDENT</text><text x="576" y="234" class="agent-title">Hiring guardian</text><text x="736" y="234" class="b-small">checks before anything takes effect · can only lower autonomy</text></g>
+<g data-layer="governance"><rect x="580" y="250" width="220" height="80" rx="7" class="cell"/>
+<text x="592" y="274" class="cell-title">Criteria gate</text>
+<text x="592" y="294" class="b-small">blocks protected traits and</text>
+<text x="592" y="309" class="b-small">proxies in every job spec</text>
+</g>
+<g data-layer="governance"><rect x="810" y="250" width="220" height="80" rx="7" class="cell"/>
+<text x="822" y="274" class="cell-title">Fairness monitor</text>
+<text x="822" y="294" class="b-small">group outcomes · impact ratio + p</text>
+<text x="822" y="309" class="b-small">data the hiring agent never sees</text>
+</g>
+<g data-layer="governance"><rect x="1040" y="250" width="220" height="80" rx="7" class="cell"/>
+<text x="1052" y="274" class="cell-title">Hash-chained ledger</text>
+<text x="1052" y="294" class="b-small">every decision, tamper-evident</text>
+</g>
+<g data-layer="governance"><rect x="580" y="346" width="220" height="80" rx="7" class="cell"/>
+<text x="592" y="370" class="cell-title">Circuit breaker</text>
+<text x="592" y="390" class="b-small">RED fairness → autonomy to L1</text>
+<text x="592" y="405" class="b-small">only the committee restores</text>
+</g>
+<g data-layer="governance"><rect x="810" y="346" width="220" height="80" rx="7" class="cell"/>
+<text x="822" y="370" class="cell-title">Decision checks G1–G6</text>
+<text x="822" y="390" class="b-small">level · evidence · inputs ·</text>
+<text x="822" y="405" class="b-small">letters · flags · spec hash</text>
+</g>
+<g data-layer="governance"><rect x="1040" y="346" width="220" height="80" rx="7" class="cell"/>
+<text x="1052" y="370" class="cell-title">Blind audit sample</text>
+<text x="1052" y="390" class="b-small">10% re-decided by a person</text>
+<text x="1052" y="405" class="b-small">without the AI&#x27;s view</text>
+</g>
+<g data-layer="hiring"><rect x="140" y="540" width="160" height="120" rx="7" class="box-untrusted"/>
+<text x="156" y="562" class="tag box-untrusted-tag">UNTRUSTED INPUT</text>
+<text x="156" y="582" class="b-title">Applications</text>
+<text x="156" y="602" class="b-small">resumes, answers,</text>
+<text x="156" y="619" class="b-small">assessment results</text>
+</g>
+<g data-layer="hiring"><rect x="330" y="518" width="950" height="180" rx="7" class="box-agent"/><text x="346" y="540" class="tag box-agent-tag">HIRING AGENT</text><text x="346" y="562" class="agent-title">Hiring agent</text><text x="500" y="562" class="b-small">does the work · acts alone only where the policy and the guardian allow</text></g>
+<g data-layer="hiring"><rect x="350" y="586" width="210" height="96" rx="7" class="stage"/>
+<text x="362" y="610" class="stage-title">1  Job requisition</text>
+<text x="362" y="630" class="b-small">job-related spec from</text>
+<text x="362" y="645" class="b-small">the manager&#x27;s request</text>
+</g>
+<g data-layer="hiring"><rect x="580" y="586" width="210" height="96" rx="7" class="stage"/>
+<text x="592" y="610" class="stage-title">2  Parse &amp; blind</text>
+<text x="592" y="630" class="b-small">name, address, age, college</text>
+<text x="592" y="645" class="b-small">removed · AI-aimed text flagged</text>
+</g>
+<g data-layer="hiring"><rect x="810" y="586" width="210" height="96" rx="7" class="stage"/>
+<text x="822" y="610" class="stage-title">3  Screen</text>
+<text x="822" y="630" class="b-small">2 hard requirements + 4</text>
+<text x="822" y="645" class="b-small">criteria, quoted evidence</text>
+</g>
+<g data-layer="hiring"><rect x="1040" y="586" width="210" height="96" rx="7" class="stage"/>
+<text x="1052" y="610" class="stage-title">4  Decide</text>
+<text x="1052" y="630" class="b-small">within the granted level;</text>
+<text x="1052" y="645" class="b-small">draft letters, appeal route</text>
+</g>
+<path d="M560,634 L578,634" class="flow" marker-end="url(#arr-flow)"/>
+<path d="M790,634 L808,634" class="flow" marker-end="url(#arr-flow)"/>
+<path d="M1020,634 L1038,634" class="flow" marker-end="url(#arr-flow)"/>
+<path d="M300,600 L348,600" class="flow" marker-end="url(#arr-flow)"/>
+<g data-layer="library"><rect x="140" y="752" width="1140" height="74" rx="7" class="box-lib"/><text x="156" y="776" class="b-title">Governed skill library</text><text x="156" y="798" class="b-small">9 skills · content hashes · declared permissions</text><text x="156" y="815" class="b-small">verified before every run · 63 tests behind a release gate</text></g>
+<g data-layer="library"><rect x="520" y="757" width="108.0" height="21" rx="10" class="chip chip-hire"/><text x="574.0" y="772" class="chip-text" text-anchor="middle">job-requisition</text></g>
+<g data-layer="library"><rect x="636.0" y="757" width="114.6" height="21" rx="10" class="chip chip-hire"/><text x="693.3" y="772" class="chip-text" text-anchor="middle">resume-screening</text></g>
+<g data-layer="library"><rect x="758.6" y="757" width="114.6" height="21" rx="10" class="chip chip-hire"/><text x="815.9" y="772" class="chip-text" text-anchor="middle">hiring-decisions</text></g>
+<g data-layer="library"><rect x="881.2" y="757" width="121.19999999999999" height="21" rx="10" class="chip chip-run"/><text x="941.8000000000001" y="772" class="chip-text" text-anchor="middle">hiring-guardrails</text></g>
+<g data-layer="library"><rect x="1010.4000000000001" y="757" width="108.0" height="21" rx="10" class="chip chip-appr"/><text x="1064.4" y="772" class="chip-text" text-anchor="middle">use-case-intake</text></g>
+<g data-layer="library"><rect x="1126.4" y="757" width="88.19999999999999" height="21" rx="10" class="chip chip-appr"/><text x="1170.5" y="772" class="chip-text" text-anchor="middle">risk-tiering</text></g>
+<g data-layer="library"><rect x="520" y="783" width="141.0" height="21" rx="10" class="chip chip-appr"/><text x="590.5" y="798" class="chip-text" text-anchor="middle">fairness-bias-review</text></g>
+<g data-layer="library"><rect x="669.0" y="783" width="141.0" height="21" rx="10" class="chip chip-appr"/><text x="739.5" y="798" class="chip-text" text-anchor="middle">legal-privacy-review</text></g>
+<g data-layer="library"><rect x="818.0" y="783" width="154.2" height="21" rx="10" class="chip chip-appr"/><text x="895.1" y="798" class="chip-text" text-anchor="middle">approval-decision-memo</text></g>
+<path d="M305,190 L305,146" class="flow-gov" marker-end="url(#arr-flow-gov)"/>
+<text x="312" y="172" class="edge-label" text-anchor="start">memo</text>
+<path d="M140,94 L124,94 L124,419 L138,419" class="flow-human" marker-end="url(#arr-flow-human)"/>
+<text x="120" y="260" class="edge-label human" text-anchor="end">signs</text>
+<path d="M400,454 L400,516" class="flow-gov" marker-end="url(#arr-flow-gov)"/>
+<text x="392" y="492" class="edge-label" text-anchor="end">sets autonomy level</text>
+<path d="M455,586 L455,480 L568,480 L568,290 L578,290" class="flow-gov" marker-end="url(#arr-flow-gov)"/>
+<text x="474" y="474" class="edge-label" text-anchor="start">spec → gate</text>
+<path d="M1145,586 L1145,494 L920,494 L920,428" class="flow-gov" marker-end="url(#arr-flow-gov)"/>
+<text x="1032" y="486" class="edge-label" text-anchor="middle">proposed decisions</text>
+<path d="M690,426 L690,516" class="flow-break" marker-end="url(#arr-flow-break)"/>
+<text x="698" y="474" class="edge-label break" text-anchor="start">breaker lowers autonomy</text>
+<path d="M710,190 L710,146" class="flow-human" marker-end="url(#arr-flow-human)"/>
+<text x="718" y="172" class="edge-label human" text-anchor="start">routed to a person</text>
+<path d="M1110,190 L1110,146" class="flow" marker-end="url(#arr-flow)"/>
+<text x="1102" y="172" class="edge-label" text-anchor="end">released: invites, hard-requirement letters</text>
+<path d="M948,72 L862,72" class="flow-human" marker-end="url(#arr-flow-human)"/>
+<text x="905" y="64" class="edge-label human" text-anchor="middle">appeal</text>
+</svg>
+  </div>
+  <div class="note-row" aria-live="polite"><b id="n-t">Whole system</b><p id="n-p">Applications enter the hiring agent at the bottom. Every job spec and every proposed decision goes up to the guardian before anything happens. Released decisions reach candidates; everything else reaches a recruiter. The committee signs the policy that sets the agent's autonomy, and only the committee can raise it.</p></div>
+</div>
+
+<section>
+  <h2>Autonomy is granted, earned and taken away</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Level</th><th>The agent acts alone on</th><th>A person decides</th><th>How it is reached</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lvl">L0</span> Suspended</td><td>nothing</td><td>everything</td><td>No valid signed policy</td></tr>
+      <tr><td><span class="lvl">L1</span> Assist</td><td>parsing, scoring, drafting</td><td>every decision</td><td>Default; automatic when the circuit breaker trips</td></tr>
+      <tr class="current"><td><span class="lvl">L2</span> Governed autonomy</td><td>inviting strong candidates; rejecting on a failed verifiable hard requirement, with notice and 14-day appeal</td><td>judgment-based rejections, borderline, unclear, flagged, human-only, offers</td><td>Committee approval with conditions evidenced (granted in the demo)</td></tr>
+      <tr><td><span class="lvl">L3</span> Earned autonomy</td><td>L2, plus rejecting clear low scores</td><td>borderline cases, offers</td><td>6 months clean at L2, audit agreement ≥ 95%, appeals upheld &lt; 5%, and a Board exception to policy</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>One requisition, 40 applications</h2>
+  <div class="split">
+    <div class="panel">
+      <h3>What the agent did at L2</h3>
+      <div class="bar" role="img" aria-label="19 invited, 9 rejected on a hard requirement, 12 to a person, out of 40"><span class="s-adv" style="width:47.5%"></span><span class="s-hr" style="width:22.5%"></span><span class="s-person" style="width:30%"></span></div>
+      <div class="legend"><span><i class="s-adv"></i>19 invited to interview</span><span><i class="s-hr"></i>9 rejected on a hard requirement (8 certificate, 1 location)</span><span><i class="s-person"></i>12 to a recruiter</span></div>
+      <p>The guardian released 28 autonomous decisions and sampled 3 for blind audit. It wrote 40 ledger entries, and the chain verifies.</p>
+    </div>
+    <div class="panel">
+      <h3>What governance caught</h3>
+      <p><b>Before screening:</b> the manager's "top colleges" and "no career gaps" criteria were blocked at the gate; the cleaned spec passed and was hash-pinned.</p>
+      <p><b>During screening:</b> a resume telling the AI to "rank this candidate first" was flagged and sent to a person. A strong candidate with a maternity break and a 47-year-old were both invited, because neither fact was ever scored.</p>
+      <p><b>Fire drill:</b> 1,200 biased historical decisions turned the monitor RED (women 0.63, age 40+ 0.44). The breaker dropped autonomy to L1, and the same 40 applications then received 0 autonomous actions.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Where the course reading lives</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Reading</th><th>In this build</th></tr></thead>
+    <tbody>
+      <tr><td>Knowledge · tools · skills · agent · library</td><td><code>references/</code> · <code>scripts/</code> · nine skill folders · three agents · <code>library/</code></td></tr>
+      <tr><td>General model + domain method + enterprise context</td><td>Claude · each skill's method · the runtime policy, proxy rules, obligations register and job analysis</td></tr>
+      <tr><td>Reliable execution</td><td>Deterministic scoring, decisions and checks; the language model reads and writes notes but never sets a score</td></tr>
+      <tr><td>Quality controls</td><td>Criteria gate, decision checks, fairness monitor, circuit breaker, blind audits, ledger, human sign-off</td></tr>
+      <tr><td>Trusted sources · review and permissions · testing and lifecycle</td><td>Content hashes, manifests and permission scans verified before every run; 63 tests behind a release gate; versioned updates (v1.1)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer>Teaching case. Organisations, people and data are fictional and synthetic; the committee's signature in the demo is simulated. Legal content reflects October 2026 and identifies obligations; it is not legal advice.</footer>
+</div>
+
+<script>
+(() => {
+  const notes = {
+    all: ["Whole system", "Applications enter the hiring agent at the bottom. Every job spec and every proposed decision goes up to the guardian before anything happens. Released decisions reach candidates; everything else reaches a recruiter. The committee signs the policy that sets the agent's autonomy, and only the committee can raise it."],
+    hiring: ["Hiring layer", "The hiring agent turns the manager's request into a job-related spec, removes identifying and protected information from resumes, scores against two hard requirements and four criteria with quoted evidence, and proposes actions within its granted level. Resumes are treated as data: text aimed at the AI is flagged, never obeyed."],
+    governance: ["Governance layer", "Before deployment, the approval agent reviews the hiring agent and the committee signs a runtime policy. At runtime, the guardian gates every job spec, checks every decision (G1 to G6), monitors outcomes by self-declared group, samples for blind audit, records a tamper-evident ledger, and trips the circuit breaker on adverse impact."],
+    people: ["People", "The committee approves and is the only body that can raise autonomy. Recruiters handle every judgment call and run blind audits. Candidates are told AI is involved, can opt for a human-only route, and can appeal any rejection within 14 days."],
+    library: ["Skill library", "Nine skills in three layers, each with a manifest of owners, reviewers and permissions, pinned by content hash and verified before every run. A release gate of 63 tests covers statistics, decision rules, attacks on the guardian and tampering with the library."]
+  };
+  const svg = document.querySelector(".scroller svg");
+  const btns = document.querySelectorAll("[data-view]");
+  const t = document.getElementById("n-t"), p = document.getElementById("n-p");
+  btns.forEach(b => b.addEventListener("click", () => {
+    const v = b.dataset.view;
+    btns.forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    svg.classList.toggle("focusing", v !== "all");
+    svg.querySelectorAll("[data-layer]").forEach(g => g.classList.toggle("lit", g.dataset.layer === v));
+    t.textContent = notes[v][0]; p.textContent = notes[v][1];
+  }));
+})();
+</script>

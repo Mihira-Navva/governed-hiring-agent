@@ -1,0 +1,633 @@
+{
+  "_about": "Register of legal, regulatory, guidance and internal-policy obligations relevant to AI in hiring for an Indian employer. Each entry says when it applies, how to test whether the proposal meets it, and the gap code the decision skill turns into a condition. Status notes are current as of the library review date in skill.json; they identify obligations and are not legal advice.",
+  "as_of": "2026-10-07",
+  "legal_status_meaning": {
+    "in_force": "Binding now.",
+    "in_force_phased": "Law in force; this obligation commences on a later notified date. Design for it now.",
+    "applies_from": "Binding from the date stated.",
+    "guidance": "Official but non-binding guidance.",
+    "benchmark": "International standard or foreign rule used as a best-practice benchmark.",
+    "internal_policy": "Binding inside this organisation by board-approved policy."
+  },
+  "obligations": [
+    {
+      "id": "IN-DPDP-NOTICE",
+      "instrument": "Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025",
+      "provision": "s. 5; Rule 3",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "Rules notified November 2025; substantive notice and consent duties commence May 2027 (18-month phase-in). SPDI Rules, 2011 under the IT Act apply until then.",
+      "requirement": "Give candidates a clear, itemised notice of what personal data is processed, for what purpose, and how to exercise their rights, before or at the time consent is sought.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.data.notice_to_candidates",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Draft candidate privacy notice reviewed by DPO.",
+      "gap_code": "GAP-PR-NOTICE",
+      "owner": "Data Protection Officer"
+    },
+    {
+      "id": "IN-DPDP-BASIS",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "ss. 4, 6, 7",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above. Whether the employment legitimate-use ground in s. 7 covers applicants (who are not yet employees) needs counsel's view; consent is the safer basis.",
+      "requirement": "Identify a lawful ground (consent or a specified legitimate use) for processing candidate data.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.data.lawful_basis",
+        "op": "truthy"
+      },
+      "evidence": "Lawful-basis assessment signed by Legal.",
+      "gap_code": "GAP-PR-BASIS",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "IN-DPDP-PURPOSE",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "s. 6(1) (consent specific and limited to necessary data)",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above.",
+      "requirement": "Candidate data is used only for this recruitment purpose; the vendor may not reuse it to train or improve its own products without separate, specific consent.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.data.vendor_reuses_data_for_training",
+        "op": "eq",
+        "value": false
+      },
+      "evidence": "Contract clause prohibiting secondary use.",
+      "gap_code": "GAP-PR-REUSE",
+      "owner": "Data Protection Officer"
+    },
+    {
+      "id": "IN-DPDP-ACCURACY",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "s. 8(3)",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above.",
+      "requirement": "Where personal data is likely to be used to make a decision that affects the person, ensure it is complete, accurate and consistent. CV parsing errors become decision errors.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.data.accuracy_controls",
+        "op": "truthy"
+      },
+      "evidence": "Parsing accuracy test on a sample of real CVs (including regional formats and non-English names); candidate can view and correct parsed data.",
+      "gap_code": "GAP-PR-ACCURACY",
+      "owner": "HR Technology Lead"
+    },
+    {
+      "id": "IN-DPDP-PROCESSOR",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "s. 8(2)",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above.",
+      "requirement": "A data processor (the vendor) may process candidate data only under a valid contract.",
+      "applies_if": {
+        "all": [
+          {
+            "field": "intake.use_case.jurisdictions",
+            "op": "contains",
+            "value": "IN"
+          },
+          {
+            "field": "intake.system.build_type",
+            "op": "in",
+            "value": [
+              "third_party",
+              "hybrid"
+            ]
+          }
+        ]
+      },
+      "check": {
+        "field": "intake.vendor_governance.contract_has_dpdp_processor_terms",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Signed data processing agreement.",
+      "gap_code": "GAP-VE-CONTRACT",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "IN-DPDP-SECURITY",
+      "instrument": "Digital Personal Data Protection Act, 2023 and DPDP Rules, 2025",
+      "provision": "s. 8(5); Rule 6",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above. Penalty for failure to take reasonable security safeguards can reach Rs 250 crore.",
+      "requirement": "Reasonable security safeguards, including at the vendor, to prevent a personal data breach.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.vendor_governance.security_assessment_done",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Information security vendor assessment report.",
+      "gap_code": "GAP-PR-SECURITY",
+      "owner": "Chief Information Security Officer"
+    },
+    {
+      "id": "IN-DPDP-RETENTION",
+      "instrument": "DPDP Act, 2023 and internal policy",
+      "provision": "s. 8(7); POL-DATA-02 (180-day cap)",
+      "jurisdiction": "IN",
+      "legal_status": "internal_policy",
+      "status_note": "The Act requires erasure once the purpose is served; the 180-day figure is this organisation's policy.",
+      "requirement": "Erase unsuccessful applicants' data within 180 days unless they consent to a talent pool.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.data.retention_days",
+        "op": "lte",
+        "value": 180
+      },
+      "evidence": "Retention schedule configured at vendor and verified.",
+      "gap_code": "GAP-PR-RETENTION",
+      "owner": "Data Protection Officer"
+    },
+    {
+      "id": "IN-DPDP-GRIEVANCE",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "ss. 8(10), 11-13",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "As above.",
+      "requirement": "An effective grievance mechanism, and a way for candidates to access, correct and erase their data.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.contestability.grievance_officer_named",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Named grievance officer and published contact in the candidate notice.",
+      "gap_code": "GAP-CO-GRIEVANCE",
+      "owner": "Data Protection Officer"
+    },
+    {
+      "id": "IN-DPDP-TRANSFER",
+      "instrument": "Digital Personal Data Protection Act, 2023",
+      "provision": "s. 16",
+      "jurisdiction": "IN",
+      "legal_status": "in_force_phased",
+      "status_note": "Transfers are allowed except to countries the Government restricts by notification.",
+      "requirement": "Document where candidate data goes and confirm no destination is restricted.",
+      "applies_if": {
+        "field": "intake.data.cross_border_transfer",
+        "op": "eq",
+        "value": true
+      },
+      "check": {
+        "field": "intake.data.transfer_destinations",
+        "op": "truthy"
+      },
+      "evidence": "Data flow map with destination countries.",
+      "gap_code": "GAP-PR-TRANSFER",
+      "owner": "Data Protection Officer"
+    },
+    {
+      "id": "IN-WAGES-GENDER",
+      "instrument": "Code on Wages, 2019",
+      "provision": "s. 3",
+      "jurisdiction": "IN",
+      "legal_status": "in_force",
+      "status_note": "The four Labour Codes took effect on 21 November 2025.",
+      "requirement": "No discrimination on the ground of gender, including transgender identity, in recruitment for the same or similar work.",
+      "applies_if": {
+        "all": [
+          {
+            "field": "intake.use_case.jurisdictions",
+            "op": "contains",
+            "value": "IN"
+          },
+          {
+            "field": "intake.system.decision_stage",
+            "op": "in",
+            "value": [
+              "sourcing",
+              "initial_screening",
+              "assessment",
+              "interview",
+              "final_selection"
+            ]
+          }
+        ]
+      },
+      "check": {
+        "field": "fairness.by_attribute.gender",
+        "op": "ne",
+        "value": "FAIL"
+      },
+      "evidence": "Gender adverse-impact test shows no statistically significant adverse impact on shadow data.",
+      "gap_code": "GAP-FA-GENDER",
+      "owner": "Chief Human Resources Officer"
+    },
+    {
+      "id": "IN-TG-EMPLOYMENT",
+      "instrument": "Transgender Persons (Protection of Rights) Act, 2019",
+      "provision": "ss. 3, 9",
+      "jurisdiction": "IN",
+      "legal_status": "in_force",
+      "status_note": "",
+      "requirement": "No unfair treatment of transgender persons in recruitment. Testing this requires inclusive, voluntary self-declaration in the audit dataset.",
+      "applies_if": {
+        "all": [
+          {
+            "field": "intake.use_case.jurisdictions",
+            "op": "contains",
+            "value": "IN"
+          },
+          {
+            "field": "intake.system.decision_stage",
+            "op": "in",
+            "value": [
+              "sourcing",
+              "initial_screening",
+              "assessment",
+              "interview",
+              "final_selection"
+            ]
+          }
+        ]
+      },
+      "check": {
+        "field": "intake.data.protected_attributes_collected_for_audit",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Audit self-declaration form with inclusive gender options, held separately from the model.",
+      "gap_code": "GAP-FA-AUDITDATA",
+      "owner": "Chief Human Resources Officer"
+    },
+    {
+      "id": "IN-RPWD",
+      "instrument": "Rights of Persons with Disabilities Act, 2016",
+      "provision": "ss. 2(y), 3, 20, 21",
+      "jurisdiction": "IN",
+      "legal_status": "in_force",
+      "status_note": "s. 20 binds government establishments; s. 21 requires every establishment to have an equal opportunity policy.",
+      "requirement": "Accessible assessment journey and a way to request reasonable accommodation, including assessment without the AI.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "all": [
+          {
+            "field": "intake.testing.accessibility_tested",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.contestability.human_alternative_on_request",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "evidence": "Accessibility test report; accommodation route in the candidate notice.",
+      "gap_code": "GAP-AC-ACCESS",
+      "owner": "Chief Human Resources Officer"
+    },
+    {
+      "id": "IN-CONST-EQUALITY",
+      "instrument": "Constitution of India",
+      "provision": "Arts. 14, 15, 16",
+      "jurisdiction": "IN",
+      "legal_status": "in_force",
+      "status_note": "Art. 16 (equality of opportunity in public employment) binds the State, including public sector employers.",
+      "requirement": "Selection must not be arbitrary or discriminatory.",
+      "applies_if": {
+        "field": "intake.organisation.sector",
+        "op": "in",
+        "value": [
+          "public_sector_undertaking",
+          "government"
+        ]
+      },
+      "check": {
+        "field": "fairness.overall",
+        "op": "ne",
+        "value": "FAIL"
+      },
+      "evidence": "Clean adverse-impact results and documented job-relatedness.",
+      "gap_code": "GAP-FA-PUBLIC",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "IN-AIGG-ACCOUNTABILITY",
+      "instrument": "India AI Governance Guidelines (MeitY, November 2025)",
+      "provision": "Sutra: Accountability",
+      "jurisdiction": "IN",
+      "legal_status": "guidance",
+      "status_note": "Non-binding; government policy favours applying existing laws over new AI-specific regulation.",
+      "requirement": "A clearly accountable person or function for the AI system's outcomes across its lifecycle.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "field": "intake.accountable_executive",
+        "op": "truthy"
+      },
+      "evidence": "Named accountable executive in the approval record.",
+      "gap_code": "GAP-AC-OWNER",
+      "owner": "AI Approval Committee"
+    },
+    {
+      "id": "IN-AIGG-UNDERSTANDABLE",
+      "instrument": "India AI Governance Guidelines (MeitY, November 2025)",
+      "provision": "Sutras: Understandable by Design; People First",
+      "jurisdiction": "IN",
+      "legal_status": "guidance",
+      "status_note": "Non-binding.",
+      "requirement": "Candidates are told AI is used, and decisions can be explained in terms a person can understand.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "IN"
+      },
+      "check": {
+        "all": [
+          {
+            "field": "intake.transparency.candidate_notified_of_ai_use",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.transparency.individual_explanations_available",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "evidence": "AI-use notice text; sample individual explanation.",
+      "gap_code": "GAP-TR-EXPLAIN",
+      "owner": "HR Technology Lead"
+    },
+    {
+      "id": "EU-AIA-ART5F",
+      "instrument": "EU AI Act (Regulation (EU) 2024/1689)",
+      "provision": "Art. 5(1)(f)",
+      "jurisdiction": "EU",
+      "legal_status": "in_force",
+      "status_note": "Prohibitions apply since 2 February 2025.",
+      "requirement": "No AI system that infers emotions of natural persons in the workplace (recruitment included), except for medical or safety reasons.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "EU"
+      },
+      "check": {
+        "field": "intake.system.techniques.emotion_or_affect_inference",
+        "op": "eq",
+        "value": false
+      },
+      "evidence": "Vendor confirmation that no affect inference is computed.",
+      "gap_code": "GAP-RL-AFFECT",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "EU-AIA-ART26",
+      "instrument": "EU AI Act",
+      "provision": "Art. 26 (deployer obligations), Annex III point 4",
+      "jurisdiction": "EU",
+      "legal_status": "applies_from",
+      "status_note": "High-risk obligations for Annex III systems apply from 2 December 2027 (Digital Omnibus on AI, in force 27 July 2026).",
+      "requirement": "Human oversight by trained, competent people; monitoring; logs kept at least six months; inform affected persons and workers' representatives.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "EU"
+      },
+      "check": {
+        "all": [
+          {
+            "field": "intake.human_oversight.reviewers_trained",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.monitoring.monitoring_plan",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.transparency.candidate_notified_of_ai_use",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "evidence": "Oversight training records, monitoring plan, notice text.",
+      "gap_code": "GAP-EU-DEPLOYER",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "EU-AIA-ART86",
+      "instrument": "EU AI Act",
+      "provision": "Art. 86 (right to explanation)",
+      "jurisdiction": "EU",
+      "legal_status": "applies_from",
+      "status_note": "Tied to the Annex III timetable (2 December 2027).",
+      "requirement": "Affected persons can obtain a clear explanation of the AI system's role in a decision about them.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "EU"
+      },
+      "check": {
+        "field": "intake.transparency.individual_explanations_available",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Explanation process and sample.",
+      "gap_code": "GAP-TR-EXPLAIN",
+      "owner": "HR Technology Lead"
+    },
+    {
+      "id": "EU-GDPR-ART22",
+      "instrument": "General Data Protection Regulation",
+      "provision": "Art. 22",
+      "jurisdiction": "EU",
+      "legal_status": "in_force",
+      "status_note": "",
+      "requirement": "No decision based solely on automated processing with legal or similarly significant effects, without safeguards including human intervention.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "EU"
+      },
+      "check": {
+        "field": "intake.human_oversight.human_reviews_every_rejection",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Workflow showing human review before rejection.",
+      "gap_code": "GAP-HO-REVIEW",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "US-NYC-LL144",
+      "instrument": "New York City Local Law 144 of 2021",
+      "provision": "Admin. Code 20-870 to 20-874",
+      "jurisdiction": "US-NYC",
+      "legal_status": "in_force",
+      "status_note": "Enforced since 5 July 2023; enforcement stepped up after a December 2025 New York State Comptroller audit.",
+      "requirement": "Independent bias audit within the last year, public summary of results, and at least 10 business days' notice to candidates.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "contains",
+        "value": "US-NYC"
+      },
+      "check": {
+        "all": [
+          {
+            "field": "intake.testing.bias_audit_independent",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.transparency.candidate_notified_of_ai_use",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "evidence": "Independent audit report, published summary, notice.",
+      "gap_code": "GAP-US-LL144",
+      "owner": "Legal Counsel"
+    },
+    {
+      "id": "BM-ISO42001",
+      "instrument": "ISO/IEC 42001:2023 AI management system",
+      "provision": "Cl. 6.1.4 (AI system impact assessment)",
+      "jurisdiction": "GLOBAL",
+      "legal_status": "benchmark",
+      "status_note": "Certifiable international standard.",
+      "requirement": "Assess the impact of the AI system on individuals and groups before deployment.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "truthy"
+      },
+      "check": {
+        "field": "intake.testing.bias_audit_completed",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Completed impact assessment including bias audit.",
+      "gap_code": "GAP-FA-AUDIT",
+      "owner": "AI Governance Office"
+    },
+    {
+      "id": "BM-NIST-MANAGE",
+      "instrument": "NIST AI Risk Management Framework 1.0 (2023)",
+      "provision": "MANAGE and MEASURE functions",
+      "jurisdiction": "GLOBAL",
+      "legal_status": "benchmark",
+      "status_note": "Voluntary framework.",
+      "requirement": "Risks are tracked after deployment, with a response plan for incidents.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "truthy"
+      },
+      "check": {
+        "all": [
+          {
+            "field": "intake.monitoring.monitoring_plan",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "field": "intake.monitoring.incident_process",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      },
+      "evidence": "Monitoring plan with metrics, owners and cadence; incident runbook.",
+      "gap_code": "GAP-MO-PLAN",
+      "owner": "AI Governance Office"
+    },
+    {
+      "id": "POL-AI-05-CHANGE",
+      "instrument": "Internal policy POL-AI-05 (third-party AI)",
+      "provision": "Model change control",
+      "jurisdiction": "GLOBAL",
+      "legal_status": "internal_policy",
+      "status_note": "",
+      "requirement": "Vendor must notify, and the organisation re-test, before any material model change goes live.",
+      "applies_if": {
+        "field": "intake.system.build_type",
+        "op": "in",
+        "value": [
+          "third_party",
+          "hybrid"
+        ]
+      },
+      "check": {
+        "field": "intake.vendor_governance.model_change_notification",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Contract clause and change-control procedure.",
+      "gap_code": "GAP-VE-CHANGE",
+      "owner": "Procurement"
+    },
+    {
+      "id": "POL-AI-06-KILL",
+      "instrument": "Internal policy POL-AI-06 (operational resilience)",
+      "provision": "Fallback and kill switch",
+      "jurisdiction": "GLOBAL",
+      "legal_status": "internal_policy",
+      "status_note": "",
+      "requirement": "The AI can be switched off within one working day, with hiring continuing manually.",
+      "applies_if": {
+        "field": "intake.use_case.jurisdictions",
+        "op": "truthy"
+      },
+      "check": {
+        "field": "intake.monitoring.kill_switch",
+        "op": "eq",
+        "value": true
+      },
+      "evidence": "Tested fallback procedure.",
+      "gap_code": "GAP-MO-KILL",
+      "owner": "HR Operations"
+    }
+  ]
+}

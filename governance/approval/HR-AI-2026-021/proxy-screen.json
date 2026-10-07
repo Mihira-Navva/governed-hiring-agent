@@ -1,0 +1,75 @@
+{
+  "proposal_id": "HR-AI-2026-021",
+  "verdict": "JUSTIFY",
+  "feature_count": 6,
+  "counts": {
+    "PROTECTED": 0,
+    "STRONG_PROXY": 0,
+    "MODERATE_PROXY": 0,
+    "JOB_RELATED": 4,
+    "UNCLASSIFIED": 2
+  },
+  "features": [
+    {
+      "feature": "Work-sample assessment score",
+      "category": "JOB_RELATED",
+      "rule": "J-ASSESSMENT",
+      "linked_attributes": [],
+      "rationale": "Direct measures of job-relevant ability, given to every candidate the same way.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Relevant sales experience with customers (months, capped at 24)",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "linked_attributes": [],
+      "rationale": "Job-relevant if defined from a job analysis and extracted accurately.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Product and compliance skills listed",
+      "category": "JOB_RELATED",
+      "rule": "J-SKILLS",
+      "linked_attributes": [],
+      "rationale": "Job-relevant if defined from a job analysis and extracted accurately.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Branch language test result",
+      "category": "UNCLASSIFIED",
+      "rule": null,
+      "linked_attributes": [],
+      "rationale": "No rule matched. Relevance to the job has not been shown.",
+      "action": "Proposer must justify its relevance to the job before it can be used.",
+      "also_matched": []
+    },
+    {
+      "feature": "NISM-Series-V-A certificate (hard requirement)",
+      "category": "JOB_RELATED",
+      "rule": "J-CERT",
+      "linked_attributes": [],
+      "rationale": "Legally or technically required credentials for the role.",
+      "action": "Acceptable in principle; confirm it is measured the same way for every candidate and is validated for this role.",
+      "also_matched": []
+    },
+    {
+      "feature": "Able to work at branch (hard requirement)",
+      "category": "UNCLASSIFIED",
+      "rule": null,
+      "linked_attributes": [],
+      "rationale": "No rule matched. Relevance to the job has not been shown.",
+      "action": "Proposer must justify its relevance to the job before it can be used.",
+      "also_matched": []
+    }
+  ],
+  "features_to_remove": [],
+  "features_to_justify": [
+    "Branch language test result",
+    "Able to work at branch (hard requirement)"
+  ],
+  "red_lines": [],
+  "limits": "Keyword screening finds proxies that are named. It cannot find proxies hidden inside composite scores or learned from free text; only outcome testing by group (adverse_impact.py) can show those."
+}

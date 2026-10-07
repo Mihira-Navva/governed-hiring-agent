@@ -1,0 +1,53 @@
+{
+  "policy_id": "RP-HR-AI-2026-021-2026-10-06",
+  "system": "Deccan Ledger governed hiring agent (branch roles)",
+  "approval_ref": "HR-AI-2026-021",
+  "approval_outcome": "APPROVE_WITH_CONDITIONS",
+  "autonomy_level": "L2",
+  "autonomy_requested": "L2",
+  "autonomy_cap_reason": "all conditions precedent evidenced",
+  "shadow_mode": false,
+  "valid_from": "2026-10-06",
+  "valid_until": "2027-04-06",
+  "min_parse_confidence": 0.7,
+  "l3_low_score_floor": null,
+  "audit_sample_rate": 0.1,
+  "fairness_monitor": {
+    "min_group_n": 30,
+    "impact_ratio_threshold": 0.8,
+    "alpha": 0.05,
+    "attributes": [
+      "gender",
+      "age_band",
+      "home_region",
+      "disability"
+    ]
+  },
+  "circuit_breaker": {
+    "trips_on": "RED",
+    "fallback_level": "L1",
+    "restored_by": "AI Approval Committee only"
+  },
+  "grievance_contact": "hiring.grievance@deccanledger.example",
+  "conditions_subsequent": [
+    "C-HO-GUARDIAN",
+    "C-HO-BLIND",
+    "C-FA-AUDIT",
+    "C-MO-REREVIEW"
+  ],
+  "conditions_precedent_outstanding": [],
+  "committee_signature": {
+    "signed_by": "Ananya Rao (fictional)",
+    "role": "Chief Risk Officer, Chair, AI Approval Committee",
+    "date": "2026-10-06"
+  },
+  "earned_autonomy_path": {
+    "L3_requires": [
+      "6 months at L2",
+      "fairness GREEN in every monthly report",
+      "blind-audit agreement >= 95%",
+      "appeals upheld < 5%",
+      "Board exception to POL-AI-03"
+    ]
+  }
+}
