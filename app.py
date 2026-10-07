@@ -77,6 +77,24 @@ def tests():
     return runner.run_tests()
 
 
+def _explain(e: Exception) -> str:
+    """Readable error for the browser, including the underlying cause (e.g. why a connection failed)."""
+    msg = f"{type(e).__name__}: {e}"
+    cause = e.__cause__ or e.__context__
+    if cause is not None:
+        msg += f" (cause: {type(cause).__name__}: {cause})"
+    name = type(e).__name__
+    if name == "APIConnectionError":
+        msg += (" — The server could not reach the Anthropic API. Most often the ANTHROPIC_API_KEY value in Vercel "
+                "contains a stray space or line break, or the function's outbound network failed. Re-paste the key "
+                "and redeploy.")
+    elif name == "AuthenticationError":
+        msg += " — The API key was rejected. Check ANTHROPIC_API_KEY in Vercel and redeploy."
+    elif name == "NotFoundError":
+        msg += " — The model name may be wrong. Check CLAUDE_MODEL."
+    return msg
+
+
 class ReviewRequest(BaseModel):
     reviewer: str = Field(..., min_length=2, max_length=120)
     proposal_id: Optional[str] = None
@@ -104,7 +122,7 @@ def review(req: ReviewRequest):
             result = approval_agent.run_approval_review(text, pilot, req.reviewer.strip(), on_event=events.put)
             events.put({"type": "result", "result": result})
         except Exception as e:  # report the failure to the browser instead of a broken stream
-            events.put({"type": "error", "message": f"{type(e).__name__}: {e}"})
+            events.put({"type": "error", "message": _explain(e)})
         finally:
             events.put(None)
 

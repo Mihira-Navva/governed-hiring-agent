@@ -377,7 +377,10 @@ def run_approval_review(proposal_text: str, pilot: str | None, reviewer: str, on
     started = time.monotonic()
     run_id = uuid.uuid4().hex[:8]
     session = ReviewSession(proposal_text, pilot)
-    client = anthropic.Anthropic(max_retries=2)
+    # Strip whitespace: a key pasted with a trailing newline or space makes every request fail
+    # with a misleading "Connection error".
+    api_key = os.getenv("ANTHROPIC_API_KEY", "").strip().strip('"').strip("'")
+    client = anthropic.Anthropic(api_key=api_key, max_retries=2)
     system = [{"type": "text", "text": build_system_prompt(bool(pilot)), "cache_control": {"type": "ephemeral"}}]
     messages = [{
         "role": "user",
