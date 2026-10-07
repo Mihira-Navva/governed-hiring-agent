@@ -28,7 +28,6 @@ How the Claude agent is wired (`web/approval_agent.py`):
 | Name | Required | Value |
 |---|---|---|
 | `ANTHROPIC_API_KEY` | Yes, for the agent tab | Your Anthropic API key. Mark it **Sensitive**. |
-| `APP_ACCESS_CODE` | Yes, for the agent tab | Any passphrase. The page asks for it, so strangers who find the URL cannot spend your credits. Without it the agent tab is disabled on Vercel. |
 | `CLAUDE_MODEL` | No | Default `claude-sonnet-5-5`. `claude-opus-5-5` is more capable but slower; reviews must finish within the 300-second function limit. |
 
 After adding or changing a variable, redeploy (Deployments → ⋯ → Redeploy) so the function picks it up.
@@ -38,7 +37,7 @@ After adding or changing a variable, redeploy (Deployments → ⋯ → Redeploy)
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt uvicorn
-cp .env.example .env    # then fill in ANTHROPIC_API_KEY (APP_ACCESS_CODE optional locally)
+cp .env.example .env    # then fill in ANTHROPIC_API_KEY
 uvicorn app:app --reload
 # open http://localhost:8000
 ```
@@ -48,4 +47,4 @@ uvicorn app:app --reload
 - Reviews are not stored: each run's files are returned to the browser (download buttons) and the
   temporary folder is deleted. Download the memo and audit log if you need to keep them.
 - Pasted proposals have no pilot data attached, so adverse impact cannot be measured for them.
-- The access code is a single shared passphrase, not per-user authentication.
+- The agent tab is open to anyone with the link. Share the URL only with people you trust, and keep a spend limit on the Anthropic API key.

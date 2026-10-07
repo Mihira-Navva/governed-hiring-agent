@@ -11,10 +11,8 @@ Routes
 
 Environment variables (set in Vercel → Project → Settings → Environment Variables):
     ANTHROPIC_API_KEY   required for /api/review
-    APP_ACCESS_CODE     required on Vercel for /api/review, so strangers cannot spend your API credits
     CLAUDE_MODEL        optional, default claude-sonnet-5-5
 """
-import hmac
 import json
 import os
 import queue
@@ -22,7 +20,7 @@ import threading
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, Header, HTTPException
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel, Field
 
@@ -35,7 +33,6 @@ except ImportError:
 from web import approval_agent, runner  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
-ON_VERCEL = bool(os.getenv("VERCEL"))
 MAX_PROPOSAL_CHARS = 40_000
 
 app = FastAPI(title="Governed Hiring Agent", docs_url=None, redoc_url=None)
@@ -56,16 +53,10 @@ def architecture_png():
     return FileResponse(ROOT / "architecture-diagram.png")
 
 
-def _access_code_required() -> bool:
-    return bool(os.getenv("APP_ACCESS_CODE")) or ON_VERCEL
-
-
 @app.get("/api/health")
 def health():
     return {
         "agent_enabled": bool(os.getenv("ANTHROPIC_API_KEY")),
-        "access_code_required": _access_code_required(),
-        "access_code_configured": bool(os.getenv("APP_ACCESS_CODE")),
         "model": approval_agent.MODEL,
         "time_budget_seconds": approval_agent.TIME_BUDGET,
     }
@@ -93,19 +84,8 @@ class ReviewRequest(BaseModel):
     use_pilot: bool = True
 
 
-def _check_access(code: Optional[str]):
-    expected = os.getenv("APP_ACCESS_CODE")
-    if not expected:
-        if ON_VERCEL:
-            raise HTTPException(503, "APP_ACCESS_CODE is not set in the Vercel project, so the agent is disabled to protect your API credits.")
-        return
-    if not code or not hmac.compare_digest(code.encode(), expected.encode()):
-        raise HTTPException(401, "Wrong or missing access code.")
-
-
 @app.post("/api/review")
-def review(req: ReviewRequest, x_access_code: Optional[str] = Header(None)):
-    _check_access(x_access_code)
+def review(req: ReviewRequest):
     if not os.getenv("ANTHROPIC_API_KEY"):
         raise HTTPException(503, "ANTHROPIC_API_KEY is not set.")
     if req.custom_text and req.custom_text.strip():

@@ -293,7 +293,6 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <details id="customBox"><summary>Or paste your own proposal</summary><div><textarea id="customText" placeholder="Describe the AI hiring tool you want to use…"></textarea></div></details>
     <div class="fields">
       <div><label for="reviewer">Your name</label><input id="reviewer" placeholder="e.g. A. Sharma" autocomplete="name"></div>
-      <div id="codeWrap"><label for="accessCode">Access code</label><input id="accessCode" type="password" placeholder="Ask the project team" autocomplete="off"></div>
     </div>
     <div class="cta" style="justify-content:flex-start;margin-top:20px"><button class="btn primary" id="runAgent">Check this tool</button></div>
     <div class="status" id="agentStatus"></div>
@@ -424,7 +423,6 @@ let proposals = [], selected = null, health = null;
     [health, proposals] = await Promise.all([fetch("/api/health").then(r => r.json()), fetch("/api/proposals").then(r => r.json())]);
     selected = proposals[0]?.id;
     renderChoices();
-    $("#codeWrap").hidden = !health.access_code_required;
     $("#reviewer").value = store.get("reviewer") || "";
     if (!health.agent_enabled) setStatus("#agentStatus", "The project team hasn't switched on the AI agent yet (API key missing).", true);
   } catch (e) { setStatus("#agentStatus", "Could not reach the server.", true); }
@@ -458,7 +456,7 @@ $("#runAgent").onclick = async () => {
   $("#track").hidden = false; renderTrack(done, active);
   const t0 = Date.now(); const tick = setInterval(() => setStatus("#agentStatus", `The agent is working… ${Math.round((Date.now() - t0) / 1000)}s (usually 1–4 minutes)`), 1000);
   try {
-    const r = await fetch("/api/review", { method: "POST", headers: { "Content-Type": "application/json", "X-Access-Code": $("#accessCode").value }, body: JSON.stringify(body) });
+    const r = await fetch("/api/review", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
     if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(typeof j.detail === "string" ? j.detail : "Request failed."); }
     const reader = r.body.getReader(), dec = new TextDecoder(); let buf = "", result = null;
     for (;;) {
